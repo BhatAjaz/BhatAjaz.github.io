@@ -1,0 +1,59 @@
+#IMPORTANT
+#when you change a slide change the data in the assets/img/bg folder
+#when you add a slide change the data in the _sass/2-layouts/index.sass document under the slides section
+
+- id: slide-1
+  image: assets/img/bg/project1.jpg
+  title: Knowledge Graphs & AI Recommendations
+  description: Developed models for predicting missing graph links, applied to drug discovery, recommendation systems, and HR. Published at ACL, NeurIPS, ICML.
+  link: "some-page-1"
+  content: content.content.content.content.content.content.content.content.content.content.
+  tag: "#tag1"
+
+- id: slide-2
+  image: assets/img/bg/project2.jpg
+  title: Memory-Driven Reasoning in Robots
+  description: Robots simulate past experiences to solve new problems creatively. Used in experiments and industrial multi-robot setups.
+  link: "some-page-2"
+  content: content.content.content.content.content.content.content.content.content.content.
+  tag: "#tag2"
+
+- id: slide-3
+  image: assets/img/bg/project3.jpg
+  title: Motor Intelligence & Body Schema
+  description: Robots abstract cause-effect relations from experience, enabling intuitive actions with unseen objects. Featured in Royal Society & BBC.
+  link: "some-page-3"
+  content: content.content.content.content.content.content.content.content.content.content.
+  tag: "#tag3"
+
+- id: slide-4
+  image: assets/img/bg/project4.jpg
+  title: Motor Intelligence & Body Schema
+  description: Neural models improve dexterity and tool use in complex tasks. Applied to iCub and industrial robots for fast, adaptable motion.
+  link: "some-page-4"
+  content: content.content.content.content.content.content.content.content.content.content.
+  tag: "#tag4"
+
+- id: slide-5
+  image: assets/img/bg/project5.jpg
+  title: Spatial Planning & Multi-Robot Collaboration
+  description: Robots coordinate in shared spaces through dynamic planning and task negotiation. Enables scalable teamwork in real-world assembly.
+  link: "some-page-5"
+  content: content.content.content.content.content.content.content.content.content.content.
+  tag: "#tag5"
+
+- id: slide-6
+  image: assets/img/bg/project6.jpg
+  title: Language & Visual Exploration in Infants
+  description: Model explains how babies learn language through visual exploration. Matches patterns across developmental studies.
+  link: "some-page-6"
+  content: content.content.content.content.content.content.content.content.content.content.
+  tag: "#tag6"
+
+- id: slide-7
+  image: assets/img/bg/project7.jpg
+  title: Word Learning Experiments Across Ages
+  description: Studies show children’s attention patterns differ from adults. Challenges standard testing and supports new learning models.
+  link: "some-page-7"
+  content: content.content.content.content.content.content.content.content.content.content.
+  tag: "#tag7"

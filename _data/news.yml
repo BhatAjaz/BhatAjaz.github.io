@@ -1,0 +1,25 @@
+#IMPORTANT
+#when you change a slide change the data in the assets/img/peopl
+- title: News1
+  image: assets/img/news/news1.jpg
+  description: text.text.text.text.text.text.text.text.text.text.text.text.
+  link: somelink
+
+- title: News2
+  image: assets/img/news/news2.jpg
+  description: text.text.text.text.text.text.text.text.text.text.text.text.
+  link: somelink
+
+- title: News3
+  image: assets/img/news/news3.jpg
+  description: text.text.text.text.text.text.text.text.text.text.text.text.
+  link: somelink
+
+- title: News4
+  image: assets/img/news/news4.jpg
+  description: text.text.text.text.text.text.text.text.text.text.text.text.
+  link: somelink
+
+
+
+

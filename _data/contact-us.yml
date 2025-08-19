@@ -1,0 +1,15 @@
+- class: bg1
+  image: assets/img/contact-us/img1.jpg
+
+- class: bg2
+  image: assets/img/contact-us/img2.jpg
+
+- class: bg3
+  image: assets/img/contact-us/img3.jpg
+
+- class: bg4
+  image: assets/img/contact-us/img4.jpg
+
+
+
+

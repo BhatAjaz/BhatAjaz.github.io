@@ -1,0 +1,39 @@
+---
+layout: default 
+---
+
+{% include nav.html %}
+<!-- first container -->
+<div class="container-news">
+  <div class="header-wrapper">
+    <h1 class="header">News</h1>
+    <hr style="margin: 1rem 0;">
+  </div>
+
+  <div class="news-content-wrapper">
+    {% for news in site.data.news %}
+      <div class="news-box">
+        <div class="news-box-text">
+          <h1>{{ news.title }}</h1>
+          <div class="image-box">
+            <img src="../{{ news.image }}" alt="{{ news.title }}">
+          </div>
+
+          <p>{{ news.description }}</p>
+        </div>
+      
+        <div class="email">
+          <a href="{{ news.link }}">Read more →</a>
+        </div>
+        <div class="overlay"></div>
+
+      </div>
+      {% endfor %}
+    
+  </div>     
+</div>
+
+ 
+{% include footer.html %}
+
+

@@ -1,0 +1,88 @@
+---
+layout: default 
+---
+
+{% include nav.html %}
+<!-- first container -->
+<div class="container-projects">
+  <div class="header-and-search">
+    <h1 class="header-projects">Projects</h1>
+
+    <div class="search-wrapper-new">
+      <input type="search-input" id="search" placeholder="Filter">
+    </div>
+  </div>
+  <hr>
+  <!-- to adjust the overview please adjust the projects: text in the _config.yml file-->
+  <div class="projects-oveview"><p>{{site.data.projects_overview.overview}}</p></div>
+  <hr>
+  <div class="projects-wrapper">
+    {% for projects in site.data.projects %}
+    <div class="projects-block" id="{{projects.link}}">
+      <img src="../{{/projects.image}}"/>
+      <div class="text">
+        <a href="#" class="open-popup"><h1>{{projects.title}}</h1></a>
+        <div class="popup-overlay" id="popup">
+          <div class="popup-content">
+            <p>{{projects.content}}</p>
+            <a href="#" class="close-popup">Close</a>
+          </div>
+        </div>
+        <p>{{projects.description}}</p>
+        <p class="tag">{{projects.tag}}</p>
+
+      </div>
+      <div class="overlay"></div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+ 
+{% include footer.html %}
+
+<!-- edit it later-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openButtons = document.querySelectorAll(".open-popup");
+    const closeButtons = document.querySelectorAll(".close-popup");
+
+    openButtons.forEach(button => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const popup = button.closest(".projects-block").querySelector(".popup-overlay");
+        popup.style.display = "flex";
+      });
+    });
+
+    closeButtons.forEach(button => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const popup = button.closest(".popup-overlay");
+        popup.style.display = "none";
+      });
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("search");
+    const blocks = document.querySelectorAll(".projects-block");
+
+    input.addEventListener("input", function () {
+      const query = input.value.trim().toLowerCase();
+
+      blocks.forEach(block => {
+        const titleElement = block.querySelector("h1");
+        const title = titleElement?.textContent.toLowerCase() || "";
+
+        const shouldShow = query === "" || title.includes(query);
+        block.style.display = shouldShow ? "flex" : "none";
+      });
+    });
+  });
+</script>
+
+
+

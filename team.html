@@ -1,0 +1,41 @@
+---
+layout: default 
+---
+
+{% include nav.html %}
+<!-- first container -->
+<div class="container-team">
+  <h1 class="header">Meet the group</h1>
+  {% for position in site.data.team.positions %}
+  <div class="title">
+      <h1>{{ position.title }}</h1>
+      <hr>
+  </div>
+  <div class="member-content-wrapper">
+    {% for person in position.members %}
+      <div class="content-box">
+        <div class="content-box-text">
+          <h1>{{ person.name }}</h1>
+          <div class="image-box">
+            <img src="../{{ person.image }}" alt="{{ person.name }}">
+          </div>
+
+          <p>{{ person.information }}</p>
+        </div>
+      
+        <div class="email">
+          <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+        </div>
+        <div class="overlay"></div>
+
+      </div>
+      {% endfor %}
+    
+  </div>     
+  {% endfor %}
+</div>
+</div>
+ 
+{% include footer.html %}
+
+

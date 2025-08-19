@@ -1,0 +1,66 @@
+---
+layout: default 
+---
+
+{% include nav.html %}
+<!-- first container -->
+<div class="container-publications">
+  <h1 class="header">Publications</h1>
+  <hr>
+
+  <div class="search-wrapper">
+    <input type="search-input" id="search" placeholder="Filter">
+  </div>
+  {% for publication in site.data.publications %}
+  <div class="publications-content-wrapper" data-tags="{{ publication.tags | join: ',' }}">
+      <div class="publication">
+        <div class="publication-wrapper" id="{{ publication.reference | remove: '#' }}">
+        <div class="number-and-url">
+            <h1>{{publication.number}}</h1>
+            <a href="{{publication.link}}">URL</a>
+            {% if publication.tags %}
+            <div class="tag-wrapper">
+              {% for tag in publication.tags %}
+                <div class="tag"><p>{{ tag }}</p></div>
+              {% endfor %}
+            </div>
+            {% endif %}
+            
+        </div>
+        <div class="information">
+            <h1>{{publication.title}}</h1>
+            <p>{{publication.authors}}</p>
+            <p class="journal">{{publication.journal}}</p>
+        </div>
+        <img src="../{{publication.image}}" />
+      </div>
+
+      <hr style="margin: 1rem 0;">
+      </div>
+      
+    
+  </div>     
+  {% endfor %}
+</div>
+</div>
+ 
+{% include footer.html %}
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("search");
+    const wrappers = document.querySelectorAll(".publications-content-wrapper");
+
+    input.addEventListener("input", function () {
+      const query = input.value.trim().toLowerCase();
+
+      wrappers.forEach(wrapper => {
+        const tags = wrapper.dataset.tags?.toLowerCase().split(",") || [];
+        const match = query === "" || tags.includes(query);
+
+        wrapper.style.display = match ? "block" : "none"; // "block" to contain both .publication and <hr>
+      });
+    });
+  });
+</script>

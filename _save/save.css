@@ -1,0 +1,36 @@
+.header{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../../assets/img/bg/img1.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 30s infinite ease-in-out;
+}
+@keyframes change{
+    0%
+    {
+        background-image: url(../../assets/img/bg/img1.JPG);
+    }
+    25%
+    {
+        background-image: url(../../assets/img/bg/img2.JPG);
+    }
+    50%
+    {
+        background-image: url(../../assets/img/bg/img3.JPG);
+    }
+    75%
+    {
+        background-image: url(../../assets/img/bg/img4.JPG);
+    }
+    100%
+    {
+        background-image: url(../../assets/img/bg/img1.JPG);
+    }
+}
+

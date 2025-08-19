@@ -1,0 +1,85 @@
+.container-team
+  padding: 5vh
+  overflow: hidden
+  .header
+    margin-top: 18vh
+    color: $secondary
+    text-align: center
+    @media screen and (max-width: 600px)
+      margin-top: 12vh
+  .title
+    h1  
+      color: $secondary
+      text-align: left
+      margin: 4vh 2vh 2vh 2vh
+    hr  
+      margin-bottom: 4vh
+    @media screen and (max-width: 600px)
+      margin-top: 15vh
+  .member-content-wrapper
+    flex-wrap: wrap
+    display: flex
+    flex-direction: row         
+    gap: 2em
+    .content-box
+      position: relative
+      padding: 30px 20px 10px 20px
+      display: flex
+      flex-direction: column
+      width: 350px
+      height: 50vh
+      border: 1px solid rgba(0,0,0,0.1)
+      border-radius: 8px
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+      overflow: hidden
+      .content-box-text
+        display: flex
+        flex-direction: column
+        flex: 1
+          
+        .image-box
+          height: 20vh
+          overflow: hidden
+          img
+            width: 100%
+            display: block
+        h1
+          color: $secondary
+          margin: 0
+          text-align: left
+          line-height: 1.2em
+          padding-bottom: 20px
+        p
+          padding-top: 20px
+          color: lighten($secondary, 40%)
+          line-height: 1.2em
+          white-space: normal
+          word-break: break-word
+          overflow-wrap: break-word
+          display: -webkit-box
+          -webkit-line-clamp: 4
+          -webkit-box-orient: vertical
+          overflow: hidden
+          
+      .overlay
+        position: absolute
+        bottom: 0
+        z-index: 2
+        width: 310px
+        height: 100px
+        background: linear-gradient(to top, $primary 0%, transparent 100%)
+        
+      .email
+        position: absolute
+        bottom: 2vh
+        z-index: 3
+        right: 2vh
+        text-align: right
+          
+        a
+          color: $secondary
+          font-weight: 500
+          text-decoration: none
+          &:hover
+            color: adjust-color($secondary, $lightness: 25%)
+        

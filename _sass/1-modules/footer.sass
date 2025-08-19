@@ -1,0 +1,48 @@
+.lab-footer 
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 1rem
+  padding: 1.5rem
+  min-height: 100px
+  overflow: hidden
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $secondary
+    opacity: 0.2
+    z-index: -1
+
+  @media (min-width: 100px)
+  flex-direction: row
+  align-items: center
+
+  p
+    color: $secondary
+    font-size: 0.5em
+
+  .footer-left
+    flex: 1
+
+  .footer-right
+    flex: 1
+    a
+      color: $secondary
+      transition: all 0.15s ease-in
+      font-size: 1em
+    a:hover
+      color: adjust-color($secondary, $lightness: 25%)
+    a.remove
+      display: none
+
+
+    address 
+      font-style: normal
+      line-height: 1.4
+      color: $secondary
+

@@ -1,0 +1,72 @@
+---
+layout: default 
+---
+
+{% include nav.html %}
+
+<div class="container-contact-us">
+  <div class="contact-us-header-wrapper">
+    <div class="bg-wrapper">
+        {% for background in site.data.contact-us %}
+            <div class="{{background.class}}"><img src="../{{background.image}}" /></div>
+        {% endfor %}
+    </div>
+    <h1 class="header">Contact Us</h1>
+  </div>
+  <div class="form-and-links">
+    <div class="links-holder">
+        <h1>Useful Links</h1>
+      <div class="links-wrapper">
+        <a href="{{ site.googlescholar_path}}" target="_blank" class="external-link-wrapper"><div class="external-link-icon external-link-icon-googlescholar"></div><h6>Google Scholar</h6></a>
+        <a href="mailto:{{ site.email }}" target="_blank" class="external-link-wrapper"><div class="external-link-icon external-link-icon-email"></div><h6>Email</h6></a>
+        <a href="{{ site.youtube_path}}" target="_blank" class="external-link-wrapper"><div class="external-link-icon external-link-icon-youtube"></div><h6>Youtube</h6></a>
+      </div>
+    </div>
+    <div class="form-holder" id="jobForm">
+      <div class="form">
+        <form method="post" name="contact-form">
+            <h1>We're hiring!</h1>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit"  id="submit">Send</button>
+        </form>
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbyE6tiBP_Cgp2-x6jQnQjyddKslpBVqDJPwMg82oe2eQ6ZGSGQz7kcrrPSPoGlcgC5g/exec';
+          const form = document.forms['contact-form'];
+
+          form.addEventListener('submit', e => {
+              e.preventDefault(); // Crucial: Stops default form submission
+              
+              fetch(scriptURL, { 
+                  method: 'POST', 
+                  body: new FormData(form)
+              })
+              .then(response => {
+              const alertBox = document.getElementById('custom-alert');
+              alertBox.classList.remove('hidden');
+              alertBox.classList.add('show');
+
+              setTimeout(() => {
+                alertBox.classList.remove('show');
+                alertBox.classList.add('hidden');
+                window.location.reload();
+              }, 3000); // Show for 3 seconds
+            })
+              .catch(error => console.error('Error!', error.message)); // Fixed syntax
+          });
+      </script>
+        
+  
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+<div id="custom-alert" class="hidden">
+  <p>Thank you! Form submitted successfully</p>
+</div>
+
+{% include footer.html %}
+

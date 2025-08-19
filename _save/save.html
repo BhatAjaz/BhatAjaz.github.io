@@ -1,0 +1,38 @@
+<div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a> <!-- add a similar line of code if you wan to add any new projects -->
+        </div>
+
+<script>
+const navLinks = document.querySelectorAll('.slider-nav a')
+// Attach click listeners to nav links
+  navLinks.forEach((link, i) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default anchor behavior
+      goToSlide(i);
+    });
+  });
+
+</script>
+
+a
+      width: 0.5rem
+      height: 0.5rem
+      border-radius: 50%
+      background-color: #0000
+      opacity: 0.75
+      transition: opacity ease 250ms
+
+      &:hover
+        opacity: 1
+
+ .slider-nav
+    display: flex
+    column-gap: 1rem
+    position: absolute
+    bottom: 1.25rem
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 4

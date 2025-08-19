@@ -1,0 +1,277 @@
+@use "sass:color"
+
+
+.container-1
+  position: relative
+  height: 100dvh
+
+  .slider
+    height: 100%
+    display: flex
+    overflow-x: auto
+    scroll-snap-type: x mandatory
+    scroll-behavior: smooth
+    scrollbar-width: none // Firefox
+    -ms-overflow-style: none
+
+    &::-webkit-scrollbar
+      display: none // Safari and Chrome
+
+
+    &::after
+      content: ""
+      position: absolute
+      inset: 0
+      background: $secondary
+      opacity: .5
+      z-index: 1
+      pointer-events: none
+
+    .slide
+      position: relative
+      flex-shrink: 0
+      scroll-snap-align: start
+      background-size: cover              // Ensures full coverage, cropping if needed
+      background-position: center         // Keeps image centered
+      background-repeat: no-repeat        // Prevents tiling
+      width: 100vw
+      height: 100vh
+      scroll-snap-align: start            // Only relevant in scroll containers
+
+      img
+        aspect-ratio: 16 / 9
+        width: 100vw
+        height: 100vh
+        scroll-snap-align: start
+        object-fit: cover
+
+      .slide-text
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.7)
+        z-index: 2
+        text-align: center
+        padding-top: 50px
+        h1
+          font-size: clamp(2rem, 5vw, 3.125rem)
+          font-weight: 500
+          line-height: 1.2em
+          padding: 0 10px 5px 10px
+          a
+            text-decoration: none
+            color: $primary
+            &:hover
+              color: adjust-color($primary, $lightness: -25%)
+
+        p
+          font-size: clamp(0.75rem, 3vw, 1.25rem)
+          font-weight: 300
+          line-height: 1.2em
+
+
+
+
+
+
+
+
+  .arrow
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    background-color: rgba(0, 0, 0, 0)
+    color: $primary
+    border: none
+    font-size: 3rem
+    cursor: pointer
+    z-index: 10
+
+    &.left-arrow
+      left: 1vw
+    &.left-arrow:hover
+      color: adjust-color($primary, $lightness: -25%)
+
+    &.right-arrow
+      right: 1vw
+    &.right-arrow:hover
+      color: adjust-color($primary, $lightness: -25%)
+    
+  .int-arrows-body
+    bottom: 1em // places it at the top of the container
+    position: absolute
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    left: 50%
+    transform: translateX(-50%) // centers it horizontally
+    z-index: 5
+
+    .int-arrow
+        position: relative
+        width: 1.5em
+        height: 1.5em
+        border-top: 0.5em solid $primary
+        border-left: 0.5em solid $primary
+        transform: rotate(-135deg)
+        animation: arrow-load 2s infinite
+    .int-arrow:hover
+      color: adjust-color($primary, $lightness: -25%)
+    .int-arrow:nth-child(1)
+        animation-delay: -0.2s
+    .int-arrow:nth-child(2)
+        top: 1em
+    @keyframes arrow-load
+        0%
+            opacity: 0
+            transform: rotate(-135deg) translate(1em, 1em)
+        0%
+            opacity: 1
+        100%
+            opacity: 0
+            transform: rotate(-135deg) translate(-1em, -1em)
+
+.container-2
+  position: relative
+  height: 100dvh
+  overflow: hidden 
+  .header
+    margin-top: 18vh
+    position: relative
+    color: $secondary
+    text-align: center
+    @media screen and (max-width: 600px)
+      margin-top: 12vh
+  .scroller[data-animated="true"] 
+    overflow: hidden
+    -webkit-mask: linear-gradient(90deg,transparent,$primary 20%,$primary 80%,transparent)
+    mask: linear-gradient(90deg, transparent, $primary 20%, $primary 80%, transparent)
+    .publications-content-wrapper
+      width: max-content
+      flex-wrap: nowrap
+      animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite
+  .scroller[data-direction="right"] 
+    --_animation-direction: reverse
+
+
+  .scroller[data-direction="left"]
+    --_animation-direction: forwards
+
+
+  .scroller[data-speed="fast"] 
+    --_animation-duration: 20s
+
+
+  .scroller[data-speed="slow"] 
+    --_animation-duration: 60s
+
+
+  .scroller
+    margin: auto
+    max-width: 1500px 
+    position: absolute
+    top: 55%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding-bottom: 1rem
+    @media screen and (max-width: 600px)
+      max-width: 400px 
+    .publications-content-wrapper
+      flex-wrap: wrap
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap            // prevent line-wrap
+      gap: 2em
+      padding: 60px 20px 0
+      
+
+      &::before,
+        &::after
+          content: ''
+          position: absolute
+          top: 0
+          width: 60px
+          height: 100%
+          pointer-events: none
+          z-index: 2
+
+      &::before
+        left: 0
+        background: linear-gradient(to right, white 0%, transparent 100%)
+      &::after 
+        right: 0
+        background: linear-gradient(to left, white 0%, transparent 100%)
+      .content-box
+        position: relative
+        padding: 30px 20px 10px 20px
+        display: flex
+        flex-direction: column
+        width: 350px
+        height: 60vh
+        border: 1px solid rgba(0,0,0,0.1)
+        border-radius: 8px
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+        overflow: hidden
+        .content-box-text
+          display: flex
+          flex-direction: column
+          flex: 1
+          position: relative
+          
+          .image-box
+            height: 20vh
+            overflow: hidden
+            img
+              width: 100%
+              display: block
+          h1
+            color: $secondary
+            margin: 0
+            text-align: left
+            line-height: 1.2em
+            padding-bottom: 20px
+          p
+            padding-top: 20px
+            color: lighten($secondary, 40%)
+            line-height: 1.2em
+            white-space: normal
+            word-break: break-word
+            overflow-wrap: break-word
+            display: -webkit-box
+            -webkit-line-clamp: 13
+            -webkit-box-orient: vertical
+            overflow: hidden
+          
+        .overlay
+          position: absolute
+          bottom: 0
+          z-index: 2
+          width: 310px
+          height: 100px
+          background: linear-gradient(to top, $primary 0%, transparent 100%)
+        
+        .read-more
+          position: absolute
+          bottom: 2vh
+          padding: 0 0 0 200px
+          z-index: 3
+          text-align: right
+          
+          a
+            color: $secondary
+            font-weight: 500
+            text-decoration: none
+            &:hover
+              color: adjust-color($secondary, $lightness: 25%)
+        
+
+
+@keyframes scroll 
+  to 
+    transform: translate(calc(-50% - 0.5rem))
+  
+
+
+

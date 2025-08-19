@@ -1,0 +1,52 @@
+<!-- Navigation -->
+<div class="background"> </div>
+<nav class="nav-wrap">
+    <a href="{{ site.baseurl}}/" class="nav-logo {% if page.url == '/' or page.url == '/contact-us/'%}toggle-dark{% endif %}">
+    {% include logo.html %}
+  </a>
+  <ul class="navigation">
+    <li><a href="{{site.baseurl}}/">Home</a></li>
+    <li><a href="{{site.baseurl}}/team">Team</a></li>
+    <li><a href="{{site.baseurl}}/publications">Publications</a></li>
+    <li><a href="{{site.baseurl}}/projects">Projects</a></li>
+    <li><a href="{{site.baseurl}}/news">News</a></li>
+    <li><a href="{{site.baseurl}}/contact-us">Contact Us</a></li>
+  </ul>
+  <!-- Mobile Navigation -->
+  <div class="nav-toggle-open-wrapper {% if page.url == '/' or page.url == '/contact-us/'%}toggle-dark{% endif %}">
+    <?xml version="1.0" encoding="utf-8"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="18px" viewBox="0 0 24 18" enable-background="new 0 0 24 18" xml:space="preserve">
+      <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="0" y1="9" x2="24" y2="9"/>
+      <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="0" y1="1" x2="24" y2="1"/>
+      <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="0" y1="17" x2="24" y2="17"/>
+    </svg>
+  </div>
+  <div class="nav-toggle-body-overlay"></div>
+    <div class="toggled-nav-wrapper">
+      <div class="nav-toggle-close-wrapper">
+        <?xml version="1.0" encoding="utf-8"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18.385px" height="18.385px" viewBox="0 0 18.385 18.385" enable-background="new 0 0 18.385 18.385" xml:space="preserve">
+          <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="0.707" y1="17.678" x2="17.678" y2="0.707"/>
+          <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="0.707" y1="0.707" x2="17.678" y2="17.678"/>
+        </svg>
+      </div>
+      <div class="internal-nav-links-wrapper">
+        <a href="{{ site.baseurl }}/" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Home</h5></div><div class="internal-link-icon internal-link-icon-home"></div></a>
+        <a href="{{ site.baseurl }}/team" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Team</h5></div><div class="internal-link-icon internal-link-icon-team"></div></a>
+        <a href="{{ site.baseurl }}/publications" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Publications</h5></div><div class="internal-link-icon internal-link-icon-publications"></div></a>
+        <a href="{{ site.baseurl }}/projects" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Projects</h5></div><div class="internal-link-icon internal-link-icon-research"></div></a>
+        <a href="{{ site.baseurl }}/news" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>News</h5></div><div class="internal-link-icon internal-link-icon-news"></div></a>
+        <a href="{{ site.baseurl }}/contact-us" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Contact Us</h5></div><div class="internal-link-icon internal-link-icon-contact-us"></div></a>
+      </div>
+      <hr/>
+      <div class="external-links-wrapper">
+        <a href="{{ site.googlescholar_path}}" target="_blank" class="external-link-wrapper"><h6>Google Scholar</h6><div class="external-link-icon external-link-icon-googlescholar"></div></a>
+        <a href="mailto:{{ site.email }}" target="_blank" class="external-link-wrapper"><h6>Email</h6><div class="external-link-icon external-link-icon-email"></div></a>
+        <a href="{{ site.youtube_path}}" target="_blank" class="external-link-wrapper"><h6>Youtube</h6><div class="external-link-icon external-link-icon-youtube"></div></a>
+      </div>
+    </div>
+  
+</nav>
+<!-- End Navigation -->

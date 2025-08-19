@@ -1,0 +1,129 @@
+.container-projects
+  position: relative
+  padding: 5vh
+  .header-and-search
+    display: flex
+    flex-direction: row
+    margin-top: 18vh
+    margin-bottom: 2vh
+    @media screen and (max-width: 600px)
+      margin-top: 12vh
+      flex-direction: column
+    .header-projects
+      width: 70%
+      color: $secondary
+      text-align: left
+      @media screen and (max-width: 600px)
+        width: 100%
+        text-align: center
+        
+    .search-wrapper-new
+      width: 30%
+      position: relative
+      display: flex
+      justify-content: flex-end
+      @media screen and (max-width: 600px)
+        width: 100%
+        margin-top: 2vh
+        margin-bottom: 4vh
+      input
+        width: 100%
+        font-size: 1rem
+        height: 1.5rem
+        @media screen and (max-width: 600px)
+          margin-top: 2vh
+          margin-bottom: 4vh
+          width: 100%
+
+  .projects-oveview
+    padding: 2vh
+    width: 100%
+    p
+      color: $secondary
+      overflow-wrap: break-word
+      display: -webkit-box
+      -webkit-line-clamp: 5
+      -webkit-box-orient: vertical
+      overflow: hidden
+      font-size: clamp(0.75rem, 2vw, 1rem)
+  .projects-wrapper
+    padding: 2vh
+    flex-wrap: wrap
+    display: flex
+    flex-direction: column
+    .projects-block
+      position: relative
+      width: 100%
+      height: 20vh
+      display: flex
+      flex-direction: row
+      border: 1px solid lighten($secondary, 80%)
+      border-radius: 1vh
+      overflow: hidden
+      img
+        object-fit: cover
+        width: 20%
+        height: auto
+        display: block
+        filter: grayscale(40%)
+      .text 
+        position: relative
+        padding: 2vh
+        display: flex
+        flex-direction: column
+        height: 16vh
+        a
+          h1  
+            color: #551A8B
+            font-size: clamp(1rem, 3vw, 1.5rem)
+            font-weight: 600
+        p
+          color: $secondary
+          font-size: clamp(0.6rem, 2vw, 1rem)
+        p.tag
+          position: absolute
+          font-size: clamp(0.75rem, 2vw, 1rem)
+          bottom: 0
+          z-index: 3
+        .popup-overlay
+          position: fixed
+          top: 0
+          left: 0
+          width: 100vw
+          height: 100vh
+          background: rgba(0, 0, 0, 0.5)
+          display: none
+          justify-content: center
+          align-items: center
+          z-index: 1000
+          display: none             /* hidden by default */
+          justify-content: center   /* center horizontally */
+          align-items: center       /* center vertically */
+          text-align: center
+        .popup-content
+          overflow-wrap: break-word
+          background: white
+          padding: 2rem
+          border-radius: 0.5rem
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+          width: 80vw
+        #close-popup 
+          display: inline-block
+          margin-top: 1rem
+          color: #551A8B
+          text-decoration: underline
+          cursor: pointer
+      .overlay
+        position: absolute
+        bottom: 0
+        right: 0
+        z-index: 2
+        width: 80%
+        height: 100px
+        background: linear-gradient(to top, $primary 0%, transparent 100%)
+      
+
+    
+    
+          
+        

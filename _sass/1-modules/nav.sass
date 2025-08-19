@@ -1,0 +1,192 @@
+@use "sass:color"
+
+.background
+  height: 130px
+  width: 100%
+  transition: all 0.3s ease-in
+  position: fixed
+  background: linear-gradient(to bottom, $secondary, rgba(0, 0, 0, 0))
+  top: 0
+  left: 0
+  right: 0
+  z-index: 899
+  @media screen and (max-width: 600px)
+    display: none
+
+nav.nav-wrap
+  transition: all 0.3s ease-in
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 900
+  max-width: 1000px
+  display: flex
+  justify-content: space-between
+  margin: auto
+  padding: 40px
+  @media screen and (max-width: 600px)
+    padding: 35px 20px
+  a.nav-logo
+    height: 50px
+    fill: $secondary
+    svg
+      height: 100%
+      width: auto
+  a.nav-logo.toggle-dark
+    height: 50px
+    fill: $primary
+    svg
+      height: 100%
+      width: auto
+        
+  ul.navigation
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    @media screen and (max-width: 600px)
+      display: none
+    li
+      display: block
+      padding-right: 30px
+      a
+        color: $white
+        transition: all 0.15s ease-in
+        font-size: 1em
+      a:hover
+        color: adjust-color($white, $lightness: -25%)
+    li:last-of-type
+      padding-right: 0
+//Toggled Nav
+.nav-toggle-open-wrapper, .nav-toggle-close-wrapper
+  position: relative
+  height: 50px
+  width: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  overflow: visible
+  svg
+    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.8))
+    width: 24px
+    height: auto
+.nav-toggle-open-wrapper
+  z-index: 999
+  svg
+    stroke: $secondary
+.nav-toggle-open-wrapper.toggle-dark
+  svg
+    stroke: $primary
+.nav-toggle-close-wrapper
+  svg
+    
+    stroke: $secondary
+.toggled-nav-wrapper
+  transition: all 0.2s ease-in-out
+  display: flex
+  flex-direction: column
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 1002
+  width: 300px
+  height: 100%
+  padding: 35px 20px 35px 20px
+  background: $white
+  transform: translateX(300px)
+  .internal-nav-links-wrapper, .external-links-wrapper
+    align-items: flex-end
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    text-align: left
+  hr
+    align-items: center
+    width: 60%
+    margin: 50px 0px 50px 60px
+  .internal-nav-links-wrapper
+    align-items: flex-start
+    margin-top: 50px
+    height: 320px
+    a.internal-link-wrapper
+      display: flex
+      flex-direction: row-reverse
+      justify-content: flex-end
+      align-items: center
+  .external-links-wrapper
+    height: auto
+    a.external-link-wrapper
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+      color: $secondary
+.external-link-icon
+  height: 30px
+  width: 30px
+  margin-left: 20px
+.internal-link-icon
+  height: 30px
+  width: 30px
+  margin-right: 20px
+.external-link-icon, .internal-link-icon
+  background:
+    size: contain
+    position: center center
+    repeat: no-repeat
+.internal-link-icon-home
+  background-image: url('../img/icons/home.svg')
+.internal-link-icon-team
+  background-image: url('../img/icons/team.svg')
+.internal-link-icon-publications
+  background-image: url('../img/icons/publications.svg')
+.internal-link-icon-research
+  background-image: url('../img/icons/research.svg')
+.internal-link-icon-news
+  background-image: url('../img/icons/news.svg')
+.internal-link-icon-contact-us
+  background-image: url('../img/icons/contact-us.svg')
+
+//exteral-links
+.external-link-icon-googlescholar
+  background-image: url('../img/icons/googlescholar.svg')
+.external-link-icon-email
+  background-image: url('../img/icons/email.svg')
+.external-link-icon-youtube
+  background-image: url('../img/icons/youtube.svg')
+
+
+.nav-toggle-body-overlay
+  transition: opacity 0.2s ease-in-out, transform 0s ease-in-out 0.2s
+  display: block
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1000
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,0.7)
+  opacity: 0
+  transform: translateX(100%)
+html.nav-open
+  body
+    overflow: hidden
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  .nav-toggle-body-overlay
+    transition: opacity 0.2s ease-in-out, transform 0s
+    opacity: 1
+    transform: translateX(0)
+  .toggled-nav-wrapper
+    transform: translateX(0)
+@media screen and (min-width: 600px)
+  .nav-toggle-open-wrapper, .nav-toggle-close-wrapper, .toggled-nav-wrapper, .nav-toggle-body-overlay
+    display: none

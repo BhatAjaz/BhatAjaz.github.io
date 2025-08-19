@@ -1,0 +1,30 @@
+#IMPORTANT
+#when you change a slide change the data in the assets/img/people folder
+positions:
+  - title: Position 1
+    members:
+      - name: Ajaz Ahmad Bhat
+        information: text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
+        email: person1@example.com
+        image: assets/img/team/person1.jpg
+
+  - title: Position 2
+    members:
+      - name: Person 2
+        information: text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
+        email: person2@example.com
+        image: assets/img/team/person0.jpg
+      - name: Person 3
+        information: text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
+        email: person3@example.com
+        image: assets/img/team/person0.jpg
+
+  - title: Position 3
+    members:
+      - name: Person 4
+        information: text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
+        email: person4@example.com
+        image: assets/img/team/person0.jpg
+
+
+
