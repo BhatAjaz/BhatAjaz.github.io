@@ -22,7 +22,7 @@ email: ajaz.bhat@ubd.edu.bn
 description: >- # this means to ignore newlines until "baseurl:"
   The UBD Ajaz Ahmad Bhat's lab is a multidisciplinary research hub focused on exploring the frontiers of artificial intelligence through the lens of human cognition and behavior. We build autonomous systems that think, reason, and adapt in ways that mirror—and often surpass—human intelligence.
 baseurl: "/Bhatajaz.github.io" # the subpath of your site, e.g. /blog
-url: "https://bhatajaz.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://bhatajaz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
