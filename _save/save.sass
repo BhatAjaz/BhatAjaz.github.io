@@ -1,0 +1,28 @@
+.popup-overlay
+  position: fixed
+          top: 0
+          left: 0
+          width: 100vw
+          height: 100vh
+          background: rgba(0, 0, 0, 0.5)
+          display: none
+          justify-content: center
+          align-items: center
+          z-index: 1000
+          display: none             /* hidden by default */
+          justify-content: center   /* center horizontally */
+          align-items: center       /* center vertically */
+          text-align: center
+        .popup-content
+          overflow-wrap: break-word
+          background: background
+          padding: 2rem
+          border-radius: 0.5rem
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+          width: 80vw
+        #close-popup 
+          display: inline-block
+          margin-top: 1rem
+          color: $highliting
+          text-decoration: underline
+          cursor: pointer

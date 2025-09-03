@@ -5,7 +5,7 @@
   width: 100%
   transition: all 0.3s ease-in
   position: fixed
-  background: linear-gradient(to bottom, $secondary, rgba(0, 0, 0, 0))
+  background: linear-gradient(to bottom, $black, rgba(0, 0, 0, 0))
   top: 0
   left: 0
   right: 0
@@ -29,16 +29,15 @@ nav.nav-wrap
     padding: 35px 20px
   a.nav-logo
     height: 50px
-    fill: $secondary
+    fill: $white
+    will-change: transform
+    transition: transform 0.3s ease
     svg
       height: 100%
       width: auto
-  a.nav-logo.toggle-dark
-    height: 50px
-    fill: $primary
-    svg
-      height: 100%
-      width: auto
+    &:hover
+      transform: scale(1.1)
+    
         
   ul.navigation
     display: flex
@@ -51,11 +50,14 @@ nav.nav-wrap
       display: block
       padding-right: 30px
       a
+        display: inline-block
         color: $white
         transition: all 0.15s ease-in
         font-size: 1em
+        will-change: transform
+        transition: transform 0.3s ease
       a:hover
-        color: adjust-color($white, $lightness: -25%)
+        transform: scale(1.1) 
     li:last-of-type
       padding-right: 0
 //Toggled Nav
@@ -69,19 +71,18 @@ nav.nav-wrap
   cursor: pointer
   overflow: visible
   svg
-    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.8))
+    filter: drop-shadow(2px 4px 3px rgba($black, 0.8))
     width: 24px
     height: auto
 .nav-toggle-open-wrapper
   z-index: 999
   svg
-    stroke: $secondary
+    stroke: $primary
 .nav-toggle-open-wrapper.toggle-dark
   svg
     stroke: $primary
 .nav-toggle-close-wrapper
   svg
-    
     stroke: $secondary
 .toggled-nav-wrapper
   transition: all 0.2s ease-in-out
@@ -123,7 +124,7 @@ nav.nav-wrap
       flex-direction: row
       justify-content: flex-start
       align-items: center
-      color: $secondary
+      color: $black
 .external-link-icon
   height: 30px
   width: 30px

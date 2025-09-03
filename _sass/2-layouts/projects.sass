@@ -1,6 +1,13 @@
 .container-projects
   position: relative
   padding: 5vh
+  background: $secondary
+  hr
+    border: none // removes default border
+    height: 1px // sets thickness
+    background-color: $background // uses your theme color
+    margin: 2px 0 // adds spacing above and below
+    width: 100% // ensures it stretches across the container
   .header-and-search
     display: flex
     flex-direction: row
@@ -10,36 +17,50 @@
       margin-top: 12vh
       flex-direction: column
     .header-projects
-      width: 70%
-      color: $secondary
+      width: 80%
+      color: $primary
       text-align: left
       @media screen and (max-width: 600px)
         width: 100%
         text-align: center
         
-    .search-wrapper-new
-      width: 30%
+    .search-wrapper-new 
+      width: 20%
+      margin: 0 auto
       position: relative
       display: flex
-      justify-content: flex-end
-      @media screen and (max-width: 600px)
+      justify-content: center
+
+      @media screen and (max-width: 600px) 
         width: 100%
         margin-top: 2vh
         margin-bottom: 4vh
-      input
+      
+
+      input 
         width: 100%
+        height: 30px
         font-size: 1rem
-        height: 1.5rem
-        @media screen and (max-width: 600px)
+        padding: 0 1rem
+        border: none
+        border-radius: 8px
+        background-color: $background
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+        transition: box-shadow 0.2s ease
+        &:focus 
+          outline: none
+          box-shadow: 0 0 0 3px rgba($primary, 0.3)
+
+        @media screen and (max-width: 600px) 
           margin-top: 2vh
           margin-bottom: 4vh
-          width: 100%
+      
 
   .projects-oveview
     padding: 2vh
     width: 100%
     p
-      color: $secondary
+      color: $primary
       overflow-wrap: break-word
       display: -webkit-box
       -webkit-line-clamp: 5
@@ -52,14 +73,21 @@
     display: flex
     flex-direction: column
     .projects-block
+      cursor: pointer
       position: relative
       width: 100%
       height: 20vh
       display: flex
       flex-direction: row
-      border: 1px solid lighten($secondary, 80%)
+      border: 1px solid darken($primary, 80%)
       border-radius: 1vh
       overflow: hidden
+      background: $background
+      z-index: 4
+      will-change: transform
+      transition: transform 0.3s ease
+      &:hover
+        transform: scale(1.05)
       img
         object-fit: cover
         width: 20%
@@ -72,47 +100,18 @@
         display: flex
         flex-direction: column
         height: 16vh
-        a
-          h1  
-            color: #551A8B
-            font-size: clamp(1rem, 3vw, 1.5rem)
-            font-weight: 600
+        h1  
+          color: $highliting
+          font-size: clamp(1rem, 3vw, 1.5rem)
+          font-weight: 600
         p
-          color: $secondary
+          color: $black
           font-size: clamp(0.6rem, 2vw, 1rem)
         p.tag
           position: absolute
           font-size: clamp(0.75rem, 2vw, 1rem)
           bottom: 0
           z-index: 3
-        .popup-overlay
-          position: fixed
-          top: 0
-          left: 0
-          width: 100vw
-          height: 100vh
-          background: rgba(0, 0, 0, 0.5)
-          display: none
-          justify-content: center
-          align-items: center
-          z-index: 1000
-          display: none             /* hidden by default */
-          justify-content: center   /* center horizontally */
-          align-items: center       /* center vertically */
-          text-align: center
-        .popup-content
-          overflow-wrap: break-word
-          background: white
-          padding: 2rem
-          border-radius: 0.5rem
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
-          width: 80vw
-        #close-popup 
-          display: inline-block
-          margin-top: 1rem
-          color: #551A8B
-          text-decoration: underline
-          cursor: pointer
       .overlay
         position: absolute
         bottom: 0

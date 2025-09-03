@@ -1,4 +1,10 @@
 .container-contact-us
+  width: 100%
+  overflow: hidden
+  background: $secondary
+  display: flex
+  flex-direction: column
+  height: auto
   .contact-us-header-wrapper
     position: relative
     height: 60vh
@@ -20,7 +26,7 @@
           content: ""
           position: absolute
           inset: 0
-          background: $secondary
+          background: $black
           opacity: .5
           z-index: 1
           pointer-events: none
@@ -42,96 +48,251 @@
       z-index: 3
       padding: 2vh
       font-size: clamp(2rem, 5vw, 3.125rem)
-  .form-and-links
+      color: $white
+  .vacancies-wrapper
+    height: 100vh
+    position: relative
+    .header
+      margin-top: 18vh
+      position: relative
+      color: $primary
+      text-align: center
+      @media screen and (max-width: 1200px)
+        margin-top: 12vh
+    .scroller
+      margin: auto
+      max-width: 1500px 
+      position: absolute
+      overflow-x: auto
+      top: 55%
+      left: 50%
+      transform: translate(-50%, -50%)
+      padding-bottom: 1rem
+      scrollbar-width: none // Firefox
+      -ms-overflow-style: none
+
+      &::-webkit-scrollbar
+        display: none // Safari and Chrome
+      -webkit-mask: linear-gradient(90deg,transparent,$secondary 20%,$secondary  80%,transparent)
+      @media screen and (max-width: 600px)
+        max-width: 400px 
+      .vacancy-content-wrapper
+        flex-wrap: wrap
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap            // prevent line-wrap
+        gap: 2em
+        padding: 60px 20px 0
+        
+
+      
+        .content-box
+          position: relative
+          padding: 30px 20px 10px 20px
+          display: flex
+          flex-direction: column
+          min-width: 350px
+          height: 60vh
+          border: 1px solid rgba($primary, 0.1)
+          border-radius: 8px
+          box-shadow: 0 4px 12px rgba($primary, 0.2)
+          overflow: hidden
+          background-color: $background
+          will-change: transform
+          transition: transform 0.3s ease
+          &:hover
+            transform: scale(1.05)
+          .overlay
+            position: absolute
+            bottom: 0
+            z-index: 2
+            width: 310px
+            height: 100px
+            background: linear-gradient(to top, $background 0%, transparent 100%)
+          .content-box-text
+            display: flex
+            flex-direction: column
+            flex: 1
+            position: relative
+            
+            .image-box
+              height: 20vh
+              overflow: hidden
+              img
+                width: 100%
+                display: block
+            h1
+              color: $black
+              margin: 0
+              text-align: left
+              line-height: 1.2em
+              padding-bottom: 20px
+            p
+              padding-top: 20px
+              color: darken($black, 40%)
+              line-height: 1.2em
+              white-space: normal
+              word-break: break-word
+              overflow-wrap: break-word
+              display: -webkit-box
+              -webkit-line-clamp: 13
+              -webkit-box-orient: vertical
+              overflow: hidden
+  .address-links-map
+    position: relative
+    max-height: 50vh
     width: 100%
     display: flex
     flex-direction: row
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 1200px)
+      max-height: 100vh
       flex-direction: column
-      height: 90vh
-    .links-holder
+    .map
+      width: 50%
+      height: 50vh
+      @media screen and (max-width: 1200px)
+        padding-top: 2vh
+        width: 100%
+    .address-and-links
+      padding: 2vh
       height: 100%
       width: 50%
-      margin: 2vh
-      padding: 20px 
       display: flex
       flex-direction: column
-      justify-content: space-between
-      text-align: right
-      @media screen and (max-width: 600px)
+      @media screen and (max-width: 1200px)
         width: 100%
-      h1
-        text-align: center
-        margin-bottom: 20px
-        color: $secondary
-        flex-shrink: 0 // Prevents it from shrinking
-      .links-wrapper
-        flex: 1
+      .address
+        h1
+          text-align: center
+          margin-bottom: 20px
+          color: $white
+          flex-shrink: 0
+        p
+          margin-left: 5vh
+          font-size: clamp(0.75rem, 3vw, 1.25rem)
+          @media screen and (max-width: 1200px)
+            margin-left: 0
+      @media screen and (max-width: 1200px)
+        flex-direction: column
+      .links-holder
+        height: 100%
+        width: 100%
+        padding: 20px 
         display: flex
         flex-direction: column
         justify-content: space-between
         text-align: right
-        height: auto
-        
-        a
-          display: flex
-          align-items: center
-          color: $secondary
-          font-size: clamp(1.125rem, 4.5vw, 1.8rem)
-          @media screen and (max-width: 600px)
-            justify-content: flex-start
-            flex-direction: row-reverse
-          &:hover
-            color: adjust-color($secondary, $lightness: 25%)
-          h6
-            font-weight: 600
-    .external-link-icon
-      margin-right: 2vh
-      height: 5vh
-      width: 5vh
-      @media screen and (max-width: 600px)
-        margin-left: 2vh
-        margin-right: 1vh // spacing when icon is before text
-
-    .form-holder
-      width: 50%
-      @media screen and (max-width: 600px)
-        width: 100%
-      .form
-        max-height: 50vh
-        margin: 2vh
-        padding: 20px 
-        background-color: lighten($secondary, 90%)
-        border-radius: 10px
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+        @media screen and (max-width: 1200px)
+          width: 100%
         h1
           text-align: center
           margin-bottom: 20px
-          color: $secondary
-        input, textarea
-          display: block
-          width: 100%
-          margin-bottom: 10px
-          padding: 10px
-          border: none
-          border-radius: 5px
-          background-color: $white
-        input:focus, textarea:focus
-          outline: none
-          box-shadow: 0 4px 12px rgba(0,0, 0, 0.6)
-        button
-          arsplay: bloCK
-          width: 100%
-          padding: 10px 
-          border: none
-          border-radius: 1vh
-          box-shadow: 0 4px 12px rgba(0,0, 0, 0.6)
-          background-color: lighten($secondary, 90%)
-          color: $secondary
-          cursor: pointer
-          transition: 0.3s ease
-        button:hover
-          background-color: lighten($secondary, 99%)
+          color: $white
+          flex-shrink: 0 // Prevents it from shrinking
+        .links-wrapper
+          flex: 1
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          text-align: right
+          height: auto
+          a
+            display: flex
+            align-items: center
+            color: $primary
+            will-change: transform
+            transition: transform 0.3s ease
+            @media screen and (max-width: 1200px)
+              justify-content: flex-start
+              flex-direction: row-reverse
+            &:hover
+              transform: scale(1.1)
+            p
+              font-size: clamp(0.75rem, 3vw, 1.25rem)
+              font-weight: 600
+      .external-link-icons
+        margin-right: 2vh
+        justify-content: center
+        align-items: center
+        height: 5vh
+        svg#Layer_1
+          height: 5vh
+          width: 5vh
+          --scholar-blue: #{adjust-color($primary, $lightness: -15%)}
+          --scholar-dark-blue: #{adjust-color($primary, $lightness: -25%)}
+          --scholar-light-blue: #{$primary}
+          --scholar-mid-blue: #{adjust-color($primary, $lightness: -5%)}
+        svg#Layer_2
+          transform: scale(2)
+          height: 5vh
+          width: 5vh
+          --gmail-shade-1: #{adjust-color($primary, $lightness: -20%)}
+          --gmail-shade-2: #{adjust-color($primary, $lightness: -15%)}
+          --gmail-shade-3: #{adjust-color($primary, $lightness: -10%)}
+          --gmail-shade-4: #{adjust-color($primary, $lightness: -5%)}
+          --gmail-shade-5: #{$primary}
+        svg#Layer_3 
+          height: 5vh
+          width: 5vh
+          --youtube-shade-1: #{$primary}
+          --youtube-shade-2: #{$secondary}
+            
+        @media screen and (max-width: 1200px)
+          margin-left: 2vh
+          margin-right: 1vh // spacing when icon is before text
+
+  .form-holder
+    height: 70vh
+    width: 100%
+    display: flex                 // ✅ enables flexbox
+    justify-content: center      // ✅ centers horizontally
+    align-items: center
+
+    .form
+      width: 50%
+      max-height: 50vh
+      margin: 2vh
+      padding: 20px 
+      border-radius: 10px
+      box-shadow: 0 4px 12px rgba($primary, 0.2)
+      background: adjust-color($secondary, $lightness: 25%)
+      will-change: transform
+      transition: transform 0.3s ease
+      @media screen and (max-width: 1200px)
+        width: 90%
+      &:hover
+        transform: scale(1.05)
+      h1
+        text-align: center
+        margin-bottom: 20px
+        color: $primary
+      input, textarea
+        display: block
+        width: 100%
+        margin-bottom: 10px
+        padding: 10px
+        border: none
+        border-radius: 5px
+        background-color: $background
+      textarea
+        height: 10vh
+      input:focus, textarea:focus
+        outline: none
+        box-shadow: 0 4px 12px rgba(0,0, 0, 0.6)
+      button
+        arsplay: bloCK
+        width: 100%
+        padding: 10px 
+        border: none
+        border-radius: 1vh
+        box-shadow: 0 4px 12px rgba(0,0, 0, 0.6)
+        background-color: lighten($black, 90%)
+        color: $black
+        cursor: pointer
+        will-change: transform
+        transition: transform 0.3s ease
+      button:hover
+        transform: scale(1.05)
 
 
 @keyframes fade
@@ -154,11 +315,11 @@
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  background-color: lighten($secondary, 40%)
-  color: $secondary
+  background-color: lighten($black, 40%)
+  color: $black
   padding: 1rem 1.5rem
   border-radius: 8px
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 4px 12px rgba($primary, 0.2)
   font-size: 1rem
   z-index: 9999
   opacity: 0
@@ -173,6 +334,7 @@
 .hidden 
   display: none
   
+
 
 
 

@@ -1,95 +1,195 @@
 .container-publications
   position: relative
   padding: 5vh
-  .header
-    margin-top: 18vh
-    margin-bottom: 2vh
-    color: $secondary
-    text-align: center
-    @media screen and (max-width: 600px)
-      margin-top: 12vh
-  .search-wrapper
+  background: $secondary
+  overflow: hidden
+  hr
+    border: none // removes default border
+    height: 1px // sets thickness
+    background-color: $background // uses your theme color
+    margin: 2px 0 // adds spacing above and below
+    width: 100% // ensures it stretches across the container
+  @media screen and (max-width: 600px)
+      padding: 5vh 0 0 0
+  .tag-header
     position: relative
-    padding: 2vw
     display: flex
-    justify-content: flex-end
+    flex-direction: column
+    p
+      margin: auto
+      padding: 2vh
+    .tag-holder
+      margin: auto
+      width: 60%
+      padding-bottom: 2vh
+      position: relative
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      bottom: 0
+      @media screen and (max-width: 600px)
+        width: 100%
+      .tag
+        margin: 2px
+        overflow: hidden
+        p
+          display: inline-block
+          padding: 0.3vh 0.7vw
+          color: $black
+          font-size: clamp(0.5rem, 2vw, 0.85rem)
+          white-space: nowrap
+          margin: 0
+    .header-and-search
+      position: relative
+      display: flex
+      flex-direction: row
+      margin-top: 18vh
+      margin-bottom: 2vh
+      @media screen and (max-width: 600px)
+        margin-top: 12vh
+        flex-direction: column
+      .header
+        position: absolute
+        width: 100%
+        color: $primary
+        text-align: center
+        @media screen and (max-width: 600px)
+          position: relative
+          width: 100%
+          text-align: center
     
 
-    input
-      width: 30%
-      font-size: 1rem
-      height: 1.5rem
-      @media screen and (max-width: 600px)
-        margin-top: 2vh
-        margin-bottom: 4vh
+      .search-wrapper 
+        width: 20%
+        left: 0
+        position: relative
+        margin-left: auto
+        display: flex
+        justify-content: flex-end
+        @media screen and (max-width: 600px) 
+
+          width: 100%
+          margin-top: 2vh
+          margin-bottom: 4vh
+      
+
+      input 
         width: 100%
+        height: 30px
+        font-size: 1rem
+        padding: 0 1rem
+        border: none
+        border-radius: 8px
+        background-color: $background
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2)
+        transition: box-shadow 0.2s ease
+        &:focus 
+          outline: none
+          box-shadow: 0 0 0 3px rgba($primary, 0.3)
+
+        @media screen and (max-width: 600px) 
+          margin-top: 2vh
+          margin-bottom: 4vh
 
   .publications-content-wrapper
     flex-wrap: wrap
     display: flex
-    flex-direction: column       
+    flex-direction: column 
+    width: 100%
     .publication-wrapper
-      padding: 2vw
-      display: flex
-      flex-direction: row
+      cursor: pointer
       width: 100%
       height: 20vh
+      box-shadow: 0 4px 12px rgba($primary, 0.2)
+      background: $secondary
+      display: flex
       overflow: hidden
-      .number-and-url
+      will-change: transform
+      transition: transform 0.3s ease
+      
+      &:hover
+        transform: scale(1.05) 
+        
+      .text-wrapper
         position: relative
-        width: 20%
-        display: flex
-        flex-direction: column
-        @media screen and (max-width: 600px)
-          width: 15%
-        h1
-          font-size: clamp(1.25rem, 3vw, 1.75rem)
-          color: $secondary
-        a
-          font-size: clamp(0.75rem, 2vw, 1rem)
-          color: $secondary
-          font-weight: 500
-          text-decoration: none
-          &:hover
-            color: adjust-color($secondary, $lightness: 25%)
-        .tag-wrapper
-          position: absolute
-          display: flex
-          flex-direction: row
-          flex-wrap: wrap
-          bottom: 0
-          .tag
-            p
-              display: inline-block
-              padding: 0.3vh 0.7vw
-              border: 1px solid adjust-color($secondary, $lightness: 40%)
-              border-radius: clamp(2px, 2vh, 6px)
-              color: $secondary
-              font-size: clamp(0.5rem, 2vw, 0.85rem)
-              white-space: nowrap
-              margin: 0
-      .information
-        position: relative
-        width: 50%
+        padding: 2vw
+        flex: 0 0 80%   
         height: 100%
         display: flex
-        flex-direction: column
-        @media screen and (max-width: 600px)
-          width: 55%
-        h1
-          font-size: clamp(1.25rem, 3vw, 1.75rem)
-          color: $secondary
-        p
-          font-size: clamp(0.75rem, 2vw, 1rem)
-          color: lighten($secondary, 40%)
-          line-height: 1.2em
-        p.journal
-          position: absolute
-          bottom: 0
-      img
-        aspect-ratio: 9 / 16
-        width: 30%
-        display: block
-        object-fit: cover
+        flex-direction: row
+        
+        .number-and-url
+          position: relative
+          width: 25%
+          display: flex
+          flex-direction: column
+          @media screen and (max-width: 600px)
+            width: 20%
+          h1
+            font-size: clamp(1.25rem, 3vw, 1.75rem)
+            color: $primary
+          a
+            font-size: clamp(0.75rem, 2vw, 1rem)
+            color: $highliting
+            font-weight: 500
+            text-decoration: none
+            transform-origin: center
+            will-change: transform
+            transition: transform 0.3s ease
+            &:hover
+              transform: scale(1.1)
+          .tag-wrapper
+            padding-bottom: 2vh
+            position: absolute
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            bottom: 0
+            .tag
+              p
+                display: inline-block
+                padding: 0.3vh 0.7vw
+                color: $black
+                font-size: clamp(0.5rem, 2vw, 0.85rem)
+                white-space: nowrap
+                margin: 0
+        .information
+          position: relative
+          flex: 0 0 75%
+          height: 100%
+          display: flex
+          flex-direction: column
+          padding-bottom: 10vh
+          @media screen and (max-width: 600px)
+            width: 60%
+          h1
+            min-height: 1.2em 
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            -webkit-line-clamp: 1
+            overflow: hidden      
+            text-overflow: ellipsis  
+            font-size: clamp(1.25rem, 3vw, 1.75rem)
+            color: $primary
+            line-height: 1.2
+            @media screen and (max-width: 600px)
+              -webkit-line-clamp: 3
+              min-height: 3.6em          
+               
+          p
+            font-size: clamp(0.75rem, 2vw, 1rem)
+            color: lighten($primary, 40%)
+            line-height: 1.2em
+          p.journal
+            position: absolute
+            bottom: 0
+      .image-box
+        img
+          object-fit: cover
+          aspect-ratio: 16/9  
+          flex: 0 0 20%      
+          height: 100%
+
+        
           
         

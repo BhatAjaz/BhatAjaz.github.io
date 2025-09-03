@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% include nav.html %}
+{% assign project = site.data.projects | where: "id", "slide-2" | first %}
+
+
+<div class="project-page">
+  <h1 class="header">{{ project.title }}</h1>
+  <hr>
+  <img src="{{ project.image }}" alt="{{ project.title }}">
+  <p><strong>Tags:</strong> {{ project.tag | join: ", " }}</p>
+  <p><strong>Link:</strong> <a href="{{ project.link }}"> URL </a></p>
+
+  <h1>Description:</h1> 
+  <hr>
+  <p>{{ project.description }}</p>
+  <h1>Content:</h1> 
+  <hr>
+  <p>{{ project.content }}</p>
+</div>
+
+{% include footer.html %}

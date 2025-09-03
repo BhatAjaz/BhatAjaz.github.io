@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% include nav.html %}
+{% assign pub = site.data.publications | where: "number", "18" | first %}
+
+
+<div class="publication-page">
+  <h1 class="header">{{ pub.title }}</h1>
+  <hr>
+  <img src="{{ pub.image }}" alt="{{ pub.title }}">
+  <p><strong>Authors:</strong> {{ pub.authors }}</p>
+  <p><strong>Journal:</strong> {{ pub.journal }}</p>
+  <p><strong>Tags:</strong> {{ pub.tags | join: ", " }}</p>
+  <p><strong>Link:</strong> <a href="{{publication.link}}">URL</a></p>
+  <h1>Abstract:</h1> 
+  <hr>
+  <p>{{ pub.abstract }}</p>
+  <h1>Methodology:</h1> 
+  <hr>
+  <p>{{ pub.methodology }}</p>
+  <h1>Acknowledgements :</h1> 
+  <hr>
+  <p>{{ pub.acknowledgements }}</p>
+</div>
+
+{% include footer.html %}

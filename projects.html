@@ -9,6 +9,7 @@ layout: default
     <h1 class="header-projects">Projects</h1>
 
     <div class="search-wrapper-new">
+      <i class="search-icon fas fa-search"></i>
       <input type="search-input" id="search" placeholder="Filter">
     </div>
   </div>
@@ -18,16 +19,10 @@ layout: default
   <hr>
   <div class="projects-wrapper">
     {% for projects in site.data.projects %}
-    <div class="projects-block" id="{{projects.link}}">
-      <img src="../{{/projects.image}}"/>
+    <div class="projects-block" id="{{projects.link}}" data-href="../{{projects.origin}}" data-tags="{{ projects.tags | join: ',' }}">
+      <img src="{{projects.image}}"/>
       <div class="text">
-        <a href="#" class="open-popup"><h1>{{projects.title}}</h1></a>
-        <div class="popup-overlay" id="popup">
-          <div class="popup-content">
-            <p>{{projects.content}}</p>
-            <a href="#" class="close-popup">Close</a>
-          </div>
-        </div>
+        <h1>{{projects.title}}</h1>
         <p>{{projects.description}}</p>
         <p class="tag">{{projects.tag}}</p>
 
@@ -42,47 +37,37 @@ layout: default
 
 <!-- edit it later-->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const openButtons = document.querySelectorAll(".open-popup");
-    const closeButtons = document.querySelectorAll(".close-popup");
-
-    openButtons.forEach(button => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
-        const popup = button.closest(".projects-block").querySelector(".popup-overlay");
-        popup.style.display = "flex";
-      });
-    });
-
-    closeButtons.forEach(button => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
-        const popup = button.closest(".popup-overlay");
-        popup.style.display = "none";
-      });
-    });
+document.querySelectorAll('.projects-block').forEach(el => {
+  el.addEventListener('click', () => {
+    const url = el.dataset.href;
+    if (url) window.location.href = url;
   });
+});
 </script>
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const input = document.getElementById("search");
-    const blocks = document.querySelectorAll(".projects-block");
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("search");
+  const wrappers = document.querySelectorAll(".projects-block");
 
-    input.addEventListener("input", function () {
-      const query = input.value.trim().toLowerCase();
+  input.addEventListener("input", function () {
+    const query = input.value.trim().toLowerCase();
 
-      blocks.forEach(block => {
-        const titleElement = block.querySelector("h1");
-        const title = titleElement?.textContent.toLowerCase() || "";
+    wrappers.forEach(wrapper => {
+      const title = wrapper.querySelector("h1")?.textContent.toLowerCase() || "";
+      const tagText = wrapper.querySelector(".tag")?.textContent.toLowerCase() || "";
 
-        const shouldShow = query === "" || title.includes(query);
-        block.style.display = shouldShow ? "flex" : "none";
-      });
+      const titleMatch = title.includes(query);
+      const tagMatch = tagText.includes(query);
+
+      const shouldShow = query === "" || titleMatch || tagMatch;
+      wrapper.style.display = shouldShow ? "" : "none"; // "" restores original CSS
     });
   });
+});
 </script>
+
 
 
 

@@ -1,0 +1,52 @@
+.publication-page
+  position: relative
+  padding: 5vh
+  background: $secondary
+  display: flex
+  flex-direction: column
+  align-items: center
+  .header
+    margin-top: 18vh
+    margin-bottom: 2vh
+    color: $primary
+    text-align: center
+    @media screen and (max-width: 600px)
+      margin-top: 12vh
+  h1
+    margin-top: 2vh
+    margin-bottom: 2vh
+    color: $primary
+    text-align: center
+    font-size: clamp(1.25rem, 3vw, 1.75rem)
+  p
+    color: $primary
+    width: 60%
+    white-space: normal
+    word-wrap: break-word
+    overflow-wrap: break-word
+  a
+    display: inline-block
+    color: $highliting
+    will-change: transform
+    transition: transform 0.3s ease
+    &:hover
+      transform: scale(1.1)
+  hr
+    border: none // removes default border
+    height: 1px // sets thickness
+    background-color: $background // uses your theme color
+    margin: 2px 0 // adds spacing above and below
+    width: 100% // ensures it stretches across the container
+  img
+    object-fit: cover
+    aspect-ratio: 16/9  
+    width: 60%      
+    height: auto
+    filter: grayscale(40%)
+
+   
+
+
+        
+          
+        
