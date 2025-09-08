@@ -63,7 +63,7 @@
   date: "18.07.2025"
 
 - title: At Gaudi's city
-  image: assets/img/news/Barcelona_pedrera.png
+  image: ../assets/img/news/Barcelona_pedrera.png
   description: |
    I am in Gaudi's beautiful city of Barcelona!
     @ the Living Machines Conference 2015, presenting my work on
