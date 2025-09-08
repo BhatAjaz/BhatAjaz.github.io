@@ -1,14 +1,16 @@
 #IMPORTANT
 #when you change a slide change the data in the assets/img/peopl
-- title: News1
-  image: https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg
+- title: At Gaudi's city
+  image: assets/img/news/Barcelona_pedrera.jpg
   description: |
-    text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
-  link: somelink
+   I am in Gaudi's beautiful city of Barcelona!
+    @ the Living Machines Conference 2015, presenting my work on
+    How  iCub  Learns  to  Imitate  Use  of  a  Tool  by  Recycling  the  Past Knowledge Learnt During Drawing. 
+  link: Link to article is here http://dx.doi.org/10.1007/978-3-319-22979-9_33
   number: "1"
   source: source1
-  authors: author1
-  date: "18.07.2025"
+  authors: AB
+  date: "24.07.2015"
 
 - title: News2
   image: https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg
