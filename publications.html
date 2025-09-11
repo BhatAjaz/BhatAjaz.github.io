@@ -1,154 +1,78 @@
 ---
-layout: default 
+layout: default
 ---
 
 {% include nav.html %}
 <!-- first container -->
 <div class="container-publications">
-  <did class="tag-header">
-    <div class="header-and-search">
-      <h1 class="header">Publications</h1>
+  <div class="tag-header">
+    {% include header-with-search.html title="Publications"
+    search_wrapper_class="search-wrapper" %}
+  </div>
+  {% assign all_tags = "" | split: "" %} {% for publication_file in
+  site.data.publications %} {% assign all_tags = all_tags | concat:
+  publication_file[1].tags %} {% endfor %} {% assign unique_tags = all_tags |
+  uniq | sort %}
 
-      <div class="search-wrapper">
-        <i class="search-icon fas fa-search"></i>
-        <input type="search-input" id="search" placeholder="Filter">
-      </div>
-    </div>
-    {% assign all_tags = "" | split: "" %}
-    {% for pub in site.data.publications %}
-      {% assign all_tags = all_tags | concat: pub.tags %}
+  <!-- Hide "All tags" section for now -->
+  <!--
+  <p>All tags:</p>
+  <div class="tag-holder">
+    {% for tag in unique_tags %}
+    <div class="tag" data-tag="{{ tag | downcase }}"><p>{{ tag }}</p></div>
     {% endfor %}
-    {% assign unique_tags = all_tags | uniq | sort %}
+  </div>
+  -->
 
-    <p>All tags:</p>
-    <div class="tag-holder">
-      {% for tag in unique_tags %}
-        <div class="tag"><p>{{ tag }}</p></div>
-      {% endfor %}
-</div>
-   
-  </did>
-  
-  <hr>
-  <div class="publications-content-wrapper" >
-    {% assign publications_with_numbers = "" | split: "" %}
-{% for pub in site.data.publications %}
-  {% assign pub_number = pub.number | plus: 0 %}
-  {% assign new_pub = pub | merge: { "number": pub_number } %}
-  {% assign publications_with_numbers = publications_with_numbers | push: new_pub %}
-{% endfor %}
-
-{% assign sorted_publications = publications_with_numbers | sort: "number" | reverse %}
-
-    {% for publication in sorted_publications %}
-      <div class="publication" data-tags="{{ publication.tags | join: ',' }}">
-        <div class="publication-wrapper" id="{{ publication.reference | remove: '#' }}" data-href="../{{publication.origin}}">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>{{publication.number}}</h1>
+  <hr />
+  <div class="publications-content-wrapper">
+    {% assign all_publications = "" | split: "" %} {% for publication_file in
+    site.data.publications %} {% assign all_publications = all_publications |
+    push: publication_file[1] %} {% endfor %} {% assign sorted_publications =
+    all_publications | sort: "year" | reverse %} {% for publication in
+    sorted_publications %}
+    <div class="publication" data-tags="{{ publication.tags | join: ',' }}">
+      <div
+        class="publication-wrapper"
+        id="{{ publication.pub_id }}"
+        data-href="/publication/{{publication.pub_id}}/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>{{publication.year}}</h1>
             <a href="{{publication.link}}">URL</a>
             {% if publication.tags %}
             <div class="tag-wrapper">
-              {% for tag in publication.tags %}
-                <div class="tag"><p>{{ tag }}</p></div>
-              {% endfor %}
+              {% assign limited_tags = publication.tags | slice: 0, 2 %} {% for
+              tag in limited_tags %}
+              <div class="tag" data-tag="{{ tag | downcase }}">
+                <p>{{ tag }}</p>
+              </div>
+              {% endfor %} {% if publication.tags.size > 2 %}
+              <div class="tag more-tags">
+                <p>+{{ publication.tags.size | minus: 2 }} more</p>
+              </div>
+              {% endif %}
             </div>
             {% endif %}
-            
-            </div>
-            <div class="information">
-              
-              <h1>{{publication.title}}</h1>
-              <p>{{publication.authors}}</p>
-              <p class="journal">{{publication.journal}}</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="{{publication.image}}" />
+          <div class="information">
+            <h1>{{publication.title}}</h1>
+            <p>{{publication.authors}}</p>
+            <p class="journal">{{publication.journal}}</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="{{publication.image}}" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     {% endfor %}
-  </div>    
+  </div>
 </div>
- 
-{% include footer.html %}
 
-<!-- for tag colors -->
-<script>
-  // Generate a consistent HSL color from a string
-  function stringToColor(str) {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      hash = str.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    return `hsl(${hash % 360}, 70%, 70%)`;
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Collect all tag elements across the page
-    const allTagElements = document.querySelectorAll(".tag-holder .tag, .tag-wrapper .tag");
-
-    // Map to store tag name → color
-    const tagColorMap = {};
-
-    // First pass: assign colors and store them
-    allTagElements.forEach(tagEl => {
-      const tagText = tagEl.textContent.trim();
-      if (!tagColorMap[tagText]) {
-        tagColorMap[tagText] = stringToColor(tagText);
-      }
-    });
-
-    // Second pass: apply colors consistently
-    allTagElements.forEach(tagEl => {
-      const tagText = tagEl.textContent.trim();
-      const color = tagColorMap[tagText];
-      tagEl.style.backgroundColor = color;
-      tagEl.style.color = "#fff";
-    });
-  });
-</script>
-
-
-<!-- for clickability of publication wrapper-->
-<script>
-
-document.querySelectorAll('.publication-wrapper').forEach(el => {
-  el.addEventListener('click', () => {
-    const url = el.dataset.href;
-    if (url) window.location.href = url;
-  });
-});
-
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("search");
-  const publications = document.querySelectorAll(".publication");
-
-  input.addEventListener("input", function () {
-    const query = input.value.trim().toLowerCase();
-
-    publications.forEach(pub => {
-      const wrapper = pub.querySelector(".publication-wrapper");
-      const hr = pub.querySelector("hr");
-      const title = wrapper.querySelector(".information h1")?.textContent.toLowerCase() || "";
-      const tags = pub.dataset.tags?.toLowerCase().split(",") || [];
-
-      const titleMatch = title.includes(query);
-      const tagMatch = tags.some(tag => tag.includes(query));
-
-      const shouldShow = query === "" || titleMatch || tagMatch;
-
-      wrapper.style.display = shouldShow ? "flex" : "none";
-      if (hr) hr.style.display = shouldShow ? "block" : "none";
-    });
-  });
-});
-</script>
-
+{% include footer.html %} {% include clickable-content.html
+selector='.publication-wrapper' %} {% include filter-scripts.html
+input_id="search" items_selector=".publication" title_selector=".information h1"
+tag_attribute="tags" hide_method="flex" also_hide_selector="hr" %}

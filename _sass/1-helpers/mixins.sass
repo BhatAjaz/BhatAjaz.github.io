@@ -1,0 +1,146 @@
+// ===========================
+// REUSABLE MIXINS
+// ===========================
+
+// Common header styles for all containers
+@mixin container-header($text-align: center)
+  margin-top: 12vh
+  position: relative
+  color: $primary
+  text-align: $text-align
+  
+  @media screen and (max-width: 600px)
+    margin-top: 8vh
+
+// Common hover scale effect
+@mixin hover-scale($scale: 1.05)
+  transform-origin: center
+  will-change: transform
+  transition: transform 0.3s ease
+  
+  &:hover
+    transform: scale($scale)
+
+// Common page layout styles
+@mixin page-layout
+  position: relative
+  padding: 5vh
+  background: $secondary
+  display: flex
+  flex-direction: column
+  align-items: center
+  
+  .header
+    margin-bottom: 2vh
+    @include container-header
+  
+  h1
+    margin-top: 2vh
+    margin-bottom: 2vh
+    color: $primary
+    text-align: center
+    font-size: clamp(1.25rem, 3vw, 1.75rem)
+  
+  p
+    color: $primary
+    width: 60%
+    white-space: normal
+    word-wrap: break-word
+    overflow-wrap: break-word
+  
+  a
+    display: inline-block
+    color: $link
+    @include hover-scale(1.1)
+  
+  hr
+    border: none
+    height: calc($radius-sm / 4)
+    background-color: $background
+    margin: $radius-sm 0
+    width: 100%
+  
+  img
+    object-fit: cover
+    aspect-ratio: 16/9
+    width: 60%
+    height: auto
+    filter: grayscale(40%)
+
+// Common search input styles
+@mixin search-input
+  width: 100%
+  height: 30px
+  font-size: 1rem
+  padding: 0 1rem
+  border: none
+  border-radius: $radius-md
+  background-color: $background
+  box-shadow: $shadow-sm
+  transition: box-shadow 0.2s ease
+  
+  &:focus
+    outline: none
+    box-shadow: 0 0 0 3px rgba($primary, 0.3)
+
+// Common content box styles
+@mixin content-box
+  position: relative
+  padding: $element-spacing clamp(1rem, 3vw, 1.25rem) calc($element-spacing * 0.67) clamp(1rem, 3vw, 1.25rem)
+  display: flex
+  flex-direction: column
+  border: 1px solid rgba($primary, 0.1)
+  border-radius: $radius-md
+  box-shadow: $shadow-md
+  overflow: hidden
+  background: $background
+  @include hover-scale
+
+// Common scroller gradient masks  
+@mixin scroller-gradient
+  &::before, &::after
+    content: ""
+    position: absolute
+    top: 0
+    width: clamp(3rem, 8vw, 4rem)
+    height: 100%
+    pointer-events: none
+    z-index: 2
+  
+  &::before
+    left: 0
+    background: linear-gradient(to right, $secondary 0%, transparent 100%)
+  
+  &::after
+    right: 0
+    background: linear-gradient(to left, $secondary 0%, transparent 100%)
+
+// Common list styling for blog posts and content
+@mixin styled-list($style: "bulleted")
+  margin: 1.5rem 0
+  padding-left: 2rem
+  
+  li
+    margin-bottom: 0.75rem
+    line-height: 1.6
+    color: $primary
+    
+    strong
+      color: $primary
+      font-weight: 600
+
+// Common blog section styling
+@mixin blog-section
+  margin: 2rem 0
+  padding: 1.5rem
+  
+  h2, h3
+    color: $primary
+    margin-bottom: 1rem
+    
+  .section-content
+    color: $primary
+    line-height: 1.7
+    
+    p
+      margin-bottom: 1rem

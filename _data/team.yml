@@ -1,23 +1,90 @@
 #IMPORTANT
-#when you change a slide change the data in the assets/img/people folder
-positions:
-  - title: Position 2
-    members:
-      - name: Person 2
-        information: text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
-        email: person2@example.com
-        image: assets/img/team/person0.png
-      - name: Person 3
-        information: text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
-        email: person3@example.com
-        image: assets/img/team/person0.png
+#Team structure organized by academic positions
+#Each member has their own HTML file in /team/ directory
 
-  - title: Position 3
-    members:
-      - name: Person 4
-        information: text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.
-        email: person4@example.com
-        image: assets/img/team/person0.png
+principal_investigator:
+  - name: "Dr. Ajaz Ahmad Bhat"
+    role: "Principal Investigator & Assistant Professor"
+    member_id: "Ajaz-Ahmad-Bhat"
+    image: "assets/img/team/person1.jpg"
+    email: "ajaz.bhat@ubd.edu.bn"
+    bio: "Dr. Ajaz Ahmad Bhat leads research in cognitive robotics, AI, and brain-inspired computing systems. His work focuses on developing intelligent robots that can learn, reason, and adapt like biological systems."
+    interests: ["Cognitive Robotics", "Artificial Intelligence", "Machine Learning", "Neural Networks"]
 
+#research_scientists_postdocs:
+#  - name: "Dr. Alice Newton"
+#    role: "Postdoctoral Researcher"
+#    member_id: "Alice-Newton"
+#    image: "assets/img/team/person0.png"
+#    email: "alice.newton@ubd.edu.bn"
+#    bio: "Alice is a postdoc in computer science researching AI and robotics applications in healthcare and manufacturing."
+#    interests: ["Artificial Intelligence", "Robotics", "Machine Learning"]
 
+postgraduate_students:
+  - name: "Haji Gul"
+    role: "PhD Student"
+    member_id: "Haji-Gul"
+    image: "assets/img/team/person0.png"
+    email: "haji.gul@ubd.edu.bn"
+    bio: "Haji is pursuing research in knowledge graph completion and natural language processing."
+    interests: ["Knowledge Graphs", "NLP", "Machine Learning"]
 
+  - name: "Udaya Wijesena"
+    role: "PhD Student"
+    member_id: "Udaya-Wijesena"
+    image: "assets/img/team/person0.png"
+    email: "Udaya-Wijesena@ubd.edu.bn"
+    bio: "Amirah is pursuing research in machine learning applciations to finance and stock price prediction."
+    interests: ["Finance", "Time-Series", "Multi-agent Systems"]
+
+  
+  - name: "Amirah Hamid"
+    role: "PhD Student"
+    member_id: "Amirah-Hamid"
+    image: "assets/img/team/person0.png"
+    email: "Amirah-Hamid@ubd.edu.bn"
+    bio: "Amirah is pursuing research in machine learning applciations to Alzheimers disease and brain MRIs."
+    interests: ["Alzheimers", "MRIs", "Machine Learning"]
+  
+  - name: "Taha Bhatti"
+    role: "Masters Student"
+    member_id: "Taha-Bhatti"
+    image: "assets/img/team/person0.png"
+    email: "Taha-Bhatti@ubd.edu.bn"
+    bio: "Taha is working on ML models for longitudinal behavior modeling and virtue ethics."
+    interests: ["Behavior Bodeling", "Virtue Ethics", "LLMs"]
+
+  - name: "Azryl Sarih"
+    role: "Masters Student"
+    member_id: "Azryl-Sarih"
+    image: "assets/img/team/person0.png"
+    email: "Azryl-Sarih@ubd.edu.bn"
+    bio: "Azrly is working on desgin and analysis of growing (or self-expanding) neural networks."
+    interests: ["Neural Networks", "SENNs", "Network Expansion"]
+
+#bachelor_students:
+#  - name: "Michael Chen"
+#    role: "Bachelor Student"
+#    member_id: "Michael-Chen"
+#    image: "assets/img/team/person0.png"
+#    email: "michael.chen@ubd.edu.bn"
+#    bio: "Michael is working on his final year project in machine learning for autonomous systems."
+#    interests: ["Machine Learning", "Autonomous Systems", "Programming"]
+
+#alumni:
+#  - name: "Dr. Emma Wilson"
+#    role: "Former Bachelor (Now at MIT)"
+#    member_id: "Emma-Wilson"
+#    image: "assets/img/team/person0.png"
+#    email: "emma.wilson@mit.edu"
+#    bio: "Emma completed her postdoc work on neural-symbolic learning and is now a research scientist at MIT."
+#    interests: ["Neural-Symbolic Learning", "Cognitive Science", "AI Safety"]
+
+other_collaborators:
+  - name: "Dr Larissa Samuelson"
+    role: "Collaborating Professor"
+    member_id: "Dr-Larissa-Samuelson"
+    image: "assets/img/team/person0.png"
+    email: "Larissa-Samuelson@stanford.edu"
+    bio: "Prof. Martinez collaborates on projects related to developmental psychology and word learning."
+    interests: ["Developmental Psychology", "Language", "Cognitive Development"]

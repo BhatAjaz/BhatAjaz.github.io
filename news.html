@@ -3,33 +3,56 @@ layout: default
 ---
 
 {% include nav.html %}
-<!-- first container -->
+<!-- News page with Jekyll blog posts -->
 <div class="container-news-original">
-  <div class="header-wrapper">
-    <h1 class="header">News</h1>
-    <hr style="margin: 1rem 0;">
-  </div>
-  <div class="news-content-wrapper" >
-    {% for post in site.data.news %}
-      <div class="post" >
-        <div class="post-wrapper" >
+  {% include page-header.html title="News & Updates" show_hr=true hr_style="margin: 1rem 0;" %}
+  <div class="news-content-wrapper">
+    {% assign pinned_posts = site.posts | where: "pinned", true %}
+    {% assign regular_posts = site.posts | where_exp: "item", "item.pinned != true" %}
+    {% for post in pinned_posts %}
+      <div class="post" data-href="{{ post.url }}">
+        <div class="post-wrapper">
           <div class="text-wrapper">
             <div class="number-and-url">
-            <h1>{{post.number}}</h1>
-            <a href="{{post.link}}">URL</a>
-            
+              <h1>{{ post.date | date: "%b %d, %Y" }}</h1>
+              <a href="{{ post.url }}">Read More</a>
             </div>
             <div class="information">
-              <h1>{{post.title}}</h1>
-              <p>{{post.authors}}</p>
-              <p class="journal">{{post.source}}</p>
+              <h1>📌 {{ post.title }}</h1>
+              <p>{{ post.authors }}</p>
+              <p class="journal">{{ post.source }}</p>
+              <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
             </div>
           </div>
           <div class="image-box">
-            <img src="{{post.image}}" />
+            {% if post.featured_image %}
+            <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+            {% endif %}
           </div>
-
-          
+        </div>
+        <hr style="margin: 1rem 0;">
+      </div>
+    {% endfor %}
+    {% for post in regular_posts %}
+      <div class="post" data-href="{{ post.url }}">
+        <div class="post-wrapper">
+          <div class="text-wrapper">
+            <div class="number-and-url">
+              <h1>{{ post.date | date: "%b %d, %Y" }}</h1>
+              <a href="{{ post.url }}">Read More</a>
+            </div>
+            <div class="information">
+              <h1>{{ post.title }}</h1>
+              <p>{{ post.authors }}</p>
+              <p class="journal">{{ post.source }}</p>
+              <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
+            </div>
+          </div>
+          <div class="image-box">
+            {% if post.featured_image %}
+            <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+            {% endif %}
+          </div>
         </div>
         <hr style="margin: 1rem 0;">
       </div>
@@ -37,7 +60,18 @@ layout: default
   </div>     
 </div>
 
- 
 {% include footer.html %}
 
-
+<script>
+// Make news posts clickable
+document.querySelectorAll('.post[data-href]').forEach(el => {
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', (e) => {
+    // Don't trigger if clicking on a link
+    if (e.target.tagName !== 'A') {
+      const url = el.dataset.href;
+      if (url) window.location.href = url;
+    }
+  });
+});
+</script>

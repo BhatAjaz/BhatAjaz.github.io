@@ -1,0 +1,46 @@
+proj_id: "word-learning-experiments"
+title: "Word Learning Experiments Across Ages"
+status: "completed"
+start_date: "2018-06-01"
+tags: ["word-learning", "developmental-psychology", "attention-patterns"]
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+link: "some-page-7"
+
+# Content sections
+overview: "This experimental study examined how children's attention patterns differ from adults during word learning tasks. The research revealed significant differences in attention mechanisms across age groups, challenging standard testing methodologies and supporting new computational models of language acquisition."
+
+objectives:
+  - "Investigate attention pattern differences between children and adults"
+  - "Challenge and improve standard word learning assessment methods"
+  - "Develop age-appropriate testing protocols for language development"
+  - "Inform computational models with empirical attention data"
+
+methodology: "We conducted controlled experiments using eye-tracking technology to measure attention patterns during word learning tasks across different age groups. The study employed novel experimental paradigms designed to capture natural learning behaviors and used statistical analysis to identify developmental differences in attention allocation."
+
+results: "Discovered significant developmental differences in attention deployment during word learning, with children showing more distributed attention compared to adult focused attention. These findings led to revised testing protocols and informed new theoretical models of language development. Results were replicated across multiple developmental laboratories."
+
+impact: "This research has influenced both educational assessment practices and computational modeling of language development. The findings have implications for early childhood education and the design of age-appropriate learning technologies."
+
+# Academic metadata
+funding:
+  - source: "Educational Research Council"
+    amount: "BND $35,000"
+    duration: "2018-2021"
+
+collaborators:
+  - name: "Dr. Michael Frank"
+    institution: "Stanford University"
+  - name: "Dr. Elika Bergelson"
+    institution: "Duke University"
+
+publications:
+  - title: "Developmental Differences in Word Learning Attention"
+    authors: "A.A. Bhat, M. Frank, E. Bergelson"
+    year: "2021"
+    journal: "Child Development"
+    link: "https://example.com/paper13"
+  - title: "Age-Related Changes in Language Learning Mechanisms"
+    authors: "A.A. Bhat, E. Bergelson"
+    year: "2020"
+    journal: "Developmental Psychology"
+    link: "https://example.com/paper14"

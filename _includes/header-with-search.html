@@ -1,0 +1,5 @@
+<!-- Header with Search Component -->
+<div class="{{ include.wrapper_class | default: 'header-and-search' }}">
+  <h1 class="{{ include.header_class | default: 'header' }}">{{ include.title }}</h1>
+  {% include search-input.html wrapper_class=include.search_wrapper_class input_id=include.search_id placeholder=include.search_placeholder %}
+</div>

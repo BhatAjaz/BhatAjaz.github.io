@@ -1,0 +1,48 @@
+<!-- Consolidated Filter Scripts -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("{{ include.input_id | default: 'search' }}");
+  const items = document.querySelectorAll("{{ include.items_selector }}");
+
+  if (!input || !items.length) return;
+
+  input.addEventListener("input", function () {
+    const query = input.value.trim().toLowerCase();
+
+    items.forEach(item => {
+      let shouldShow = query === "";
+      
+      // Check title match if selector provided
+      {% if include.title_selector %}
+      const title = item.querySelector("{{ include.title_selector }}")?.textContent.toLowerCase() || "";
+      if (title.includes(query)) shouldShow = true;
+      {% endif %}
+      
+      // Check tag match if attribute provided
+      {% if include.tag_attribute %}
+      const tags = item.dataset.{{ include.tag_attribute }}?.toLowerCase().split(",") || [];
+      if (tags.some(tag => tag.includes(query))) shouldShow = true;
+      {% endif %}
+      
+      // Check tag text if tag selector provided
+      {% if include.tag_text_selector %}
+      const tagText = item.querySelector("{{ include.tag_text_selector }}")?.textContent.toLowerCase() || "";
+      if (tagText.includes(query)) shouldShow = true;
+      {% endif %}
+
+      // Apply visibility
+      {% if include.hide_method == 'flex' %}
+      item.style.display = shouldShow ? "flex" : "none";
+      {% else %}
+      item.style.display = shouldShow ? "" : "none";
+      {% endif %}
+      
+      // Hide additional elements if specified
+      {% if include.also_hide_selector %}
+      const additionalElement = item.querySelector("{{ include.also_hide_selector }}");
+      if (additionalElement) additionalElement.style.display = shouldShow ? "block" : "none";
+      {% endif %}
+    });
+  });
+});
+</script>

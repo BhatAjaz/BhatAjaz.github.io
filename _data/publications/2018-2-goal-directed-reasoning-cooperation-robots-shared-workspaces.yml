@@ -1,0 +1,11 @@
+title: "Goal-Directed Reasoning and Cooperation in Robots in Shared Workspaces: An Internal Simulation-Based Neural Framework"
+pub_id: "2018-2-goal-directed-reasoning-cooperation-robots-shared-workspaces"
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+authors: "Bhat A. A. & Mohan V."
+journal: "Cognitive Computation"
+year: 2018
+link: "https://doi.org/10.1007/s12559-018-9553-1"
+video: ""
+tags: ["planning","simulation","cooperation","robotics","cognitive"]
+abstract: "In an industrial assembly task, two robots share workspace to assemble fuse-boxes. We describe coupled forward models of body and peripersonal space learned via exploration. Internal simulation evaluates action-consequence pairs, driving cooperative sequences even when solo goals are unachievable."
+methodology: "Each robot's body schema and peripersonal space are learned via self-organized map clustering. During run-time, action candidates are simulated in the forward model, scored by task reward. A shared planner sequences individual goals into cooperative behaviors."

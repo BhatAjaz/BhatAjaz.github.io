@@ -1,0 +1,34 @@
+<!-- Reusable research highlights component -->
+{% comment %}
+Usage: {% include research-highlights.html 
+           highlights=page.key_findings 
+           style="numbered|bulleted" %}
+{% endcomment %}
+
+<div class="research-highlights">
+  <h3>{{ include.title | default: "Key Highlights" }}</h3>
+  
+  {% assign style = include.style | default: "bulleted" %}
+  
+  {% if style == "numbered" %}
+    <ol class="highlights-list numbered">
+  {% else %}
+    <ul class="highlights-list bulleted">
+  {% endif %}
+  
+  {% for highlight in include.highlights %}
+    <li class="highlight-item">
+      {% if highlight.title %}
+        <strong>{{ highlight.title }}</strong>: {{ highlight.description }}
+      {% else %}
+        {{ highlight }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  
+  {% if style == "numbered" %}
+    </ol>
+  {% else %}
+    </ul>
+  {% endif %}
+</div>

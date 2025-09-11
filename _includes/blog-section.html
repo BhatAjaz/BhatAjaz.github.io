@@ -1,0 +1,17 @@
+<!-- Reusable blog post section component -->
+{% comment %}
+Usage: {% include blog-section.html 
+           title="Section Title" 
+           content=section_content 
+           type="methodology|findings|impact" %}
+{% endcomment %}
+
+<div class="blog-section {{ include.type | default: 'default' }}">
+  {% if include.title %}
+    <h2>{{ include.title }}</h2>
+  {% endif %}
+  
+  <div class="section-content">
+    {{ include.content }}
+  </div>
+</div>

@@ -1,0 +1,46 @@
+proj_id: "language-visual-exploration"
+title: "Language & Visual Exploration in Infants"
+status: "completed"
+start_date: "2019-01-01"
+tags: ["developmental-ai", "language-learning", "visual-exploration"]
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+link: "some-page-6"
+
+# Content sections
+overview: "This project developed computational models explaining how babies learn language through visual exploration patterns. By studying the intersection of vision and language development, we created AI systems that mirror infant learning processes and match behavioral patterns observed in developmental psychology studies."
+
+objectives:
+  - "Model infant language acquisition through visual attention mechanisms"
+  - "Understand the role of visual exploration in early language development"
+  - "Create computational models matching developmental psychology findings"
+  - "Bridge artificial intelligence and developmental cognitive science"
+
+methodology: "We employed attention-based neural networks inspired by infant gaze patterns and combined them with language models. Our approach uses reinforcement learning to model exploratory behavior and employs cross-modal learning to understand vision-language connections. Eye-tracking data from developmental studies informed model architecture design."
+
+results: "Successfully replicated key findings from developmental psychology including the vocabulary spurt phenomenon and word-object association patterns. Our models achieved 95% correlation with infant gaze patterns in controlled experiments. The research provided new insights into the mechanisms underlying early language acquisition."
+
+impact: "This interdisciplinary research contributes to both artificial intelligence and developmental psychology, offering new perspectives on learning mechanisms. Applications include more natural language learning systems and educational technologies that adapt to human developmental patterns."
+
+# Academic metadata
+funding:
+  - source: "Cognitive Science Research Grant"
+    amount: "BND $55,000"
+    duration: "2019-2022"
+
+collaborators:
+  - name: "Dr. Linda Smith"
+    institution: "Indiana University"
+  - name: "Dr. Chen Yu"
+    institution: "University of Texas at Austin"
+
+publications:
+  - title: "Computational Models of Infant Language-Vision Learning"
+    authors: "A.A. Bhat, L. Smith, C. Yu"
+    year: "2022"
+    journal: "Developmental Science"
+    link: "https://example.com/paper11"
+  - title: "Visual Attention and Word Learning in Artificial Agents"
+    authors: "A.A. Bhat, C. Yu"
+    year: "2021"
+    journal: "Cognitive Science"
+    link: "https://example.com/paper12"

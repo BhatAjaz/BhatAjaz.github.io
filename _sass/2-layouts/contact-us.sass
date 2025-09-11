@@ -1,3 +1,5 @@
+@use "sass:color"
+
 .container-contact-us
   width: 100%
   overflow: hidden
@@ -129,7 +131,7 @@
               padding-bottom: 20px
             p
               padding-top: 20px
-              color: darken($black, 40%)
+              color: color.scale($black, $lightness: -40%)
               line-height: 1.2em
               white-space: normal
               word-break: break-word
@@ -218,18 +220,18 @@
         svg#Layer_1
           height: 5vh
           width: 5vh
-          --scholar-blue: #{adjust-color($primary, $lightness: -15%)}
-          --scholar-dark-blue: #{adjust-color($primary, $lightness: -25%)}
+          --scholar-blue: #{color.adjust($primary, $lightness: -15%)}
+          --scholar-dark-blue: #{color.adjust($primary, $lightness: -25%)}
           --scholar-light-blue: #{$primary}
-          --scholar-mid-blue: #{adjust-color($primary, $lightness: -5%)}
+          --scholar-mid-blue: #{color.adjust($primary, $lightness: -5%)}
         svg#Layer_2
           transform: scale(2)
           height: 5vh
           width: 5vh
-          --gmail-shade-1: #{adjust-color($primary, $lightness: -20%)}
-          --gmail-shade-2: #{adjust-color($primary, $lightness: -15%)}
-          --gmail-shade-3: #{adjust-color($primary, $lightness: -10%)}
-          --gmail-shade-4: #{adjust-color($primary, $lightness: -5%)}
+          --gmail-shade-1: #{color.adjust($primary, $lightness: -20%)}
+          --gmail-shade-2: #{color.adjust($primary, $lightness: -15%)}
+          --gmail-shade-3: #{color.adjust($primary, $lightness: -10%)}
+          --gmail-shade-4: #{color.adjust($primary, $lightness: -5%)}
           --gmail-shade-5: #{$primary}
         svg#Layer_3 
           height: 5vh
@@ -255,7 +257,7 @@
       padding: 20px 
       border-radius: 10px
       box-shadow: 0 4px 12px rgba($primary, 0.2)
-      background: adjust-color($secondary, $lightness: 25%)
+      background: color.adjust($secondary, $lightness: 25%)
       will-change: transform
       transition: transform 0.3s ease
       @media screen and (max-width: 1200px)
@@ -280,13 +282,13 @@
         outline: none
         box-shadow: 0 4px 12px rgba(0,0, 0, 0.6)
       button
-        arsplay: bloCK
+        display: block
         width: 100%
         padding: 10px 
         border: none
         border-radius: 1vh
         box-shadow: 0 4px 12px rgba(0,0, 0, 0.6)
-        background-color: lighten($black, 90%)
+        background-color: color.scale($black, $lightness: 90%)
         color: $black
         cursor: pointer
         will-change: transform
@@ -315,7 +317,7 @@
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  background-color: lighten($black, 40%)
+  background-color: color.scale($black, $lightness: 40%)
   color: $black
   padding: 1rem 1.5rem
   border-radius: 8px

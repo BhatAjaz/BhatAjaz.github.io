@@ -1,0 +1,11 @@
+title: "Muscle-less motor synergies and actions without movements. From motor neuroscience to cognitive robotics"
+pub_id: "2018-4-muscle-less-motor-synergies-cognitive-robotics"
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+authors: "Mohan V., Bhat A. A., & Morasso P."
+journal: "Physics of Life Reviews"
+year: 2018
+link: "https://doi.org/10.1016/j.plrev.2018.04.005"
+video: ""
+tags: ["motor-control","cognitive","robotics","body-schema","action","simulation","PMP"]
+abstract: "Emerging trends in neurosciences provide converging evidence that cortical networks in predominantly motor areas are activated in multiple contexts related to \"action\" that do not cause overt movement. For complex bodies—human or embodied robots—there must be a seamless alternation between shaping motor output during action execution and simulating potential actions for feasibility and understanding. Revisiting the Equilibrium Point Hypothesis and muscle‐synergy formation, this article proposes a \"plastic, configurable\" internal body‐schema as a unifying principle enabling both real and imagined actions through internal simulation. The theoretical rationale is grounded in intracranial recordings, fMRI studies of action execution/imagination, tool‐use experiments, and computational robot models to show how muscleless motor synergies arise from goal‐directed body‐schema animation."
+methodology: "This paper synthesizes interdisciplinary findings—neurophysiological recordings, fMRI, behavioural tool‐use studies, and robotics simulations—under a computational framework. The authors formalize an internal body‐schema model and Equilibrium Point Hypothesis to generate muscleless synergies. Computational experiments on simulated robotic limbs illustrate how body‐schema animation yields both overt and covert action trajectories without direct kinematic inversion. The approach integrates forward/inverse model comparisons, dimensionality reduction of synergy patterns, and tool‐incorporation case studies."

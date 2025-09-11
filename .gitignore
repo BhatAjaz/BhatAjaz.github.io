@@ -1,1 +1,11 @@
 Dockerfile.txt
+.DS_Store
+.jekyll-metadata
+.jekyll-cache/
+_site/
+.cache/
+*.tmp
+*.bak
+*~
+node_modules/
+.sass-cache/

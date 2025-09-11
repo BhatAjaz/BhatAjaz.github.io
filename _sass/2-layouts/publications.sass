@@ -1,3 +1,5 @@
+@use "sass:color"
+
 .container-publications
   position: relative
   padding: 5vh
@@ -32,6 +34,9 @@
       .tag
         margin: 2px
         overflow: hidden
+        display: inline-block
+        width: fit-content
+        border-radius: 4px
         p
           display: inline-block
           padding: 0.3vh 0.7vw
@@ -39,6 +44,48 @@
           font-size: clamp(0.5rem, 2vw, 0.85rem)
           white-space: nowrap
           margin: 0
+          
+        // Improved Tag Color System - More vibrant and visually appealing
+        &.tag-1, &[data-tag*="neural"], &[data-tag*="network"]
+          background-color: #ff4757  // Vibrant red
+        &.tag-2, &[data-tag*="learning"], &[data-tag*="machine"]
+          background-color: #2ed573  // Bright green
+        &.tag-3, &[data-tag*="cognitive"], &[data-tag*="robotics"]
+          background-color: #3742fa  // Electric blue
+        &.tag-4, &[data-tag*="motor"], &[data-tag*="control"]
+          background-color: #70a1ff  // Light blue
+        &.tag-5, &[data-tag*="causal"], &[data-tag*="causality"]
+          background-color: #ffa502  // Bright orange
+        &.tag-6, &[data-tag*="attention"], &[data-tag*="memory"]
+          background-color: #a4b0be  // Cool gray
+        &.tag-7, &[data-tag*="planning"], &[data-tag*="exploration"]
+          background-color: #ff6348  // Coral
+        &.tag-8, &[data-tag*="simulation"], &[data-tag*="model"]
+          background-color: #ff3838  // Bright red
+        &.tag-9, &[data-tag*="completion"], &[data-tag*="knowledge"]
+          background-color: #8c7ae6  // Purple
+        &.tag-10, &[data-tag*="imitation"], &[data-tag*="collaboration"]
+          background-color: #00d2d3  // Cyan
+        &.tag-11, &[data-tag*="word"], &[data-tag*="language"]
+          background-color: #ff9ff3  // Pink
+        &.tag-12, &[data-tag*="similarity"], &[data-tag*="spectral"]
+          background-color: #54a0ff  // Sky blue
+        &.tag-13, &[data-tag*="plasticity"], &[data-tag*="synapses"]
+          background-color: #ffdd59  // Golden yellow
+        &.tag-14, &[data-tag*="episodic"], &[data-tag*="tool"]
+          background-color: #5f27cd  // Deep purple
+        &.tag-15, &[data-tag*="variation"], &[data-tag*="complexity"]
+          background-color: #00d8d6  // Teal
+        &.tag-16, &[data-tag*="graph"], &[data-tag*="entity"]
+          background-color: #ff6b81  // Rose
+        &.tag-17, &[data-tag*="bert"], &[data-tag*="transformer"]
+          background-color: #7bed9f  // Mint green
+        &.tag-18, &[data-tag*="drug"], &[data-tag*="biomedical"]
+          background-color: #ff5722  // Deep orange
+        &.tag-19, &[data-tag*="context"], &[data-tag*="embedding"]
+          background-color: #9c88ff  // Lavender
+        &.tag-20, &[data-tag*="evaluation"], &[data-tag*="metric"]
+          background-color: #fbc531  // Sunny yellow
     .header-and-search
       position: relative
       display: flex
@@ -123,6 +170,8 @@
           width: 25%
           display: flex
           flex-direction: column
+          justify-content: space-between
+          min-height: 100%
           @media screen and (max-width: 600px)
             width: 20%
           h1
@@ -130,22 +179,26 @@
             color: $primary
           a
             font-size: clamp(0.75rem, 2vw, 1rem)
-            color: $highliting
+            color: $highlight
             font-weight: 500
             text-decoration: none
             transform-origin: center
             will-change: transform
             transition: transform 0.3s ease
+            margin-bottom: 1vh
             &:hover
               transform: scale(1.1)
           .tag-wrapper
-            padding-bottom: 2vh
-            position: absolute
+            margin-top: 1vh
             display: flex
             flex-direction: row
             flex-wrap: wrap
-            bottom: 0
             .tag
+              margin: 2px
+              overflow: hidden
+              display: inline-block
+              width: fit-content
+              border-radius: 4px
               p
                 display: inline-block
                 padding: 0.3vh 0.7vw
@@ -153,6 +206,68 @@
                 font-size: clamp(0.5rem, 2vw, 0.85rem)
                 white-space: nowrap
                 margin: 0
+                
+              // Updated Tag Color System - Comprehensive mapping for research tags
+              &.tag-1, &[data-tag*="neural-model"], &[data-tag*="network"]
+                background-color: #ff4757  // Vibrant red
+              &.tag-2, &[data-tag*="learning"], &[data-tag*="machine"]
+                background-color: #2ed573  // Bright green
+              &.tag-3, &[data-tag*="cognitive"], &[data-tag*="robotics"]
+                background-color: #3742fa  // Electric blue
+              &.tag-4, &[data-tag*="motor-control"], &[data-tag*="control"]
+                background-color: #70a1ff  // Light blue
+              &.tag-5, &[data-tag*="causal-learning"], &[data-tag*="causality"]
+                background-color: #ffa502  // Bright orange
+              &.tag-6, &[data-tag*="attention"], &[data-tag*="memory"]
+                background-color: #a4b0be  // Cool gray
+              &.tag-7, &[data-tag*="planning"], &[data-tag*="exploration"]
+                background-color: #ff6348  // Coral
+              &.tag-8, &[data-tag*="simulation"], &[data-tag*="model"]
+                background-color: #ff3838  // Bright red
+              &.tag-9, &[data-tag*="episodic-memory"], &[data-tag*="semantic-memory"]
+                background-color: #8c7ae6  // Purple
+              &.tag-10, &[data-tag*="imitation"], &[data-tag*="collaboration"]
+                background-color: #00d2d3  // Cyan
+              &.tag-11, &[data-tag*="word"], &[data-tag*="language"]
+                background-color: #ff9ff3  // Pink
+              &.tag-12, &[data-tag*="similarity"], &[data-tag*="variability"]
+                background-color: #54a0ff  // Sky blue
+              &.tag-13, &[data-tag*="plasticity"], &[data-tag*="synapses"]
+                background-color: #ffdd59  // Golden yellow
+              &.tag-14, &[data-tag*="tool-use"], &[data-tag*="affordance"]
+                background-color: #5f27cd  // Deep purple
+              &.tag-15, &[data-tag*="graph"], &[data-tag*="KGC"]
+                background-color: #ff6b81  // Rose
+              &.tag-16, &[data-tag*="bert"], &[data-tag*="transformer"]
+                background-color: #7bed9f  // Mint green
+              &.tag-17, &[data-tag*="biomedical"], &[data-tag*="drug"]
+                background-color: #ff5722  // Deep orange
+              &.tag-18, &[data-tag*="context"], &[data-tag*="embedding"]
+                background-color: #9c88ff  // Lavender
+              &.tag-19, &[data-tag*="evaluation"], &[data-tag*="metric"]
+                background-color: #fbc531  // Sunny yellow
+              &.tag-20, &[data-tag*="visual"], &[data-tag*="novelty"]
+                background-color: #00d8d6  // Teal
+              &.tag-21, &[data-tag*="developmental"], &[data-tag*="development"]
+                background-color: #e55039  // Red orange
+              &.tag-22, &[data-tag*="associative"], &[data-tag*="working-memory"]
+                background-color: #3c6382  // Steel blue
+              &.tag-23, &[data-tag*="criticality"], &[data-tag*="competition"]
+                background-color: #40407a  // Dark blue
+              &.tag-24, &[data-tag*="cooperation"], &[data-tag*="skills"]
+                background-color: #27ae60  // Emerald green
+              &.tag-25, &[data-tag*="inference"], &[data-tag*="sampling"]
+                background-color: #8e44ad  // Purple
+              &.tag-26, &[data-tag*="DFT"]
+                background-color: #e74c3c  // Crimson
+              &.tag-29, &[data-tag*="KGC"]
+                background-color: #d63031  // Dark red
+              &.tag-30, &[data-tag*="PMP"]
+                background-color: #e74c3c  // Crimson
+              &.tag-27, &[data-tag*="link-prediction"], &[data-tag*="action"]
+                background-color: #f39c12  // Orange
+              &.tag-28, &[data-tag*="body-schema"], &[data-tag*="body"]
+                background-color: #16a085  // Dark turquoise
         .information
           position: relative
           flex: 0 0 75%
@@ -178,7 +293,7 @@
                
           p
             font-size: clamp(0.75rem, 2vw, 1rem)
-            color: lighten($primary, 40%)
+            color: color.scale($primary, $lightness: 40%)
             line-height: 1.2em
           p.journal
             position: absolute

@@ -1,0 +1,11 @@
+title: "MuCoS: Efficient Drug Target Discovery via Multi Context Aware Sampling in Knowledge Graphs"
+pub_id: "2025-3-mucos-drug-target-discovery-knowledge-graphs"
+image: "https://images.pexels.com/photos/3825577/pexels-photo-3825577.jpeg"
+authors: "Gul H., Naim A. G., & Bhat A. A."
+journal: "BioNLP Workshop at ACL"
+year: 2025
+link: "https://aclanthology.org/2025.bionlp-1.27/"
+video: ""
+tags: ["biomedical","KGC","graph","sampling","bert"]
+abstract: "Knowledge graphs (KGs) have emerged as powerful tools for drug discovery, but existing methods often fail to capture the multi-contextual nature of biomedical relationships. We introduce MuCoS (Multi Context Aware Sampling), a novel approach that efficiently discovers drug targets by sampling diverse contextual neighborhoods in biomedical KGs. Our method significantly improves target identification accuracy while reducing computational overhead."
+methodology: "MuCoS employs a multi-context aware sampling strategy that explores different relationship types and entity neighborhoods simultaneously. We evaluate on standard drug discovery benchmarks and compare against state-of-the-art KG completion methods. Performance is measured by target prediction accuracy, computational efficiency, and biological relevance of discovered relationships."

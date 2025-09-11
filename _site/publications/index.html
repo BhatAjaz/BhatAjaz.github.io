@@ -6,31 +6,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The UBD Ajaz Ahmad Bhat's lab is a multidisciplinary research hub focused on exploring the frontiers of artificial intelligence through the lens of human cognition and behavior. We build autonomous systems that think, reason, and adapt in ways that mirror—and often surpass—human intelligence.">
 <title>Laboratory</title>
-<link rel="canonical" href="https://localhost:4000/publications/">
-<link rel="icon" type="image/x-icon" href="/lab_website_private/favicon.ico">
-<link rel="shortcut icon" type="image/x-icon" href="/lab_website_private/favicon.ico">
-<link rel="stylesheet" type="text/css" href="/lab_website_private/assets/css/styles.css">
+<link rel="canonical" href="http://0.0.0.0:5000/publications/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
     </head>
     <body>
         <!-- Navigation -->
 <div class="background"> </div>
 <nav class="nav-wrap">
-    <a href="/lab_website_private/" class="nav-logo">
+    <a href="/" class="nav-logo">
     <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 403 230" style="enable-background:new 0 0 403 230;" xml:space="preserve">
   <g>
-    <text x="50" y="150" font-family="Arial" font-size="100">LAB</text>
+    <text x="50" y="150" font-family="Arial" font-size="100">AB LAB</text>
   </g>
 </svg>
   </a>
   <ul class="navigation">
-    <li><a href="/lab_website_private/">Home</a></li>
-    <li><a href="/lab_website_private/team">Team</a></li>
-    <li><a href="/lab_website_private/publications">Publications</a></li>
-    <li><a href="/lab_website_private/projects">Projects</a></li>
-    <li><a href="/lab_website_private/news">News</a></li>
-    <li><a href="/lab_website_private/contact-us">Contact Us</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/team">Team</a></li>
+    <li><a href="/publications">Publications</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/news"> News</a></li>
+    <li><a href="/contact-us">Contact</a></li>
   </ul>
   <!-- Mobile Navigation -->
   <div class="nav-toggle-open-wrapper ">
@@ -53,12 +53,12 @@
         </svg>
       </div>
       <div class="internal-nav-links-wrapper">
-        <a href="/lab_website_private/" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Home</h5></div><div class="internal-link-icon internal-link-icon-home"></div></a>
-        <a href="/lab_website_private/team" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Team</h5></div><div class="internal-link-icon internal-link-icon-team"></div></a>
-        <a href="/lab_website_private/publications" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Publications</h5></div><div class="internal-link-icon internal-link-icon-publications"></div></a>
-        <a href="/lab_website_private/projects" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Projects</h5></div><div class="internal-link-icon internal-link-icon-research"></div></a>
-        <a href="/lab_website_private/news" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>News</h5></div><div class="internal-link-icon internal-link-icon-news"></div></a>
-        <a href="/lab_website_private/contact-us" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Contact Us</h5></div><div class="internal-link-icon internal-link-icon-contact-us"></div></a>
+        <a href="/" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Home</h5></div><div class="internal-link-icon internal-link-icon-home"></div></a>
+        <a href="/team" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Team</h5></div><div class="internal-link-icon internal-link-icon-team"></div></a>
+        <a href="/publications" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Publications</h5></div><div class="internal-link-icon internal-link-icon-publications"></div></a>
+        <a href="/projects" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Projects</h5></div><div class="internal-link-icon internal-link-icon-research"></div></a>
+        <a href="/news" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>News</h5></div><div class="internal-link-icon internal-link-icon-news"></div></a>
+        <a href="/contact-us" class="internal-link-wrapper"><div class="link-titles-wrapper"><h5>Contact Us</h5></div><div class="internal-link-icon internal-link-icon-contact-us"></div></a>
       </div>
       <hr/>
       <div class="external-links-wrapper">
@@ -72,915 +72,1102 @@
 <!-- End Navigation -->
 <!-- first container -->
 <div class="container-publications">
-  <did class="tag-header">
-    <div class="header-and-search">
-      <h1 class="header">Publications</h1>
+  <div class="tag-header">
+    <!-- Header with Search Component -->
+<div class="header-and-search">
+  <h1 class="header">Publications</h1>
+  <!-- Search Input Component -->
+<div class="search-wrapper">
+  <i class="search-icon fas fa-search"></i>
+  <input type="search-input" id="search" placeholder="Filter">
+</div>
+</div>
+  </div>
+    
 
-      <div class="search-wrapper">
-        <i class="search-icon fas fa-search"></i>
-        <input type="search-input" id="search" placeholder="Filter">
+  <!-- Hide "All tags" section for now -->
+  <!--
+  <p>All tags:</p>
+  <div class="tag-holder">
+    
+    <div class="tag" data-tag="dft"><p>DFT</p></div>
+    
+    <div class="tag" data-tag="kgc"><p>KGC</p></div>
+    
+    <div class="tag" data-tag="pmp"><p>PMP</p></div>
+    
+    <div class="tag" data-tag="action"><p>action</p></div>
+    
+    <div class="tag" data-tag="affordance"><p>affordance</p></div>
+    
+    <div class="tag" data-tag="associative"><p>associative</p></div>
+    
+    <div class="tag" data-tag="attention"><p>attention</p></div>
+    
+    <div class="tag" data-tag="bert"><p>bert</p></div>
+    
+    <div class="tag" data-tag="biomedical"><p>biomedical</p></div>
+    
+    <div class="tag" data-tag="body-schema"><p>body-schema</p></div>
+    
+    <div class="tag" data-tag="causal"><p>causal</p></div>
+    
+    <div class="tag" data-tag="causal-learning"><p>causal-learning</p></div>
+    
+    <div class="tag" data-tag="cognitive"><p>cognitive</p></div>
+    
+    <div class="tag" data-tag="collaboration"><p>collaboration</p></div>
+    
+    <div class="tag" data-tag="competition"><p>competition</p></div>
+    
+    <div class="tag" data-tag="context"><p>context</p></div>
+    
+    <div class="tag" data-tag="cooperation"><p>cooperation</p></div>
+    
+    <div class="tag" data-tag="criticality"><p>criticality</p></div>
+    
+    <div class="tag" data-tag="development"><p>development</p></div>
+    
+    <div class="tag" data-tag="developmental"><p>developmental</p></div>
+    
+    <div class="tag" data-tag="embedding"><p>embedding</p></div>
+    
+    <div class="tag" data-tag="episodic-memory"><p>episodic-memory</p></div>
+    
+    <div class="tag" data-tag="evaluation"><p>evaluation</p></div>
+    
+    <div class="tag" data-tag="exploration"><p>exploration</p></div>
+    
+    <div class="tag" data-tag="graph"><p>graph</p></div>
+    
+    <div class="tag" data-tag="imitation"><p>imitation</p></div>
+    
+    <div class="tag" data-tag="inference"><p>inference</p></div>
+    
+    <div class="tag" data-tag="language"><p>language</p></div>
+    
+    <div class="tag" data-tag="learning"><p>learning</p></div>
+    
+    <div class="tag" data-tag="link-prediction"><p>link-prediction</p></div>
+    
+    <div class="tag" data-tag="memory"><p>memory</p></div>
+    
+    <div class="tag" data-tag="metric"><p>metric</p></div>
+    
+    <div class="tag" data-tag="motor-control"><p>motor-control</p></div>
+    
+    <div class="tag" data-tag="neural"><p>neural</p></div>
+    
+    <div class="tag" data-tag="neural-model"><p>neural-model</p></div>
+    
+    <div class="tag" data-tag="novelty"><p>novelty</p></div>
+    
+    <div class="tag" data-tag="planning"><p>planning</p></div>
+    
+    <div class="tag" data-tag="plasticity"><p>plasticity</p></div>
+    
+    <div class="tag" data-tag="robotics"><p>robotics</p></div>
+    
+    <div class="tag" data-tag="sampling"><p>sampling</p></div>
+    
+    <div class="tag" data-tag="semantic-memory"><p>semantic-memory</p></div>
+    
+    <div class="tag" data-tag="similarity"><p>similarity</p></div>
+    
+    <div class="tag" data-tag="simulation"><p>simulation</p></div>
+    
+    <div class="tag" data-tag="skills"><p>skills</p></div>
+    
+    <div class="tag" data-tag="synapses"><p>synapses</p></div>
+    
+    <div class="tag" data-tag="tool-use"><p>tool-use</p></div>
+    
+    <div class="tag" data-tag="transformer"><p>transformer</p></div>
+    
+    <div class="tag" data-tag="variability"><p>variability</p></div>
+    
+    <div class="tag" data-tag="visual"><p>visual</p></div>
+    
+    <div class="tag" data-tag="word-learning"><p>word-learning</p></div>
+    
+    <div class="tag" data-tag="working-memory"><p>working-memory</p></div>
+    
+  </div>
+  -->
+
+  <hr />
+  <div class="publications-content-wrapper">
+       
+    <div class="publication" data-tags="biomedical,KGC,graph,sampling,bert">
+      <div
+        class="publication-wrapper"
+        id="2025-3-mucos-drug-target-discovery-knowledge-graphs"
+        data-href="/publication/2025-3-mucos-drug-target-discovery-knowledge-graphs/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2025</h1>
+            <a href="https://aclanthology.org/2025.bionlp-1.27/">URL</a>
+            
+            <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="biomedical">
+                <p>biomedical</p>
+              </div>
+              
+              <div class="tag" data-tag="kgc">
+                <p>KGC</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+3 more</p>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="information">
+            <h1>MuCoS: Efficient Drug Target Discovery via Multi Context Aware Sampling in Knowledge Graphs</h1>
+            <p>Gul H., Naim A. G., & Bhat A. A.</p>
+            <p class="journal">BioNLP Workshop at ACL</p>
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/3825577/pexels-photo-3825577.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
     </div>
     
-    
-    
-
-    <p>All tags:</p>
-    <div class="tag-holder">
-      
-        <div class="tag"><p>affordances</p></div>
-      
-        <div class="tag"><p>attention</p></div>
-      
-        <div class="tag"><p>bert</p></div>
-      
-        <div class="tag"><p>body-schema</p></div>
-      
-        <div class="tag"><p>causal-learning</p></div>
-      
-        <div class="tag"><p>cognitive-robotics</p></div>
-      
-        <div class="tag"><p>collaboration</p></div>
-      
-        <div class="tag"><p>competition</p></div>
-      
-        <div class="tag"><p>completion</p></div>
-      
-        <div class="tag"><p>complexity</p></div>
-      
-        <div class="tag"><p>control</p></div>
-      
-        <div class="tag"><p>coordination</p></div>
-      
-        <div class="tag"><p>drug-discovery</p></div>
-      
-        <div class="tag"><p>episodic-memory</p></div>
-      
-        <div class="tag"><p>exploration</p></div>
-      
-        <div class="tag"><p>imitation</p></div>
-      
-        <div class="tag"><p>knowledge-graphs</p></div>
-      
-        <div class="tag"><p>learning</p></div>
-      
-        <div class="tag"><p>motor-synergies</p></div>
-      
-        <div class="tag"><p>neural-model</p></div>
-      
-        <div class="tag"><p>planning</p></div>
-      
-        <div class="tag"><p>plasticity</p></div>
-      
-        <div class="tag"><p>robotics</p></div>
-      
-        <div class="tag"><p>similarity</p></div>
-      
-        <div class="tag"><p>simulation</p></div>
-      
-        <div class="tag"><p>spectral-gradient</p></div>
-      
-        <div class="tag"><p>synapses</p></div>
-      
-        <div class="tag"><p>tool-use</p></div>
-      
-        <div class="tag"><p>variation</p></div>
-      
-        <div class="tag"><p>word-learning</p></div>
-      
-</div>
-   
-  </did>
-  
-  <hr>
-  <div class="publications-content-wrapper" >
-    
-
-
-
-
-    
-      <div class="publication" data-tags="knowledge-graphs,completion">
-        <div class="publication-wrapper" id="some-publication-22" data-href="../publication/publication22">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>22</h1>
-            <a href="https://arxiv.org/abs/2503.03091">URL</a>
+    <div class="publication" data-tags="graph,bert,neural-model,link-prediction">
+      <div
+        class="publication-wrapper"
+        id="2025-2-muco-kgc-multi-context-knowledge-graph-completion"
+        data-href="/publication/2025-2-muco-kgc-multi-context-knowledge-graph-completion/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2025</h1>
+            <a href="https://link.springer.com/chapter/10.1007/978-981-97-2253-2_1">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="graph">
+                <p>graph</p>
+              </div>
               
-                <div class="tag"><p>knowledge-graphs</p></div>
-              
-                <div class="tag"><p>completion</p></div>
+              <div class="tag" data-tag="bert">
+                <p>bert</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>MuCo-KGC: Multi-Context-Aware Knowledge Graph Completion</h1>
-              <p>Gul H., Naim A. G., & Bhat A. A.</p>
-              <p class="journal">arXiv preprint / PAKDD DSFA Special Session</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>MuCo-KGC: Multi-Context-Aware Knowledge Graph Completion</h1>
+            <p>Gul H., Naim A. G., & Bhat A. A.</p>
+            <p class="journal">Pacific-Asia Conference on Knowledge Discovery and Data Mining</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="spectral-gradient,complexity">
-        <div class="publication-wrapper" id="some-publication-21" data-href="../publication/publication21">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>21</h1>
-            <a href="https://openreview.net/pdf?id=H0CKbqT937">URL</a>
+    <div class="publication" data-tags="evaluation,metric,KGC,graph">
+      <div
+        class="publication-wrapper"
+        id="2025-1-kg-edas-meta-metric-framework-knowledge-graph-evaluation"
+        data-href="/publication/2025-1-kg-edas-meta-metric-framework-knowledge-graph-evaluation/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2025</h1>
+            <a href="https://arxiv.org/abs/2508.15357">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="evaluation">
+                <p>evaluation</p>
+              </div>
               
-                <div class="tag"><p>spectral-gradient</p></div>
-              
-                <div class="tag"><p>complexity</p></div>
+              <div class="tag" data-tag="metric">
+                <p>metric</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Evaluating Cumulative Spectral Gradient as a Complexity Measure</h1>
-              <p>Gul H., Naim A. G., & Bhat A. A.</p>
-              <p class="journal">ICML Workshop Proceedings (PMLR 267, 2025)</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>KG-EDAS: A Meta-Metric Framework for Evaluating Knowledge Graph Completion Models</h1>
+            <p>Gul H., Naim A. G., & Bhat A. A.</p>
+            <p class="journal">arXiv preprint</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
-      </div>
-    
-      <div class="publication" data-tags="drug-discovery,knowledge-graphs">
-        <div class="publication-wrapper" id="some-publication-20" data-href="../publication/publication20">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>20</h1>
-            <a href="https://arxiv.org/abs/2503.08075">URL</a>
-            
-            <div class="tag-wrapper">
-              
-                <div class="tag"><p>drug-discovery</p></div>
-              
-                <div class="tag"><p>knowledge-graphs</p></div>
-              
-            </div>
-            
-            
-            </div>
-            <div class="information">
-              
-              <h1>MuCoS: Efficient Drug–Target Discovery via Multi-Context-Aware Sampling in Knowledge Graphs</h1>
-              <p>Gul H., Naim A. G., & Bhat A. A.</p>
-              <p class="journal">ACL BioNLP Workshop, NeurIPS 2025</p>
-            </div>
-          </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
-          </div>
-
-          
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg" />
         </div>
-        <hr style="margin: 1rem 0;">
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="word-learning,similarity">
-        <div class="publication-wrapper" id="some-publication-19" data-href="../publication/publication19">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>19</h1>
+    <div class="publication" data-tags="word-learning,similarity,attention,memory">
+      <div
+        class="publication-wrapper"
+        id="2024-3-similarity-object-properties-cross-situational-word-learning"
+        data-href="/publication/2024-3-similarity-object-properties-cross-situational-word-learning/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2024</h1>
             <a href="https://escholarship.org/uc/item/893685t3">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="word-learning">
+                <p>word-learning</p>
+              </div>
               
-                <div class="tag"><p>word-learning</p></div>
-              
-                <div class="tag"><p>similarity</p></div>
+              <div class="tag" data-tag="similarity">
+                <p>similarity</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Similarity in object properties supports cross-situational word learning: Predictions from a dynamic neural model confirmed</h1>
-              <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
-              <p class="journal">CogSci Proceedings</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Similarity in object properties supports cross-situational word learning: Predictions from a dynamic neural model confirmed</h1>
+            <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
+            <p class="journal">CogSci Proceedings</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
-      </div>
-    
-      <div class="publication" data-tags="knowledge-graphs,bert">
-        <div class="publication-wrapper" id="some-publication-18" data-href="../publication/publication18">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>18</h1>
-            <a href="https://arxiv.org/abs/2412.11016">URL</a>
-            
-            <div class="tag-wrapper">
-              
-                <div class="tag"><p>knowledge-graphs</p></div>
-              
-                <div class="tag"><p>bert</p></div>
-              
-            </div>
-            
-            
-            </div>
-            <div class="information">
-              
-              <h1>A Contextualized BERT model for Knowledge Graph Completion</h1>
-              <p>Gul H. & Bhat A. A.</p>
-              <p class="journal">NeurIPS Workshop (to appear)</p>
-            </div>
-          </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
-          </div>
-
-          
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
         </div>
-        <hr style="margin: 1rem 0;">
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="word-learning,neural-model">
-        <div class="publication-wrapper" id="some-publication-17" data-href="../publication/publication17">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>17</h1>
+    <div class="publication" data-tags="novelty,word-learning,neural-model,attention,memory,visual">
+      <div
+        class="publication-wrapper"
+        id="2024-2-formal-theories-neural-process-visual-exploration-word-learning"
+        data-href="/publication/2024-2-formal-theories-neural-process-visual-exploration-word-learning/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2024</h1>
             <a href="https://doi.org/10.1111/cdev.14023">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="novelty">
+                <p>novelty</p>
+              </div>
               
-                <div class="tag"><p>word-learning</p></div>
-              
-                <div class="tag"><p>neural-model</p></div>
+              <div class="tag" data-tag="word-learning">
+                <p>word-learning</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+4 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Formal theories clarify the complex: Generalizing a neural process account of the interaction of visual exploration and word learning in infancy</h1>
-              <p>Bhat A. A., Samuelson L. K., & Spencer J. P.</p>
-              <p class="journal">Child Development</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Formal theories clarify the complex: Generalizing a neural process account of the interaction of visual exploration and word learning in infancy</h1>
+            <p>Bhat A. A., Samuelson L. K., & Spencer J. P.</p>
+            <p class="journal">Child Development</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="word-learning,exploration">
-        <div class="publication-wrapper" id="some-publication-16" data-href="../publication/publication16">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>16</h1>
-            <a href="https://doi.org/10.1037/rev0000313">URL</a>
+    <div class="publication" data-tags="KGC,graph,bert,transformer,context,embedding,link-prediction">
+      <div
+        class="publication-wrapper"
+        id="2024-1-contextualized-bert-knowledge-graph-completion"
+        data-href="/publication/2024-1-contextualized-bert-knowledge-graph-completion/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2024</h1>
+            <a href="https://arxiv.org/abs/2412.11016">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="kgc">
+                <p>KGC</p>
+              </div>
               
-                <div class="tag"><p>word-learning</p></div>
-              
-                <div class="tag"><p>exploration</p></div>
+              <div class="tag" data-tag="graph">
+                <p>graph</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+5 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Word-Object Learning via Visual Exploration in Space (WOLVES): A Neural Process Account of Cross-Situational Word Learning</h1>
-              <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
-              <p class="journal">Psychological Review</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>A Contextualized BERT model for Knowledge Graph Completion</h1>
+            <p>Gul H. & Bhat A. A.</p>
+            <p class="journal">NeurIPS Workshop (to appear)</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="word-learning,attention">
-        <div class="publication-wrapper" id="some-publication-15" data-href="../publication/publication15">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>15</h1>
-            <a href="https://osf.io/htd7p">URL</a>
+    <div class="publication" data-tags="word-learning,language,learning,visual,exploration,attention,memory,cognitive">
+      <div
+        class="publication-wrapper"
+        id="2022-1-wolves-word-object-learning-visual-exploration-space"
+        data-href="/publication/2022-1-wolves-word-object-learning-visual-exploration-space/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2022</h1>
+            <a href="https://psycnet.apa.org/record/2022-72074-001">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="word-learning">
+                <p>word-learning</p>
+              </div>
               
-                <div class="tag"><p>word-learning</p></div>
-              
-                <div class="tag"><p>attention</p></div>
+              <div class="tag" data-tag="language">
+                <p>language</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+6 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Moving beyond Associative Learning and Hypothesis Testing: How Stimulus Exposure Times and Looking Behaviours Conspire in Cross-Situational Word Learning</h1>
-              <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
-              <p class="journal">OSF Pre-registry</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Word-Object Learning via Visual Exploration in Space (WOLVES): A Neural Process Account of Cross-Situational Word Learning</h1>
+            <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
+            <p class="journal">Psychological Review</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="word-learning,variation">
-        <div class="publication-wrapper" id="some-publication-14" data-href="../publication/publication14">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>14</h1>
+    <div class="publication" data-tags="word-learning,variability,attention,memory,similarity,language,development">
+      <div
+        class="publication-wrapper"
+        id="2020-3-metric-variation-object-shapes-cross-situational-word-learning"
+        data-href="/publication/2020-3-metric-variation-object-shapes-cross-situational-word-learning/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2020</h1>
             <a href="https://osf.io/rbg7m">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="word-learning">
+                <p>word-learning</p>
+              </div>
               
-                <div class="tag"><p>word-learning</p></div>
-              
-                <div class="tag"><p>variation</p></div>
+              <div class="tag" data-tag="variability">
+                <p>variability</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+5 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Effect of Metric Variation in Object Shapes and Colours on Cross-Situational Word Learning in Adults</h1>
-              <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
-              <p class="journal">OSF Pre-registry</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Effect of Metric Variation in Object Shapes and Colours on Cross-Situational Word Learning in Adults</h1>
+            <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
+            <p class="journal">OSF Pre-registry</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="causal-learning,episodic-memory">
-        <div class="publication-wrapper" id="some-publication-13" data-href="../publication/publication13">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>13</h1>
+    <div class="publication" data-tags="causal-learning,episodic-memory,semantic-memory,robotics">
+      <div
+        class="publication-wrapper"
+        id="2020-2-causal-learning-robot-semantic-episodic-memory-aesop"
+        data-href="/publication/2020-2-causal-learning-robot-semantic-episodic-memory-aesop/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2020</h1>
             <a href="https://arxiv.org/abs/2003.00274">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="causal-learning">
+                <p>causal-learning</p>
+              </div>
               
-                <div class="tag"><p>causal-learning</p></div>
-              
-                <div class="tag"><p>episodic-memory</p></div>
+              <div class="tag" data-tag="episodic-memory">
+                <p>episodic-memory</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Causal Learning by a Robot with Semantic-Episodic Memory in an Aesop's Fable Experiment</h1>
-              <p>Bhat A. A. & Mohan V.</p>
-              <p class="journal">ICLR (arXiv)</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Causal Learning by a Robot with Semantic-Episodic Memory in an Aesop's Fable Experiment</h1>
+            <p>Bhat A. A. & Mohan V.</p>
+            <p class="journal">ICLR (arXiv)</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="motor-synergies,control">
-        <div class="publication-wrapper" id="some-publication-12" data-href="../publication/publication12">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>12</h1>
+    <div class="publication" data-tags="word-learning,attention,working-memory,associative">
+      <div
+        class="publication-wrapper"
+        id="2020-1-beyond-associative-learning-stimulus-exposure-word-learning"
+        data-href="/publication/2020-1-beyond-associative-learning-stimulus-exposure-word-learning/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2020</h1>
+            <a href="https://osf.io/htd7p">URL</a>
+            
+            <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="word-learning">
+                <p>word-learning</p>
+              </div>
+              
+              <div class="tag" data-tag="attention">
+                <p>attention</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="information">
+            <h1>Moving beyond Associative Learning and Hypothesis Testing: How Stimulus Exposure Times and Looking Behaviours Conspire in Cross-Situational Word Learning</h1>
+            <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
+            <p class="journal">OSF Pre-registry</p>
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
+      </div>
+      <hr style="margin: 1rem 0" />
+    </div>
+    
+    <div class="publication" data-tags="motor-control,robotics,cognitive,PMP">
+      <div
+        class="publication-wrapper"
+        id="2019-1-muscleless-motor-synergies-control-strategies-humans-robots"
+        data-href="/publication/2019-1-muscleless-motor-synergies-control-strategies-humans-robots/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2019</h1>
             <a href="https://doi.org/10.1016/j.plrev.2019.11.001">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="motor-control">
+                <p>motor-control</p>
+              </div>
               
-                <div class="tag"><p>motor-synergies</p></div>
-              
-                <div class="tag"><p>control</p></div>
+              <div class="tag" data-tag="robotics">
+                <p>robotics</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>The complementarity of ‘Muscleless’ motor synergies with motor control strategies in humans and robots: Reply to Comments</h1>
-              <p>Mohan V., Morasso P., & Bhat A. A.</p>
-              <p class="journal">Physics of Life Reviews</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>The complementarity of 'Muscleless' motor synergies with motor control strategies in humans and robots: Reply to Comments</h1>
+            <p>Mohan V., Morasso P., & Bhat A. A.</p>
+            <p class="journal">Physics of Life Reviews</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="motor-synergies,cognitive-robotics">
-        <div class="publication-wrapper" id="some-publication-11" data-href="../publication/publication11">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>11</h1>
+    <div class="publication" data-tags="motor-control,cognitive,robotics,body-schema,action,simulation,PMP">
+      <div
+        class="publication-wrapper"
+        id="2018-4-muscle-less-motor-synergies-cognitive-robotics"
+        data-href="/publication/2018-4-muscle-less-motor-synergies-cognitive-robotics/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2018</h1>
             <a href="https://doi.org/10.1016/j.plrev.2018.04.005">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="motor-control">
+                <p>motor-control</p>
+              </div>
               
-                <div class="tag"><p>motor-synergies</p></div>
-              
-                <div class="tag"><p>cognitive-robotics</p></div>
+              <div class="tag" data-tag="cognitive">
+                <p>cognitive</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+5 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Muscle-less motor synergies and actions without movements. From motor neuroscience to cognitive robotics</h1>
-              <p>Mohan V., Bhat A. A., & Morasso P.</p>
-              <p class="journal">Physics of Life Reviews</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Muscle-less motor synergies and actions without movements. From motor neuroscience to cognitive robotics</h1>
+            <p>Mohan V., Bhat A. A., & Morasso P.</p>
+            <p class="journal">Physics of Life Reviews</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
-      </div>
-    
-      <div class="publication" data-tags="planning,simulation">
-        <div class="publication-wrapper" id="some-publication-10" data-href="../publication/publication10">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>10</h1>
-            <a href="https://doi.org/10.1007/s12559-018-9553-1">URL</a>
-            
-            <div class="tag-wrapper">
-              
-                <div class="tag"><p>planning</p></div>
-              
-                <div class="tag"><p>simulation</p></div>
-              
-            </div>
-            
-            
-            </div>
-            <div class="information">
-              
-              <h1>Goal-Directed Reasoning and Cooperation in Robots in Shared Workspaces: An Internal Simulation-Based Neural Framework</h1>
-              <p>Bhat A. A. & Mohan V.</p>
-              <p class="journal">Cognitive Computation</p>
-            </div>
-          </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
-          </div>
-
-          
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
         </div>
-        <hr style="margin: 1rem 0;">
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="collaboration,planning">
-        <div class="publication-wrapper" id="some-publication-9" data-href="../publication/publication9">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>9</h1>
+    <div class="publication" data-tags="collaboration,memory,robotics,cognitive,inference">
+      <div
+        class="publication-wrapper"
+        id="2018-3-joint-goal-human-robot-collaboration"
+        data-href="/publication/2018-3-joint-goal-human-robot-collaboration/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2018</h1>
             <a href="https://doi.org/10.1016/j.procs.2018.01.089">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="collaboration">
+                <p>collaboration</p>
+              </div>
               
-                <div class="tag"><p>collaboration</p></div>
-              
-                <div class="tag"><p>planning</p></div>
+              <div class="tag" data-tag="memory">
+                <p>memory</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+3 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Joint Goal Human-Robot Collaboration—From Remembering to Inferring</h1>
-              <p>Mohan V. & Bhat A. A.</p>
-              <p class="journal">Procedia Computer Science</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Joint Goal Human-Robot Collaboration—From Remembering to Inferring</h1>
+            <p>Mohan V. & Bhat A. A.</p>
+            <p class="journal">Procedia Computer Science</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="word-learning,attention">
-        <div class="publication-wrapper" id="some-publication-8" data-href="../publication/publication8">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>8</h1>
+    <div class="publication" data-tags="planning,simulation,cooperation,robotics,cognitive">
+      <div
+        class="publication-wrapper"
+        id="2018-2-goal-directed-reasoning-cooperation-robots-shared-workspaces"
+        data-href="/publication/2018-2-goal-directed-reasoning-cooperation-robots-shared-workspaces/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2018</h1>
+            <a href="https://doi.org/10.1007/s12559-018-9553-1">URL</a>
+            
+            <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="planning">
+                <p>planning</p>
+              </div>
+              
+              <div class="tag" data-tag="simulation">
+                <p>simulation</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+3 more</p>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="information">
+            <h1>Goal-Directed Reasoning and Cooperation in Robots in Shared Workspaces: An Internal Simulation-Based Neural Framework</h1>
+            <p>Bhat A. A. & Mohan V.</p>
+            <p class="journal">Cognitive Computation</p>
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
+      </div>
+      <hr style="margin: 1rem 0" />
+    </div>
+    
+    <div class="publication" data-tags="word-learning,attention,memory,neural,DFT">
+      <div
+        class="publication-wrapper"
+        id="2018-1-dynamic-neural-field-memory-attention-word-learning"
+        data-href="/publication/2018-1-dynamic-neural-field-memory-attention-word-learning/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2018</h1>
             <a href="https://mindmodeling.org/cogsci2018/papers/0048/index.html">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="word-learning">
+                <p>word-learning</p>
+              </div>
               
-                <div class="tag"><p>word-learning</p></div>
-              
-                <div class="tag"><p>attention</p></div>
+              <div class="tag" data-tag="attention">
+                <p>attention</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+3 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>A Dynamic Neural Field Model of Memory, Attention and Cross-Situational Word Learning</h1>
-              <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
-              <p class="journal">Proceedings CogSci 2018</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>A Dynamic Neural Field Model of Memory, Attention and Cross-Situational Word Learning</h1>
+            <p>Bhat A. A., Spencer J. P., & Samuelson L. K.</p>
+            <p class="journal">Proceedings CogSci 2018</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="body-schema,coordination">
-        <div class="publication-wrapper" id="some-publication-7" data-href="../publication/publication7">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>7</h1>
+    <div class="publication" data-tags="body-schema,motor-control,PMP,cognitive,robotics">
+      <div
+        class="publication-wrapper"
+        id="2016-2-neural-body-schema-dexterous-coordination-robots"
+        data-href="/publication/2016-2-neural-body-schema-dexterous-coordination-robots/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2016</h1>
             <a href="https://doi.org/10.1007/s10514-016-9563-3">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="body-schema">
+                <p>body-schema</p>
+              </div>
               
-                <div class="tag"><p>body-schema</p></div>
-              
-                <div class="tag"><p>coordination</p></div>
+              <div class="tag" data-tag="motor-control">
+                <p>motor-control</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+3 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Towards a Learnt Neural Body Schema for Dexterous Coordination of Action in Humanoid and Industrial Robots</h1>
-              <p>Bhat A. A., Mohan V., Akkaladevi S. C., Eitzinger C., Sandini G., & Morasso P.</p>
-              <p class="journal">Autonomous Robots</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Towards a Learnt Neural Body Schema for Dexterous Coordination of Action in Humanoid and Industrial Robots</h1>
+            <p>Bhat A. A., Mohan V., Akkaladevi S. C., Eitzinger C., Sandini G., & Morasso P.</p>
+            <p class="journal">Autonomous Robots</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="affordances,cognitive-robotics">
-        <div class="publication-wrapper" id="some-publication-6" data-href="../publication/publication6">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>6</h1>
+    <div class="publication" data-tags="cognitive,robotics,causal,exploration,episodic-memory,tool-use,learning">
+      <div
+        class="publication-wrapper"
+        id="2016-1-humanoid-robot-archimedes-principle-exploration"
+        data-href="/publication/2016-1-humanoid-robot-archimedes-principle-exploration/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2016</h1>
             <a href="https://doi.org/10.1098/rsif.2016.0310">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="cognitive">
+                <p>cognitive</p>
+              </div>
               
-                <div class="tag"><p>affordances</p></div>
-              
-                <div class="tag"><p>cognitive-robotics</p></div>
+              <div class="tag" data-tag="robotics">
+                <p>robotics</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+5 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Humanoid Robot Infers Archimedes' Principle: From Cumulative Exploration to Abstraction of Underlying Physical Relations and Object Affordances</h1>
-              <p>Bhat A. A., Mohan V., Sandini G., & Morasso P.</p>
-              <p class="journal">Journal of the Royal Society Interface</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Humanoid Robot Infers Archimedes' Principle: From Cumulative Exploration to Abstraction of Underlying Physical Relations and Object Affordances</h1>
+            <p>Bhat A. A., Mohan V., Sandini G., & Morasso P.</p>
+            <p class="journal">Journal of the Royal Society Interface</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="imitation,tool-use">
-        <div class="publication-wrapper" id="some-publication-5" data-href="../publication/publication5">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>5</h1>
+    <div class="publication" data-tags="imitation,tool-use,cognitive,robotics,affordance,skills">
+      <div
+        class="publication-wrapper"
+        id="2015-1-icub-learns-imitate-tool-recycling-knowledge"
+        data-href="/publication/2015-1-icub-learns-imitate-tool-recycling-knowledge/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2015</h1>
             <a href="https://doi.org/10.1007/978-3-319-22979-9_33">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="imitation">
+                <p>imitation</p>
+              </div>
               
-                <div class="tag"><p>imitation</p></div>
-              
-                <div class="tag"><p>tool-use</p></div>
+              <div class="tag" data-tag="tool-use">
+                <p>tool-use</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+4 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>How iCub Learns to Imitate Use of a Tool Quickly by Recycling the Past Knowledge Learnt During Drawing</h1>
-              <p>Bhat A. A. & Mohan V.</p>
-              <p class="journal">Biomimetic and Biohybrid Systems</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>How iCub Learns to Imitate Use of a Tool Quickly by Recycling the Past Knowledge Learnt During Drawing</h1>
+            <p>Bhat A. A. & Mohan V.</p>
+            <p class="journal">Biomimetic and Biohybrid Systems</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="causal-learning,robotics">
-        <div class="publication-wrapper" id="some-publication-4" data-href="../publication/publication4">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>4</h1>
+    <div class="publication" data-tags="causal,robotics,cognitive,affordance">
+      <div
+        class="publication-wrapper"
+        id="2014-2-object-action-property-learning-causal-properties"
+        data-href="/publication/2014-2-object-action-property-learning-causal-properties/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2014</h1>
             <a href="https://doi.org/10.1016/j.bica.2014.11.006">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="causal">
+                <p>causal</p>
+              </div>
               
-                <div class="tag"><p>causal-learning</p></div>
-              
-                <div class="tag"><p>robotics</p></div>
+              <div class="tag" data-tag="robotics">
+                <p>robotics</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>From Object-Action to Property-Action: Learning Causally Dominant Properties through Cumulative Explorative Interactions</h1>
-              <p>Mohan V., Bhat A. A., Morasso P., & Sandini G.</p>
-              <p class="journal">Biologically Inspired Cognitive Architectures</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>From Object-Action to Property-Action: Learning Causally Dominant Properties through Cumulative Explorative Interactions</h1>
+            <p>Mohan V., Bhat A. A., Morasso P., & Sandini G.</p>
+            <p class="journal">Biologically Inspired Cognitive Architectures</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="episodic-memory,robotics">
-        <div class="publication-wrapper" id="some-publication-3" data-href="../publication/publication3">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>3</h1>
+    <div class="publication" data-tags="episodic-memory,robotics,cognitive,developmental">
+      <div
+        class="publication-wrapper"
+        id="2014-1-connecting-experiences-episodic-memory-robots"
+        data-href="/publication/2014-1-connecting-experiences-episodic-memory-robots/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2014</h1>
             <a href="https://doi.org/10.1109/DEVLRN.2014.6983007">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="episodic-memory">
+                <p>episodic-memory</p>
+              </div>
               
-                <div class="tag"><p>episodic-memory</p></div>
-              
-                <div class="tag"><p>robotics</p></div>
+              <div class="tag" data-tag="robotics">
+                <p>robotics</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+2 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>“Connecting Experiences”: Towards a Biologically Inspired Episodic Memory for Developmental Robots</h1>
-              <p>Bhat A. A., Mohan V., Rea F., Morasso P., & Sandini G.</p>
-              <p class="journal">IEEE ICDL-EPIROB 2014</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>"Connecting Experiences": Towards a Biologically Inspired Episodic Memory for Developmental Robots</h1>
+            <p>Bhat A. A., Mohan V., Rea F., Morasso P., & Sandini G.</p>
+            <p class="journal">IEEE ICDL-EPIROB 2014</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
-      </div>
-    
-      <div class="publication" data-tags="competition,plasticity">
-        <div class="publication-wrapper" id="some-publication-2" data-href="../publication/publication2">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>2</h1>
-            <a href="https://doi.org/10.1103/PhysRevE.85.011134">URL</a>
-            
-            <div class="tag-wrapper">
-              
-                <div class="tag"><p>competition</p></div>
-              
-                <div class="tag"><p>plasticity</p></div>
-              
-            </div>
-            
-            
-            </div>
-            <div class="information">
-              
-              <h1>Dynamics of Competitive Learning: The Role of Updates and Memory</h1>
-              <p>Bhat A. A. & Mehta A.</p>
-              <p class="journal">Physical Review E</p>
-            </div>
-          </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
-          </div>
-
-          
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
         </div>
-        <hr style="margin: 1rem 0;">
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-      <div class="publication" data-tags="synapses,learning">
-        <div class="publication-wrapper" id="some-publication-1" data-href="../publication/publication1">
-          <div class="text-wrapper">
-            <div class="number-and-url">
-            <h1>1</h1>
+    <div class="publication" data-tags="plasticity,synapses,learning,neural,memory">
+      <div
+        class="publication-wrapper"
+        id="2012-2-learning-network-competing-synapses"
+        data-href="/publication/2012-2-learning-network-competing-synapses/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2012</h1>
             <a href="https://doi.org/10.1371/journal.pone.0025048">URL</a>
             
             <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="plasticity">
+                <p>plasticity</p>
+              </div>
               
-                <div class="tag"><p>synapses</p></div>
-              
-                <div class="tag"><p>learning</p></div>
+              <div class="tag" data-tag="synapses">
+                <p>synapses</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+3 more</p>
+              </div>
               
             </div>
             
-            
-            </div>
-            <div class="information">
-              
-              <h1>Learning with a network of Competing Synapses</h1>
-              <p>Bhat A. A., Mahajan G., & Mehta A.</p>
-              <p class="journal">PLoS ONE</p>
-            </div>
           </div>
-          <div class="image-box">
-            <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+          <div class="information">
+            <h1>Learning with a network of Competing Synapses</h1>
+            <p>Bhat A. A., Mahajan G., & Mehta A.</p>
+            <p class="journal">PLoS ONE</p>
           </div>
-
-          
         </div>
-        <hr style="margin: 1rem 0;">
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
       </div>
+      <hr style="margin: 1rem 0" />
+    </div>
     
-  </div>    
+    <div class="publication" data-tags="plasticity,memory,criticality,competition,learning">
+      <div
+        class="publication-wrapper"
+        id="2012-1-dynamics-competitive-learning-updates-memory"
+        data-href="/publication/2012-1-dynamics-competitive-learning-updates-memory/"
+      >
+        <div class="text-wrapper">
+          <div class="number-and-url">
+            <h1>2012</h1>
+            <a href="https://doi.org/10.1103/PhysRevE.85.011134">URL</a>
+            
+            <div class="tag-wrapper">
+               
+              <div class="tag" data-tag="plasticity">
+                <p>plasticity</p>
+              </div>
+              
+              <div class="tag" data-tag="memory">
+                <p>memory</p>
+              </div>
+               
+              <div class="tag more-tags">
+                <p>+3 more</p>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="information">
+            <h1>Dynamics of Competitive Learning: The Role of Updates and Memory</h1>
+            <p>Bhat A. A. & Mehta A.</p>
+            <p class="journal">Physical Review E</p>
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg" />
+        </div>
+      </div>
+      <hr style="margin: 1rem 0" />
+    </div>
+    
+  </div>
 </div>
- 
+
 <footer class="lab-footer">
   <div class="footer-left">
-    <h4>© Dr. Ajaz Ahmad Bhat's Lab</h4>
+    <h4>© Dr. Ajaz Ahmad Bhat</h4>
   </div>
   <div class="footer-right">
-    <a href="/lab_website_private/contact-us" class="">Contact us</a>
+    <a href="/contact-us" class="">Visit Us</a>
     <address>
       <p class="">School of Digital Science</p>
-      <p class="">2nd Floor of Academy of Brunei Studies Building, Universiti Brunei Darussalam, Jalan Tungku Link, BE1410</p>
-      <p class="">Negara Brunei Darussalam</p>
+      <p class="">Room 2.48 2nd Floor APB Building, Universiti Brunei Darussalam, Jalan Tungku Link, BE1410</p>
+      <p class="">Brunei Darussalam</p>
     </address>
   </div>
 </footer>
-
-
-<!-- for tag colors -->
+ <!-- Clickable Content Script -->
 <script>
-  // Generate a consistent HSL color from a string
-  function stringToColor(str) {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      hash = str.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    return `hsl(${hash % 360}, 70%, 70%)`;
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Collect all tag elements across the page
-    const allTagElements = document.querySelectorAll(".tag-holder .tag, .tag-wrapper .tag");
-
-    // Map to store tag name → color
-    const tagColorMap = {};
-
-    // First pass: assign colors and store them
-    allTagElements.forEach(tagEl => {
-      const tagText = tagEl.textContent.trim();
-      if (!tagColorMap[tagText]) {
-        tagColorMap[tagText] = stringToColor(tagText);
-      }
-    });
-
-    // Second pass: apply colors consistently
-    allTagElements.forEach(tagEl => {
-      const tagText = tagEl.textContent.trim();
-      const color = tagColorMap[tagText];
-      tagEl.style.backgroundColor = color;
-      tagEl.style.color = "#fff";
-    });
-  });
-</script>
-
-
-<!-- for clickability of publication wrapper-->
-<script>
-
 document.querySelectorAll('.publication-wrapper').forEach(el => {
   el.addEventListener('click', () => {
     const url = el.dataset.href;
     if (url) window.location.href = url;
   });
 });
-
-</script>
-
+</script> <!-- Consolidated Filter Scripts -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("search");
-  const publications = document.querySelectorAll(".publication");
+  const items = document.querySelectorAll(".publication");
+
+  if (!input || !items.length) return;
 
   input.addEventListener("input", function () {
     const query = input.value.trim().toLowerCase();
 
-    publications.forEach(pub => {
-      const wrapper = pub.querySelector(".publication-wrapper");
-      const hr = pub.querySelector("hr");
-      const title = wrapper.querySelector(".information h1")?.textContent.toLowerCase() || "";
-      const tags = pub.dataset.tags?.toLowerCase().split(",") || [];
+    items.forEach(item => {
+      let shouldShow = query === "";
+      
+      // Check title match if selector provided
+      
+      const title = item.querySelector(".information h1")?.textContent.toLowerCase() || "";
+      if (title.includes(query)) shouldShow = true;
+      
+      
+      // Check tag match if attribute provided
+      
+      const tags = item.dataset.tags?.toLowerCase().split(",") || [];
+      if (tags.some(tag => tag.includes(query))) shouldShow = true;
+      
+      
+      // Check tag text if tag selector provided
+      
 
-      const titleMatch = title.includes(query);
-      const tagMatch = tags.some(tag => tag.includes(query));
-
-      const shouldShow = query === "" || titleMatch || tagMatch;
-
-      wrapper.style.display = shouldShow ? "flex" : "none";
-      if (hr) hr.style.display = shouldShow ? "block" : "none";
+      // Apply visibility
+      
+      item.style.display = shouldShow ? "flex" : "none";
+      
+      
+      // Hide additional elements if specified
+      
+      const additionalElement = item.querySelector("hr");
+      if (additionalElement) additionalElement.style.display = shouldShow ? "block" : "none";
+      
     });
   });
 });
 </script>
 
-
-        <script type="text/javascript" src="/lab_website_private/assets/js/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="/lab_website_private/assets/js/functions.js"></script>
+        <script type="text/javascript" src="/assets/js/jquery-3.7.1.min.js"></script>
     </body>
 </html>

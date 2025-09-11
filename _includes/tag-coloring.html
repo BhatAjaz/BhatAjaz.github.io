@@ -1,0 +1,35 @@
+<!-- Tag Coloring Script -->
+<script>
+// Generate a consistent HSL color from a string
+function stringToColor(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return `hsl(${hash % 360}, 70%, 70%)`;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Collect all tag elements across the page
+  const allTagElements = document.querySelectorAll("{{ include.tag_selector | default: '.tag' }}");
+
+  // Map to store tag name → color
+  const tagColorMap = {};
+
+  // First pass: assign colors and store them
+  allTagElements.forEach(tagEl => {
+    const tagText = tagEl.textContent.trim();
+    if (!tagColorMap[tagText]) {
+      tagColorMap[tagText] = stringToColor(tagText);
+    }
+  });
+
+  // Second pass: apply colors consistently
+  allTagElements.forEach(tagEl => {
+    const tagText = tagEl.textContent.trim();
+    const color = tagColorMap[tagText];
+    tagEl.style.backgroundColor = color;
+    tagEl.style.color = "#fff";
+  });
+});
+</script>

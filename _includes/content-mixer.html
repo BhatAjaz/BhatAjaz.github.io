@@ -1,0 +1,61 @@
+<!-- Dynamic Content Mixer - Configuration-driven mixed content generation -->
+{% assign config = site.data.site_config %}
+{% assign all_content = '' | split: '' %}
+
+<!-- Dynamic configuration variables -->
+{% assign pub_limit = config.limits.publications_homepage %}
+{% assign news_limit = config.limits.news_homepage %}
+{% assign total_limit = config.limits.total_homepage_content %}
+{% assign excerpt_limit = config.limits.excerpt_words %}
+
+<!-- Latest Publications (dynamic limit) -->
+{% assign all_publications = '' | split: '' %}
+{% for pub_pair in site.data.publications %}
+  {% assign publication = pub_pair[1] %}
+  {% assign all_publications = all_publications | push: publication %}
+{% endfor %}
+{% assign publications_by_year = all_publications | sort: 'year' | reverse %}
+{% for publication in publications_by_year limit: pub_limit %}
+  {% assign pub_image = publication.image | default: config.images.default_publication %}
+  {% capture pub_item %}publication|{{ publication.pub_id }}|{{ publication.title }}|{{ pub_image }}|{{ publication.abstract }}|{{ config.urls.publication_base }}{{ publication.pub_id }}/{% endcapture %}
+  {% assign all_content = all_content | push: pub_item %}
+{% endfor %}
+
+<!-- Latest News Posts (dynamic limit) -->
+{% for post in site.posts limit: news_limit %}
+  {% assign post_excerpt = post.excerpt | strip_html | truncatewords: excerpt_limit %}
+  {% assign image_file = site.data.news_images.mappings[post.slug] | default: site.data.news_images.default %}
+  {% assign image_extension = site.data.news_images.default_extension | default: '.jpeg' %}
+  {% assign news_image = config.images.news_directory | append: image_file | append: image_extension %}
+  {% capture news_item %}news|{{ post.slug }}|{{ post.title }}|{{ news_image }}|{{ post_excerpt }}|{{ post.url }}{% endcapture %}
+  {% assign all_content = all_content | push: news_item %}
+{% endfor %}
+
+<!-- Shuffle and Display Content (dynamic limit) -->
+{% assign shuffled_content = all_content | sort %}
+{% for item_data in shuffled_content limit: total_limit %}
+  {% assign item_parts = item_data | split: '|' %}
+  {% assign content_type = item_parts[0] %}
+  {% assign content_id = item_parts[1] %}
+  {% assign content_title = item_parts[2] %}
+  {% assign content_image = item_parts[3] %}
+  {% assign content_description = item_parts[4] %}
+  {% assign content_url = item_parts[5] %}
+  
+  <div class="content-box" data-href="{{ content_url }}" data-type="{{ content_type }}">
+    <div class="content-type-badge {{ content_type }}-badge">
+      {% if content_type == 'publication' %}Publication{% else %}News{% endif %}
+    </div>
+    <div class="content-box-text">
+      <h1>{{ content_title }}</h1>
+      <div class="image-box">
+        <img src="{{ content_image }}" alt="{{ content_title }}">
+      </div>
+      <p>{{ content_description }}</p>
+    </div>
+    <div class="read-more">
+      <a href="{{ content_url }}">Read more →</a>
+    </div>
+    <div class="overlay"></div>
+  </div>
+{% endfor %}

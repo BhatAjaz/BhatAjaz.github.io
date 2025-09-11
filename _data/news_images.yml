@@ -1,0 +1,15 @@
+# News Image Mapping - Central configuration for news post images
+mappings:
+  ai-robotics-talk-ubd: robotics-talk
+  physics-life-reviews-motor: motor-neuroscience
+  open-vacancies-lab-positions: lab-vacancies
+  cogsci-dynamic-neural-field: neural-field
+  wolves-model-word-learning: language-learning
+  iclr-causal-learning-aesop: causal-learning
+  creative-ai-research: creative-ai
+  icitda-committee-member: conference
+
+# Default fallback image
+default: conference
+# Default image file extension
+default_extension: ".jpeg"

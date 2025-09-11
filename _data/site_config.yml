@@ -1,0 +1,133 @@
+# ===========================
+# SITE CONFIGURATION
+# Dynamic configuration for all site behavior and appearance
+# ===========================
+
+# Content Display Limits
+limits:
+  publications_homepage: 5          # Publications shown on homepage
+  news_homepage: 5                  # News posts shown on homepage
+  total_homepage_content: 10        # Total mixed content items on homepage
+  excerpt_words: 20                 # Words in news excerpts
+  search_results: 50                # Maximum search results shown
+
+# Timing and Intervals (in milliseconds)
+timing:
+  slider_interval: 5000             # Auto-slide interval for project slider
+  scroll_duration: 800              # Smooth scroll animation duration
+  fade_duration: 300                # Fade transition duration
+  loading_delay: 100                # Loading animation delay
+
+# Image Configuration
+images:
+  default_publication: "/assets/images/publications/research-general.jpeg"
+  news_directory: "/assets/images/news/"
+  publications_directory: "/assets/images/publications/"
+  team_directory: "/assets/images/team/"
+  projects_directory: "/assets/images/projects/"
+  fallback_image: "/assets/images/publications/research-general.jpeg"
+  
+  # Image dimensions (for responsive design)
+  dimensions:
+    publication_card: "800x600"
+    team_photo: "400x400"
+    project_hero: "1200x600"
+    news_thumbnail: "600x400"
+
+# URL Patterns
+urls:
+  publication_base: "/publication/"
+  project_base: "/project/"
+  team_base: "/team/"
+  blog_base: "/blog/"
+  
+  # External URL patterns
+  scholar_base: "https://scholar.google.com/citations?user="
+  github_base: "https://github.com/"
+  linkedin_base: "https://linkedin.com/in/"
+
+# Layout and Display Settings
+layout:
+  container_max_width: "1200px"
+  content_padding: "2rem"
+  card_spacing: "1.5rem"
+  grid_columns:
+    desktop: 3
+    tablet: 2  
+    mobile: 1
+    
+  # Responsive breakpoints (in px)
+  breakpoints:
+    mobile: 768
+    tablet: 1024
+    desktop: 1200
+
+# Content Processing Settings
+processing:
+  markdown_engine: "kramdown"
+  syntax_highlighter: "rouge"
+  excerpt_separator: "<!--more-->"
+  permalink_style: "pretty"
+  
+  # SEO and Meta Settings
+  meta:
+    default_author: "Dr. Ajaz Ahmad Bhat"
+    default_keywords: ["AI", "Robotics", "Cognitive Science", "Research"]
+    og_image_default: "/assets/images/og-default.jpg"
+
+# Feature Toggles
+features:
+  livereload: true
+  search_enabled: true
+  comments_enabled: false
+  analytics_enabled: false
+  dark_mode_toggle: false
+  print_styles: true
+  
+# Development Settings
+development:
+  show_drafts: false
+  show_future: false
+  incremental_build: true
+  profile: false
+
+# Social Media Configuration
+social:
+  platforms:
+    - name: "Google Scholar"
+      icon: "scholar"
+      color: "#4285f4"
+    - name: "GitHub"
+      icon: "github" 
+      color: "#333"
+    - name: "LinkedIn"
+      icon: "linkedin"
+      color: "#0077b5"
+    - name: "YouTube"
+      icon: "youtube"
+      color: "#ff0000"
+    - name: "Email"
+      icon: "email"
+      color: "#ea4335"
+
+# Animation and Interaction Settings
+interactions:
+  hover_scale: 1.02                 # Scale factor on hover
+  transition_speed: "0.3s"          # CSS transition speed
+  scroll_offset: 100                # Offset for scroll-to-top
+  lazy_loading: true                # Enable lazy loading for images
+  
+# Search Configuration
+search:
+  fuzzy_search: true
+  search_delay: 300                 # Delay before search triggers (ms)
+  min_search_length: 2              # Minimum characters to trigger search
+  highlight_results: true
+
+# Performance Settings
+performance:
+  compress_html: true
+  minify_css: true
+  optimize_images: true
+  enable_caching: true
+  gzip_compression: true

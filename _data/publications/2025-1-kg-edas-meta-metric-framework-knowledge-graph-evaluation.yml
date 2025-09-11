@@ -1,0 +1,11 @@
+title: "KG-EDAS: A Meta-Metric Framework for Evaluating Knowledge Graph Completion Models"
+pub_id: "2025-1-kg-edas-meta-metric-framework-knowledge-graph-evaluation"
+image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg"
+authors: "Gul H., Naim A. G., & Bhat A. A."
+journal: "arXiv preprint"
+year: 2025
+link: "https://arxiv.org/abs/2508.15357"
+video: ""
+tags: ["evaluation","metric","KGC","graph",]
+abstract: "Current evaluation practices for knowledge graph completion models lack standardization and often fail to capture model capabilities comprehensively. We introduce KG-EDAS (Knowledge Graph Evaluation through Data-Aware Scoring), a meta-metric framework that provides more robust and interpretable evaluation of KGC models. Our framework addresses key limitations in existing evaluation protocols."
+methodology: "KG-EDAS combines multiple evaluation dimensions including semantic consistency, structural awareness, and robustness to data distribution shifts. We conduct extensive experiments across different KGC architectures and datasets to validate the framework's effectiveness. The meta-metric approach provides both aggregate scores and detailed breakdowns of model performance."

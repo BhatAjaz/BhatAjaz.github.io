@@ -1,0 +1,130 @@
+<!-- Consolidated Site JavaScript -->
+<script src="{{ '/assets/js/jquery-3.7.1.min.js' | relative_url }}"></script>
+<script>
+// === DYNAMIC SITE FUNCTIONALITY MODULE ===
+// Configuration-driven JavaScript with no hardcoded values
+{% assign config = site.data.site_config %}
+const SiteFeatures = {
+  
+  // Dynamic configuration from Jekyll data
+  config: {
+    scrollDuration: {{ config.timing.scroll_duration }},
+    fadeDuration: {{ config.timing.fade_duration }},
+    scrollOffset: {{ config.interactions.scroll_offset }},
+    hoverScale: {{ config.interactions.hover_scale }},
+    transitionSpeed: '{{ config.interactions.transition_speed }}',
+    lazyLoading: {{ config.interactions.lazy_loading | jsonify }},
+    searchDelay: {{ config.search.search_delay }},
+    minSearchLength: {{ config.search.min_search_length }}
+  },
+  
+  // Initialize all site features
+  init() {
+    this.initScrollerAnimation();
+    this.initClickableCards();
+    this.initNavigation();
+    this.initSmoothScroll();
+    this.initDynamicInteractions();
+  },
+
+  // Scroller animation for content cards
+  initScrollerAnimation() {
+    const scrollers = document.querySelectorAll(".scroller");
+    
+    // Check for reduced motion preference
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    
+    scrollers.forEach((scroller) => {
+      scroller.setAttribute("data-animated", true);
+      
+      const scrollerInner = scroller.querySelector(".publications-content-wrapper");
+      if (!scrollerInner) return;
+      
+      const scrollerContent = Array.from(scrollerInner.children);
+      
+      // Clone items for infinite scroll effect
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", true);
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  },
+
+  // Make content cards clickable
+  initClickableCards() {
+    document.querySelectorAll('.content-box[data-href], .news-wrapper[data-href]').forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', (e) => {
+        // Don't trigger navigation if clicking on links
+        if (e.target.tagName === 'A') return;
+        
+        const url = el.dataset.href;
+        if (url) window.location.href = url;
+      });
+    });
+  },
+
+  // Navigation functionality
+  initNavigation() {
+    // Navigation toggle functionality
+    $('.toggled-nav-wrapper').on('click', function(e) {
+      e.stopPropagation();
+    });
+
+    $('.nav-toggle-open-wrapper, .nav-toggle-close-wrapper, header .nav-toggle-body-overlay').on('click', function() {
+      $('html').toggleClass('nav-open');
+    });
+  },
+
+  // Dynamic smooth scroll functionality
+  initSmoothScroll() {
+    const scrollDuration = this.config.scrollDuration;
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, scrollDuration);
+          return false;
+        }
+      }
+    });
+  },
+
+  // Dynamic interaction enhancements
+  initDynamicInteractions() {
+    // Apply dynamic hover effects if configured
+    if (this.config.hoverScale !== 1) {
+      const scaleValue = this.config.hoverScale;
+      $('[data-hover-scale]').each(function() {
+        $(this).css('transition', `transform ${SiteFeatures.config.transitionSpeed} ease`);
+        $(this).hover(
+          function() { $(this).css('transform', `scale(${scaleValue})`); },
+          function() { $(this).css('transform', 'scale(1)'); }
+        );
+      });
+    }
+    
+    // Dynamic lazy loading if enabled
+    if (this.config.lazyLoading && 'IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+          }
+        });
+      });
+      document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
+    }
+  }
+};
+
+// Initialize when DOM is ready
+$(document).ready(() => SiteFeatures.init());
+</script>

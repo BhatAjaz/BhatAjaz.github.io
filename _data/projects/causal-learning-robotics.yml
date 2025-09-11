@@ -1,0 +1,49 @@
+proj_id: "causal-learning-robotics"
+title: "Causal Learning & Body Schema in Robotics"
+status: "active"
+start_date: "2021-09-01"
+tags: ["causal-learning", "body-schema", "motor-intelligence"]
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+link: "some-page-3"
+
+# Content sections
+overview: "This project focuses on how robots can abstract cause-effect relations from experience, enabling intuitive actions with unseen objects. By developing body schema models and causal learning algorithms, robots gain the ability to understand their physical capabilities and predict interaction outcomes, leading to more natural and effective manipulation skills."
+
+objectives:
+  - "Develop causal learning algorithms for robotic manipulation"
+  - "Create adaptive body schema models that evolve with experience"
+  - "Enable intuitive interaction with novel objects and tools"
+  - "Integrate causal reasoning with motor control systems"
+
+methodology: "Our approach combines causal inference techniques with deep learning to model cause-effect relationships in robotic interactions. We use variational autoencoders to learn body schema representations and employ causal discovery algorithms to understand manipulation dynamics. The system continuously updates its understanding through active exploration."
+
+results: "Achieved 85% success rate in novel object manipulation tasks without prior training. The causal learning system enables robots to predict interaction outcomes with 92% accuracy. Successfully demonstrated on various robotic platforms including iCub humanoid robot, with results featured in Royal Society publications and BBC coverage."
+
+impact: "This research contributes to more intuitive and adaptive robotic systems that can work effectively in unstructured environments. Applications include assistive robotics, manufacturing, and exploration scenarios where robots must interact with unknown objects and environments."
+
+# Academic metadata
+funding:
+  - source: "Royal Society Grant"
+    amount: "GBP £75,000"
+    duration: "2021-2024"
+  - source: "EU Horizon Grant"
+    amount: "EUR €50,000"
+    duration: "2022-2025"
+
+collaborators:
+  - name: "Prof. Giorgio Metta"
+    institution: "Italian Institute of Technology"
+  - name: "Dr. Tamim Asfour"
+    institution: "Karlsruhe Institute of Technology"
+
+publications:
+  - title: "Causal Learning for Robotic Manipulation"
+    authors: "A.A. Bhat, G. Metta, T. Asfour"
+    year: "2023"
+    journal: "Philosophical Transactions of the Royal Society B"
+    link: "https://example.com/paper5"
+  - title: "Body Schema Learning Through Causal Inference"
+    authors: "A.A. Bhat, T. Asfour"
+    year: "2022"
+    journal: "IEEE Transactions on Robotics"
+    link: "https://example.com/paper6"

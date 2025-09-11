@@ -1,0 +1,46 @@
+proj_id: "memory-based-reasoning"
+title: "Memory-Driven Reasoning in Robots"
+status: "active"
+start_date: "2022-06-01"
+tags: ["robotics", "memory-systems", "cognitive-reasoning"]
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+link: "some-page-2"
+
+# Content sections
+overview: "This project explores how robots can simulate past experiences to solve new problems creatively and efficiently. By developing memory-driven reasoning systems, robots can leverage historical interactions to adapt to novel situations, demonstrating enhanced problem-solving capabilities in both experimental settings and industrial multi-robot environments."
+
+objectives:
+  - "Design memory architectures that enable experience-based learning in robots"
+  - "Develop algorithms for retrieving and applying relevant past experiences"
+  - "Implement creative problem-solving mechanisms through memory simulation"
+  - "Validate approaches in industrial multi-robot collaboration scenarios"
+
+methodology: "We employ episodic memory models inspired by cognitive science, combined with reinforcement learning techniques. Our approach uses attention mechanisms to retrieve relevant experiences and neural networks to adapt past solutions to current contexts. The system integrates temporal reasoning with spatial understanding for comprehensive memory-based decision making."
+
+results: "Demonstrated 40% improvement in task completion rates compared to traditional reactive approaches. Successfully deployed in industrial settings with 3-5 robot teams, achieving 35% reduction in coordination errors. The memory system enables robots to solve novel problems 60% faster by leveraging past experiences."
+
+impact: "This research advances the field of cognitive robotics and has practical applications in manufacturing, logistics, and service robotics. The memory-driven approach enables more autonomous and adaptable robotic systems that can handle unexpected situations more effectively."
+
+# Academic metadata
+funding:
+  - source: "MOSTI Research Grant"
+    amount: "BND $60,000"
+    duration: "2022-2024"
+
+collaborators:
+  - name: "Dr. Elena Rodriguez"
+    institution: "Technical University of Munich"
+  - name: "Dr. Yuki Tanaka"
+    institution: "University of Tokyo"
+
+publications:
+  - title: "Episodic Memory for Robotic Problem Solving"
+    authors: "A.A. Bhat, E. Rodriguez, Y. Tanaka"
+    year: "2023"
+    journal: "IEEE Robotics and Automation Letters"
+    link: "https://example.com/paper3"
+  - title: "Memory-Driven Multi-Robot Coordination"
+    authors: "A.A. Bhat, Y. Tanaka"
+    year: "2024"
+    journal: "International Conference on Robotics and Automation (ICRA)"
+    link: "https://example.com/paper4"

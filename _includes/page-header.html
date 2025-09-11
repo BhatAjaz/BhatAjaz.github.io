@@ -1,0 +1,7 @@
+<!-- Page Header Component -->
+<div class="{{ include.wrapper_class | default: 'header-wrapper' }}">
+  <h1 class="{{ include.header_class | default: 'header' }}">{{ include.title }}</h1>
+  {% if include.show_hr %}
+    <hr{% if include.hr_style %} style="{{ include.hr_style }}"{% endif %}>
+  {% endif %}
+</div>

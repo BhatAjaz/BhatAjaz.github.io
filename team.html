@@ -3,61 +3,172 @@ layout: default
 ---
 
 {% include nav.html %}
-<!-- first container -->
+<!-- Team page with organized sections -->
 <div class="container-team">
-  <h1 class="header">Meet the group</h1>
+  {% include page-header.html title="Meet the group" %}
+  
+  <!-- Principal Investigator Section -->
   <div class="title">
-      <h1>Position 1</h1>
+      <h1>Principal Investigator</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    <div class="first-content-box">
+    {% for member in site.data.team.principal_investigator %}
+    <div class="first-content-box" data-href="../team/{{ member.member_id }}">
       <div class="image-box">
-          <img src="../assets/img/team/person1.jpg" alt="Ajaz Ahmad Bhat">
+          <img src="../{{ member.image }}" alt="{{ member.name }}">
       </div>
       <div class="content-box-text">
-        <h1>Ajaz Ahmad Bhat</h1>
-        <p>text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.text.</p>     
+        <h1>{{ member.name }}</h1>
+        <p>{{ member.bio }}</p>     
         <div class="email">
-          <a href="../team/Ajaz-Ahmad-Bhat">More details</a>
+          <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
       </div> 
-
     </div>
+    {% endfor %}
   </div>
   
-  {% for position in site.data.team.positions %}
+  <!-- Research Scientists & PostDocs Section -->
+  {% if site.data.team.research_scientists_postdocs.size > 0 %}
   <div class="title">
-      <h1>{{ position.title }}</h1>
+      <h1>Research Scientists & PostDocs</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    {% for person in position.members %}
-      <div class="content-box">
+    {% for member in site.data.team.research_scientists_postdocs %}
+      <div class="content-box" data-href="../team/{{ member.member_id }}">
           <div class="content-box-text">
-          <h1>{{ person.name }}</h1>
+          <h1>{{ member.name }}</h1>
           <div class="image-box">
-            <img src="../{{ person.image }}" alt="{{ person.name }}">
+            <img src="../{{ member.image }}" alt="{{ member.name }}">
           </div>
-
-          <p>{{ person.information }}</p>
+          <p>{{ member.bio }}</p>
           </div>
-        
-      
         <div class="email">
-          <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+          <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
-
       </div>
-      {% endfor %}
-    
-  </div>     
-  {% endfor %}
+    {% endfor %}
+  </div>
+  {% endif %}
+  
+  <!-- PostGraduate Students Section -->
+  {% if site.data.team.postgraduate_students.size > 0 %}
+  <div class="title">
+      <h1>PostGraduate Students</h1>
+      <hr>
+  </div>
+  <div class="member-content-wrapper">
+    {% for member in site.data.team.postgraduate_students %}
+      <div class="content-box" data-href="../team/{{ member.member_id }}">
+          <div class="content-box-text">
+          <h1>{{ member.name }}</h1>
+          <div class="image-box">
+            <img src="../{{ member.image }}" alt="{{ member.name }}">
+          </div>
+          <p>{{ member.bio }}</p>
+          </div>
+        <div class="email">
+          <a href="../team/{{ member.member_id }}">More details</a>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
+  <!-- Bachelors Students Section -->
+  {% if site.data.team.bachelor_students.size > 0 %}
+  <div class="title">
+      <h1>Bachelors Students</h1>
+      <hr>
+  </div>
+  <div class="member-content-wrapper">
+    {% for member in site.data.team.bachelor_students %}
+      <div class="content-box" data-href="../team/{{ member.member_id }}">
+          <div class="content-box-text">
+          <h1>{{ member.name }}</h1>
+          <div class="image-box">
+            <img src="../{{ member.image }}" alt="{{ member.name }}">
+          </div>
+          <p>{{ member.bio }}</p>
+          </div>
+        <div class="email">
+          <a href="../team/{{ member.member_id }}">More details</a>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
+  <!-- Alumni (Collaborators) Section -->
+  {% if site.data.team.alumni.size > 0 %}
+  <div class="title">
+      <h1>Alumni (Collaborators)</h1>
+      <hr>
+  </div>
+  <div class="member-content-wrapper">
+    {% for member in site.data.team.alumni %}
+      <div class="content-box" data-href="../team/{{ member.member_id }}">
+          <div class="content-box-text">
+          <h1>{{ member.name }}</h1>
+          <div class="image-box">
+            <img src="../{{ member.image }}" alt="{{ member.name }}">
+          </div>
+          <p>{{ member.bio }}</p>
+          </div>
+        <div class="email">
+          <a href="../team/{{ member.member_id }}">More details</a>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
+  <!-- Other Collaborators Section -->
+  {% if site.data.team.other_collaborators.size > 0 %}
+  <div class="title">
+      <h1>Other Collaborators</h1>
+      <hr>
+  </div>
+  <div class="member-content-wrapper">
+    {% for member in site.data.team.other_collaborators %}
+      <div class="content-box" data-href="../team/{{ member.member_id }}">
+          <div class="content-box-text">
+          <h1>{{ member.name }}</h1>
+          <div class="image-box">
+            <img src="../{{ member.image }}" alt="{{ member.name }}">
+          </div>
+          <p>{{ member.bio }}</p>
+          </div>
+        <div class="email">
+          <a href="../team/{{ member.member_id }}">More details</a>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  
 </div>
-</div>
- 
+
 {% include footer.html %}
 
-
+<script>
+// Make team member cards clickable
+document.querySelectorAll('.content-box[data-href], .first-content-box[data-href]').forEach(el => {
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', (e) => {
+    // Don't trigger if clicking on a link
+    if (e.target.tagName !== 'A') {
+      const url = el.dataset.href;
+      if (url) window.location.href = url;
+    }
+  });
+});
+</script>

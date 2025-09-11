@@ -1,0 +1,12 @@
+title: "Causal Learning by a Robot with Semantic-Episodic Memory in an Aesop's Fable Experiment"
+pub_id: "2020-2-causal-learning-robot-semantic-episodic-memory-aesop"
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+authors: "Bhat A. A. & Mohan V."
+journal: "ICLR (arXiv)"
+year: 2020
+number: 13
+link: "https://arxiv.org/abs/2003.00274"
+video: ""
+tags: ["causal-learning","episodic-memory","semantic-memory","robotics",]
+abstract: "Corvids, apes, and children solve the Crow and the Pitcher task, indicating causal understanding. To explore how agents abstract cause–effect relations from cumulative interactions, we re-enact the task on a robot equipped with a brain-guided neural model of semantic-episodic memory. Four task-agnostic learning rules compare expectations recalled from past episodes with current scenarios to extract hidden causal relations. Robot behaviors illustrate causal learning, and predictions for novel objects converge to Archimedes' principle, independent of exploration order and object set."
+methodology: "The Crow and Pitcher task was implemented on an iCub robot. A neural architecture with semantic-episodic memory modules encoded object properties and past interactions. Four learning rules—discrepancy detection, semantic binding, episodic attenuation, and expectation update—were applied to compare recalled episode outputs to sensory feedback. Robot trials with objects of varying weight, shape, color, and volume tested causal inference. Behavioral outcomes were evaluated against physical principles."

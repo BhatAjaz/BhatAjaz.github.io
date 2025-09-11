@@ -1,0 +1,11 @@
+title: "Moving beyond Associative Learning and Hypothesis Testing: How Stimulus Exposure Times and Looking Behaviours Conspire in Cross-Situational Word Learning"
+pub_id: "2020-1-beyond-associative-learning-stimulus-exposure-word-learning"
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+authors: "Bhat A. A., Spencer J. P., & Samuelson L. K."
+journal: "OSF Pre-registry"
+year: 2020
+link: "https://osf.io/htd7p"
+video: ""
+tags: ["word-learning","attention","working-memory","associative"]
+abstract: "This pre‐registered study investigates how the duration of stimulus exposure and participants' looking behaviours jointly influence cross‐situational word learning. By manipulating exposure times and recording eye movements, we will examine contributions of associative learning versus hypothesis‐testing mechanisms across multiple ambiguous naming trials."
+methodology: "Adult learners complete CSWL tasks under varied stimulus exposure durations (short vs. long). Eye‐tracking captures real‐time fixations on each object during word presentation. Learning outcomes are assessed via forced‐choice tests. We fit computational models implementing associative accumulation and hypothesis‐testing algorithms to gaze and choice data to determine which processes dominate under different exposure conditions."

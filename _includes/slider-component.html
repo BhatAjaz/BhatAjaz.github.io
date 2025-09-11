@@ -1,0 +1,65 @@
+<!-- Dynamic Project Slider Component -->
+{% assign config = site.data.site_config %}
+<div class="slider" data-interval="{{ config.timing.slider_interval }}">
+    {% assign project_array = '' | split: '' %}
+    {% for proj_pair in site.data.projects %}
+      {% assign project = proj_pair[1] %}
+      {% assign project_array = project_array | push: project %}
+    {% endfor %}
+    {% assign all_projects = project_array | sort: 'title' %}
+    {% for project in all_projects %}
+    <div id="{{ project.proj_id }}" class="slide">
+        {% assign project_image = project.image | default: config.images.fallback_image %}
+        <img src="{{ project_image }}" alt="{{ project.title }}" loading="lazy">
+        <div class="slide-text">
+            <h1><a href="{{ config.urls.project_base }}{{ project.proj_id }}/">{{ project.title }}</a></h1>
+            <p>{{ project.overview }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div>
+     <button class="arrow left-arrow">&#10094;</button>
+     <button class="arrow right-arrow">&#10095;</button>
+</div>
+
+<script>
+  // Dynamic slider configuration
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  
+  // Get dynamic interval from data attribute (no hardcoded fallback)
+  const sliderInterval = parseInt(slider.dataset.interval);
+  let index = 0;
+  let interval;
+
+  function goToSlide(i) {
+    index = (i + slides.length) % slides.length;
+    slider.scrollTo({
+      left: slides[index].offsetLeft,
+      behavior: 'smooth'
+    });
+    resetInterval();
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(() => {
+      index = (index + 1) % slides.length;
+      slider.scrollTo({
+        left: slides[index].offsetLeft,
+        behavior: 'smooth'
+      });
+    }, sliderInterval);
+  }
+
+  // Initialize slider if elements exist
+  if (slider && slides.length > 0) {
+    leftArrow?.addEventListener('click', () => goToSlide(index - 1));
+    rightArrow?.addEventListener('click', () => goToSlide(index + 1));
+    resetInterval();
+  }
+</script>
