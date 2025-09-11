@@ -32,7 +32,7 @@ youtube_path: https://www.youtube.com/channel/UCbTav7pqgfIFCoH_ccnXPMw
 
 permalink: pretty
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 exclude:
