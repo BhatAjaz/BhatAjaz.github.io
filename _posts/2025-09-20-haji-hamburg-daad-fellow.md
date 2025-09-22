@@ -5,17 +5,17 @@ date: 2025-09-15
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/"
 categories: [news, students, fellowships]
-featured_image: "/assets/images/news/2025-09-20-haji2.jpg"
+featured_image: "/assets/images/news/2025-09-20/haji2.jpg"
 external_link: "https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/"
 ---
 
-We are proud to announce that **Haji Gul**, a PhD student at the School of Digital Science, Universiti Brunei Darussalam, working under the supervision of **Dr. Ajaz Ahmad Bhat** and **Dr. Abdul Ghani Naim**, has been selected as a **DAAD AINeT Fellow** for the Postdoc-NeT-AI 05/2025 Networking Week on Natural Language Processing (NLP).
+I am proud to announce that **Haji Gul**, a PhD student at the School of Digital Science, Universiti Brunei Darussalam, working under my and Dr. Ghani's supervision, has been selected as a **DAAD AINeT Fellow** for the Postdoc-NeT-AI 05/2025 Networking Week on Natural Language Processing (NLP).
 
 ---
 
 ## 🎓 Fellowship & Visit
 
-As part of this prestigious fellowship, Haji Gul is currently representing the School of Digital Science at the international level during his visit to **Leuphana University of Lüneburg, Germany** from **September 15–19, 2025**. The Networking Week offers a platform to engage with leading researchers in Artificial Intelligence, Knowledge Graphs, and NLP, and to expand professional research networks.
+As part of this prestigious fellowship, Haji Gul is currently on his visit to **Leuphana University of Lüneburg, Germany** from **September 15–20, 2025**. The Networking Week offers a platform to engage with leading researchers in Artificial Intelligence, Knowledge Graphs, and NLP, and to expand professional research networks.
 
 ---
 
@@ -33,6 +33,6 @@ During his stay, Haji Gul is collaborating with **Prof. Dr. Ricardo Usbeck** and
 
 We are proud to see Haji Gul representing UBD on the international stage and look forward to the research contributions that will result from this fellowship and collaboration.
 
-![DAAD Fellowship - Haji Gul](/assets/images/news/2025-09-20-haji1.jpg)
+![DAAD Fellowship - Haji Gul](/assets/images/news/2025-09-20/haji1.jpg)
 
 *Haji Gul representing the School of Digital Science during the DAAD AINeT Networking Week (Postdoc-NeT-AI 05/2025).*
