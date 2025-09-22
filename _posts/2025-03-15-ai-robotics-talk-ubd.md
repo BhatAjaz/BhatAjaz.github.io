@@ -7,7 +7,7 @@ date: 2025-03-15
 
 authors: "Dr. Ajaz Ahmad Bhat"
 
-source: "UBD Faculty of Science"
+source: "School of Digital Science UBD "
 
 categories: [talks, research]
 
@@ -36,4 +36,4 @@ The talk was well-received by faculty, students, and researchers, providing valu
 
 ![Robotics Talk](/assets/images/news/robotics-talk.jpeg)
 
-*Dr. Bhat presenting at the UBD Faculty of Science*
+*Dr. Bhat presenting at the School of Digital Science UBD *

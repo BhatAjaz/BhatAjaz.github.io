@@ -4,7 +4,7 @@ title: "Open Vacancies - Master's and PhD Positions Available"
 date: 2025-09-09
 pinned: true
 authors: "Dr. Ajaz Ahmad Bhat"
-source: "UBD Faculty of Science"
+source: "School of Digital Science UBD "
 categories: [vacancies, opportunities]
 featured_image: "/assets/images/news/lab-vacancies.jpeg"
 ---
