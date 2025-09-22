@@ -7,7 +7,10 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.4.1"
+## Use GitHub Pages' bundled gemset for exact parity with GitHub Pages builds.
+## This will pin Jekyll and all supported plugins to the versions GitHub Pages uses.
+## To update, run: bundle update github-pages
+gem "github-pages", group: :jekyll_plugins
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 ######gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -15,6 +18,9 @@ gem "jekyll", "~> 4.4.1"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  # These are included by `github-pages`, but listing them here is harmless
+  # if you want to force a specific version. Removing them leaves version
+  # management entirely to `github-pages`.
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap"
 end

@@ -38,8 +38,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-sass:
-  sass_dir: _sass
+## SASS config removed — styles are now provided as precompiled CSS in assets/css/
   
 #defaults:
 
