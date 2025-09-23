@@ -20,12 +20,12 @@ timing:
 
 # Image Configuration
 images:
-  default_publication: "/assets/images/publications/research-general.jpeg"
-  news_directory: "/assets/images/news/"
-  publications_directory: "/assets/images/publications/"
-  team_directory: "/assets/images/team/"
-  projects_directory: "/assets/images/projects/"
-  fallback_image: "/assets/images/publications/research-general.jpeg"
+  default_img: "/assets/img/default.jpeg"
+  news_directory: "/assets/img/news/"
+  publications_directory: "/assets/img/publications/"
+  team_directory: "/assets/img/team/"
+  projects_directory: "/assets/img/projects/"
+  fallback_image: "/assets/img/publications/research-general.jpeg"
   
   # Image dimensions (for responsive design)
   dimensions:
@@ -73,7 +73,7 @@ processing:
   meta:
     default_author: "Dr. Ajaz Ahmad Bhat"
     default_keywords: ["AI", "Robotics", "Cognitive Science", "Research"]
-    og_image_default: "/assets/images/og-default.jpg"
+    og_image_default: "/assets/img/og-default.jpg"
 
 # Feature Toggles
 features:

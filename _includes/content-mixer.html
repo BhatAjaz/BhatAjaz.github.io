@@ -16,7 +16,7 @@
 {% endfor %}
 {% assign publications_by_year = all_publications | sort: 'year' | reverse %}
 {% for publication in publications_by_year limit: pub_limit %}
-  {% assign pub_image = publication.image | default: config.images.default_publication %}
+  {% assign pub_image = publication.image | default: config.images.default_img %}
   {% capture pub_item %}publication|{{ publication.pub_id }}|{{ publication.title }}|{{ pub_image }}|{{ publication.abstract }}|{{ config.urls.publication_base }}{{ publication.pub_id }}/{% endcapture %}
   {% assign all_content = all_content | push: pub_item %}
 {% endfor %}
@@ -24,7 +24,7 @@
 <!-- Latest News Posts (dynamic limit) -->
 {% for post in site.posts limit: news_limit %}
   {% assign post_excerpt = post.excerpt | strip_html | truncatewords: excerpt_limit %}
-  {% assign news_image = post.featured_image | default: '/assets/img/news/default.jpeg' %}
+  {% assign news_image = post.featured_image | default: config.images.default_img %}
   {% unless post.featured_image %}
     <!-- ⚠️ Missing featured_image for {{ post.slug }} -->
   {% endunless %}
