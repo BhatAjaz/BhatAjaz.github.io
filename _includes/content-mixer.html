@@ -24,12 +24,15 @@
 <!-- Latest News Posts (dynamic limit) -->
 {% for post in site.posts limit: news_limit %}
   {% assign post_excerpt = post.excerpt | strip_html | truncatewords: excerpt_limit %}
-  {% assign image_file = site.data.news_images.mappings[post.slug] | default: site.data.news_images.default %}
-  {% assign image_extension = site.data.news_images.default_extension | default: '.jpeg' %}
-  {% assign news_image = config.images.news_directory | append: image_file | append: image_extension %}
+  {% assign news_image = post.featured_image | default: '/assets/img/news/default.jpeg' %}
+  {% unless post.featured_image %}
+    <!-- ⚠️ Missing featured_image for {{ post.slug }} -->
+  {% endunless %}
   {% capture news_item %}news|{{ post.slug }}|{{ post.title }}|{{ news_image }}|{{ post_excerpt }}|{{ post.url }}{% endcapture %}
   {% assign all_content = all_content | push: news_item %}
 {% endfor %}
+
+
 
 <!-- Shuffle and Display Content (dynamic limit) -->
 {% assign shuffled_content = all_content | sort %}
