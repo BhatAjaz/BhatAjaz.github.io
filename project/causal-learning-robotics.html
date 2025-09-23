@@ -1,0 +1,75 @@
+---
+layout: default
+---
+{% include nav.html %}
+{% assign project = site.data.projects.causal-learning-robotics %}
+
+<div class="project-page">
+  <h1 class="header">{{ project.title }}</h1>
+  <hr>
+  <img src="{{ project.image }}" alt="{{ project.title }}">
+  <p><strong>Status:</strong> {{ project.status | capitalize }}</p>
+  <p><strong>Tags:</strong> {{ project.tags | join: ", " }}</p>
+  <p><strong>Start Date:</strong> {{ project.start_date }}</p>
+
+  <h1>Overview:</h1> 
+  <hr>
+  <p>{{ project.overview }}</p>
+
+  <h1>Objectives:</h1>
+  <hr>
+  <ul>
+    {% for objective in project.objectives %}
+    <li>{{ objective }}</li>
+    {% endfor %}
+  </ul>
+
+  <h1>Methodology:</h1>
+  <hr>
+  <p>{{ project.methodology }}</p>
+
+  <h1>Results:</h1>
+  <hr>
+  <p>{{ project.results }}</p>
+
+  <h1>Impact:</h1>
+  <hr>
+  <p>{{ project.impact }}</p>
+
+  {% if project.funding %}
+  <h1>Funding:</h1>
+  <hr>
+  <ul>
+    {% for fund in project.funding %}
+    <li><strong>{{ fund.source }}:</strong> {{ fund.amount }} ({{ fund.duration }})</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if project.collaborators %}
+  <h1>Collaborators:</h1>
+  <hr>
+  <ul>
+    {% for collaborator in project.collaborators %}
+    <li><strong>{{ collaborator.name }}</strong> - {{ collaborator.institution }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if project.publications %}
+  <h1>Publications:</h1>
+  <hr>
+  <ul>
+    {% for pub in project.publications %}
+    <li>
+      <strong>{{ pub.title }}</strong><br>
+      {{ pub.authors }} ({{ pub.year }})<br>
+      <em>{{ pub.journal }}</em>
+      {% if pub.link %}<br><a href="{{ pub.link }}" target="_blank">Read Paper</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+
+{% include footer.html %}
