@@ -11,7 +11,7 @@ source: "Royal Society Interface"
 
 categories: [research, robotics, causality]
 
-featured_image: "/assets/images/news/creative-ai.jpeg"
+featured_image: "/assets/images/news/2016-07-07/creative-ai.jpeg"
 
 external_link: "https://doi.org/10.1098/rsif.2016.0086"
 ---

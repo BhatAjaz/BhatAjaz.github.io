@@ -11,7 +11,7 @@ source: "PhD Defense"
 
 categories: [milestone, research, memory]
 
-featured_image: "/assets/images/news/neural-field.jpeg"
+featured_image: "/assets/images/news/2016-04-28/neural-field.jpeg"
 
 external_link: "https://ajazahmad.github.io/thesis"
 ---

@@ -12,7 +12,7 @@ source: "Physics of Life Reviews"
 
 categories: [research, neuroscience, motor-control]
 
-featured_image: "/assets/images/news/motor-neuroscience.jpeg"
+featured_image: "/assets/images/news/2019-07-15/motor-neuroscience.jpeg"
 
 external_link: "https://osf.io/kxycs/"
 

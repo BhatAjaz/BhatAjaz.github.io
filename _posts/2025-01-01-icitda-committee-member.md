@@ -5,7 +5,7 @@ date: 2025-01-01
 authors: "Conference Committee"
 source: "ICITDA 2025"
 categories: [conferences, committee]
-featured_image: "/assets/images/news/conference.jpeg"
+featured_image: "/assets/images/news/2025-01-01/conference.jpeg"
 external_link: "https://icitda.org/committee/"
 ---
 
@@ -13,7 +13,7 @@ Dr. Ajaz Bhat serves as a committee member for ICITDA 2025 (International Confer
 
 ## Conference Overview
 
-ICITDA 2025 is a premier international conference bringing together researchers, academics, and industry professionals from around the world to share cutting-edge research and innovations in information technology and data analytics.
+ICITDA 2025 is an international conference bringing together researchers, academics, and industry professionals from around the world to share cutting-edge research and innovations in information technology and data analytics.
 
 ## Dr. Bhat's Contributions
 
@@ -33,6 +33,6 @@ The conference serves as a vital platform for:
 - Fostering international research collaborations
 - Advancing the field through peer review and discussion
 
-![Conference](/assets/images/news/conference.jpeg)
+![Conference](/assets/images/news/2025-01-01/conference.jpeg)
 
 *International conferences foster global research collaboration*

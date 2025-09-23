@@ -11,7 +11,7 @@ source: "University of East Anglia"
 
 categories: [milestone, career, development]
 
-featured_image: "/assets/images/news/robotics-talk.jpeg"
+featured_image: "/assets/images/news/2016-11-09/robotics-talk.jpeg"
 
 external_link: "https://www.uea.ac.uk/groups-and-centres/developmental-dynamics-lab"
 ---

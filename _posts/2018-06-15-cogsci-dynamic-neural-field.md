@@ -11,7 +11,7 @@ source: "Cognitive Science Society Conference"
 
 categories: [conference, neural-models, cognitive-science]
 
-featured_image: "/assets/images/news/neural-field.jpeg"
+featured_image: "/assets/images/news/2018-06-15/neural-field.jpeg"
 
 external_link: "https://mindmodeling.org/cogsci2018/"
 ---

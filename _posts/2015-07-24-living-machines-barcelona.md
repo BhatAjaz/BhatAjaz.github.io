@@ -11,7 +11,7 @@ source: "Living Machines Conference 2015"
 
 categories: [conference, robotics, imitation]
 
-featured_image: "/assets/img/news/Barcelona_pedrera.jpg"
+featured_image: "/assets/img/news/2015-07-24/barcelona_pedrera.jpg"
 
 external_link: "http://dx.doi.org/10.1007/978-3-319-22979-9_33"
 ---

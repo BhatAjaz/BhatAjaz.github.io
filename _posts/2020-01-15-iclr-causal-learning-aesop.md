@@ -5,7 +5,7 @@ date: 2020-01-15
 authors: "Dr. Ajaz Ahmad Bhat et al."
 source: "International Conference on Learning and Representation"
 categories: [conference, research, causal-learning]
-featured_image: "/assets/images/news/causal-learning.jpeg"
+featured_image: "/assets/images/news/2020-01-15/causal-learning.jpeg"
 external_link: "https://arxiv.org/abs/2003.00274"
 ---
 
@@ -85,7 +85,7 @@ This research opens several avenues for future work:
 - **Moral Reasoning**: Applying causal understanding to ethical decisions
 - **Real-world Applications**: Deploying causal learning in practical scenarios
 
-![Causal Learning](/assets/images/news/causal-learning.jpeg)
+![Causal Learning](/assets/images/news/2020-01-15/causal-learning.jpeg)
 
 *The Aesop's fable experiment demonstrates sophisticated causal reasoning in robotic systems*
 
