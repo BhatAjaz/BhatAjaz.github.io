@@ -5,7 +5,7 @@ date: 2025-01-01
 authors: "Conference Committee"
 source: "ICITDA 2025"
 categories: [conferences, committee]
-featured_image: "/assets/images/news/2025-01-01/conference.jpeg"
+featured_image: "/assets/img/news/2025-01-01/conference.jpeg"
 external_link: "https://icitda.org/committee/"
 ---
 
@@ -33,6 +33,6 @@ The conference serves as a vital platform for:
 - Fostering international research collaborations
 - Advancing the field through peer review and discussion
 
-![Conference](/assets/images/news/2025-01-01/conference.jpeg)
+![Conference](/assets/img/news/2025-01-01/conference.jpeg)
 
 *International conferences foster global research collaboration*

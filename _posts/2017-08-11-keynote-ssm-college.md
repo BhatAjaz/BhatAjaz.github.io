@@ -11,7 +11,7 @@ source: "SSM College Srinagar"
 
 categories: [keynote, cloud-computing, robotics]
 
-featured_image: "/assets/images/news/2017-08-11/conference.jpeg"
+featured_image: "/assets/img/news/2017-08-11/conference.jpeg"
 
 external_link: "#"
 ---

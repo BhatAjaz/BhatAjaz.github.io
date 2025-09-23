@@ -5,7 +5,7 @@ date: 2025-09-15
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/"
 categories: [news, students, fellowships]
-featured_image: "/assets/images/news/2025-09-20/haji2.jpg"
+featured_image: "/assets/img/news/2025-09-20/haji2.jpg"
 external_link: "https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/"
 ---
 
@@ -33,6 +33,6 @@ During his stay, Haji Gul is collaborating with **Prof. Dr. Ricardo Usbeck** and
 
 We are proud to see Haji Gul representing UBD on the international stage and look forward to the research contributions that will result from this fellowship and collaboration.
 
-![DAAD Fellowship - Haji Gul](/assets/images/news/2025-09-20/haji1.jpg)
+![DAAD Fellowship - Haji Gul](/assets/img/news/2025-09-20/haji1.jpg)
 
 *Haji Gul representing the School of Digital Science during the DAAD AINeT Networking Week (Postdoc-NeT-AI 05/2025).*

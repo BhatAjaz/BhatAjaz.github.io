@@ -5,7 +5,7 @@ date: 2025-09-15
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "2025 CHINA (GUANGXI) – ASEAN Vocational Education and Development Conference"
 categories: [talks, conferences, keynote]
-featured_image: "/assets/images/news/2025-09-16/nanning1.jpg"
+featured_image: "/assets/img/news/2025-09-16/nanning1.jpg"
 external_link: ""
 ---
 
@@ -84,6 +84,6 @@ During his visit to Nanning, Dr. Ajaz enjoyed walks at Nanhu Park, visits to Cha
 
 ---
 
-![China–ASEAN Conference](/assets/images/news/2025-09-16/nanning2.jpg)
+![China–ASEAN Conference](/assets/img/news/2025-09-16/nanning2.jpg)
 
 *Dr. Ajaz Ahmad Bhat — Keynote speaker, 2025 China (Guangxi) – ASEAN Vocational Education and Development Conference*

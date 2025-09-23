@@ -11,7 +11,7 @@ source: "Cognitive Science Society Conference"
 
 categories: [conference, neural-models, cognitive-science]
 
-featured_image: "/assets/images/news/2018-06-15/neural-field.jpeg"
+featured_image: "/assets/img/news/2018-06-15/neural-field.jpeg"
 
 external_link: "https://mindmodeling.org/cogsci2018/"
 ---
@@ -97,6 +97,6 @@ This work opens several promising avenues:
 - Clinical applications for understanding disorders
 - Educational technologies based on cognitive models
 
-![Neural Modeling](/assets/images/news/neural-field.jpeg)
+![Neural Modeling](/assets/img/news/neural-field.jpeg)
 
 *Dynamic Neural Field models provide insights into the computational principles underlying cognition*

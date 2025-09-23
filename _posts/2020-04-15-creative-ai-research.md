@@ -5,7 +5,7 @@ date: 2020-04-15
 authors: "Dr. Ajaz Ahmad Bhat et al."
 source: "Research Submission"
 categories: [research, robotics, ai]
-featured_image: "/assets/images/news/2020-04-15/creative-ai.jpeg"
+featured_image: "/assets/img/news/2020-04-15/creative-ai.jpeg"
 external_link: "https://ajaz706.wixsite.com/bhat"
 ---
 
@@ -48,6 +48,6 @@ This research has significant implications for:
 - **Cognitive Science**: Understanding creativity in artificial systems
 - **AI Development**: Advancing beyond rule-based problem solving
 
-![Creative AI](/assets/images/news/2020-04-15/creative-ai.jpeg)
+![Creative AI](/assets/img/news/2020-04-15/creative-ai.jpeg)
 
 *Creative problem-solving represents the next frontier in AI and robotics*

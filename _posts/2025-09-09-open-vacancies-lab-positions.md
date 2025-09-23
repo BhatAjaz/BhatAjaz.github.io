@@ -6,7 +6,7 @@ pinned: true
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "School of Digital Science UBD "
 categories: [vacancies, opportunities]
-featured_image: "/assets/images/news/2025-09-09/lab-vacancies.jpeg"
+featured_image: "/assets/img/news/2025-09-09/lab-vacancies.jpeg"
 ---
 
 Vacancies are available for local and international candidates interested in pursuing a Master's or PhD degree in our lab. Our major research areas include Artificial General Intelligence, Cognitive Robotics, Natural Language Understanding, Neuro-cognitive Development, and Advanced Machine Learning. Some of the projects our lab is pursuing are listed below that may interest you. To apply to our lab, please email me your research proposal, CV, academic transcripts, and any publications, demonstrating your technical knowledge in any/all of the areas above.
@@ -56,7 +56,7 @@ To apply to our lab, please email me with the following documents:
 
 Your application should demonstrate technical knowledge in any or all of our research areas listed above.
 
-![Research Lab](/assets/images/news/2025-09-09/lab-vacancies.jpeg)
+![Research Lab](/assets/img/news/2025-09-09/lab-vacancies.jpeg)
 
 *Join our dynamic research team and contribute to cutting-edge AI and robotics research*
 

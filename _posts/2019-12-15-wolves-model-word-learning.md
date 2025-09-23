@@ -5,7 +5,7 @@ date: 2019-12-15
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "OSF Preprints / Psychological Review"
 categories: [research, language-learning, neural-models]
-featured_image: "/assets/images/news/2019-12-15/language-learning.jpeg"
+featured_image: "/assets/img/news/2019-12-15/language-learning.jpeg"
 external_link: "https://doi.org/10.31219/osf.io/kxycs"
 ---
 
@@ -146,7 +146,7 @@ The work has engaged diverse communities:
 - **Clinicians**: Supporting therapeutic interventions
 - **Technologists**: Inspiring AI development
 
-![Language Learning](/assets/images/news/language-learning.jpeg)
+![Language Learning](/assets/img/news/language-learning.jpeg)
 
 *The WOLVES model reveals how visual exploration enables language learning in both biological and artificial systems*
 
