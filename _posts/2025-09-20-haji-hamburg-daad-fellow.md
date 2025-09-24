@@ -9,7 +9,7 @@ featured_image: "/assets/img/news/2025-09-20/haji2.jpg"
 external_link: "https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/"
 ---
 
-I am proud to announce that **Haji Gul**, a PhD student at the School of Digital Science, Universiti Brunei Darussalam, working under my and Dr. Ghani's supervision, has been selected as a **DAAD AINeT Fellow** for the Postdoc-NeT-AI 05/2025 Networking Week on Natural Language Processing (NLP).
+Glad to share **Haji Gul** from my lab, working under my and Dr. Ghani's supervision, has been selected as a **DAAD AINeT Fellow** for the Postdoc-NeT-AI 05/2025 Networking Week on Natural Language Processing (NLP).
 
 ---
 

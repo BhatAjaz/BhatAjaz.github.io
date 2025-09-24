@@ -5,7 +5,7 @@ date: 2025-03-15
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "School of Digital Science, UBD"
 categories: [talks, research]
-featured_image: "/assets/img/news/2025-03-15/robotics-talk.jpeg"
+featured_image: "/assets/img/news/2025-03-15/iet-talk.jpg"
 external_link: "https://ajazbhat.com"
 ---
 
@@ -33,6 +33,6 @@ The presentation explored the **evolution of robotics**, from simple programmabl
 
 The talk was well-received by faculty, students, and researchers, providing **valuable insights** into the current state and future potential of AI-driven robotics systems.  
 
-![Robotics Talk](/assets/img/news/2025-03-15/robotics-talk.jpeg)  
+![Robotics Talk](/assets/img/news/2025-03-15/iet-talk.jpeg)  
 
 *Dr. Bhat presenting at the School of Digital Science, UBD*  
