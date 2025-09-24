@@ -1,4 +1,4 @@
-# Dr. Ajaz Ahmad Bhat's Research Laboratory Website
+# Dr. Ajaz Ahmad Bhat's Research Lab Website
 
 A modern, responsive Jekyll website showcasing research activities, publications, team members, and projects in artificial intelligence, cognitive robotics, and related fields at Universiti Brunei Darussalam.
 
@@ -15,8 +15,7 @@ A modern, responsive Jekyll website showcasing research activities, publications
 ## Quick Start
 
 ### Prerequisites
-- Ruby 2.7 or higher
-- Jekyll gem
+- Jekyll gem github-pages
 - Git
 
 ### Installation
@@ -46,7 +45,6 @@ A modern, responsive Jekyll website showcasing research activities, publications
 ├── _includes/          # Reusable components
 ├── _layouts/           # Page templates
 ├── _posts/             # Blog posts/news
-├── _sass/              # Stylesheets
 ├── assets/             # Images, CSS, JavaScript
 ├── publication/        # Individual publication pages
 ├── project/            # Individual project pages
@@ -68,12 +66,12 @@ All content is managed through YAML files in the `_data/` directory:
 ### New Team Member
 1. Add entry to `_data/team.yml`
 2. Create page: `team/Member-Name.html`
-3. Add photo: `assets/img/team/`
+3. Add photo: `assets/img/team/fname-lname`
 
 ### New Publication
-1. Create: `_data/publications/publication-title.yml`
-2. Create page: `publication/publication-title.html`
-3. Add image: `assets/img/publications/`
+1. Create: `_data/publications/year-number-publication-short-title.yml`
+2. Create page: `publication/year-number-publication-short-title.html`
+3. Add images: `assets/img/publications/year-number/`
 
 ### New Blog Post
 Create: `_posts/YYYY-MM-DD-title.md`
@@ -81,9 +79,7 @@ Create: `_posts/YYYY-MM-DD-title.md`
 ## Customization
 
 ### Styling
-- Edit SASS files in `_sass/`
-- Color variables in `_sass/0-base/`
-- Layout styles in `_sass/2-layouts/`
+- Edit CSS files 
 
 ### Components
 - Modify includes in `_includes/`
@@ -108,9 +104,9 @@ For detailed instructions on content management, customization, and maintenance,
 
 ## Technical Details
 
-- **Framework**: Jekyll 4.x
+- **Framework**: Jekyll for github pages
 - **CSS**: SASS with modular architecture
-- **JavaScript**: jQuery 3.7.1
+- **JavaScript**: jQuery 
 - **Responsive**: Mobile-first design
 - **SEO**: Optimized URLs and meta tags
 
