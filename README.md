@@ -33,6 +33,7 @@ A modern, responsive Jekyll website showcasing research activities, publications
 
 3. **Run locally**:
    ```bash
+   bundle exec jekyll build
    bundle exec jekyll serve --host 0.0.0.0 --port 5000 --livereload
    ```
 
@@ -105,7 +106,7 @@ For detailed instructions on content management, customization, and maintenance,
 ## Technical Details
 
 - **Framework**: Jekyll for github pages
-- **CSS**: SASS with modular architecture
+- **CSS**: Modular architecture
 - **JavaScript**: jQuery 
 - **Responsive**: Mobile-first design
 - **SEO**: Optimized URLs and meta tags
