@@ -1,65 +1,166 @@
-<!-- Dynamic Project Slider Component -->
+<!-- Dynamic Interleaved Slider: news, publication, project (up to 3 each) -->
 {% assign config = site.data.site_config %}
-<div class="slider" data-interval="{{ config.timing.slider_interval }}">
-    {% assign project_array = '' | split: '' %}
-    {% for proj_pair in site.data.projects %}
-      {% assign project = proj_pair[1] %}
-      {% assign project_array = project_array | push: project %}
-    {% endfor %}
-    {% assign all_projects = project_array | sort: 'title' %}
-    {% for project in all_projects %}
-    <div id="{{ project.proj_id }}" class="slide">
-        {% assign project_image = project.image | default: config.images.fallback_image %}
-        <img src="{{ project_image }}" alt="{{ project.title }}" loading="lazy">
-        <div class="slide-text">
-            <h1><a href="{{ config.urls.project_base }}{{ project.proj_id }}/">{{ project.title }}</a></h1>
-            <p>{{ project.overview }}</p>
+
+{%- comment -%}
+  Build three lists (max 3 each), then interleave rendering:
+  order: news, publication, project
+{%- endcomment -%}
+
+{% assign news_items = site.posts | slice: 0, 3 %}
+
+{% assign all_publications = '' | split: '' %}
+{% for pub_pair in site.data.publications %}
+  {% assign pub_key = pub_pair[0] %}
+  {% assign publication = pub_pair[1] %}
+  {% assign publication = publication | merge: { 'data_key': pub_key } %}
+  {% assign all_publications = all_publications | push: publication %}
+{% endfor %}
+
+{% assign publications_by_year = all_publications | sort: 'year' | reverse %}
+{% assign pub_items = publications_by_year | slice: 0, 3 %}
+
+{% assign proj_array = '' | split: '' %}
+{% for proj_pair in site.data.projects %}
+  {% assign project = proj_pair[1] %}
+  {% assign proj_array = proj_array | push: project %}
+{% endfor %}
+{% assign proj_items = proj_array | sort: 'title' | slice: 0, 3 %}
+
+<div class="slider" data-interval="{{ config.timing.slider_interval }}" role="region" aria-roledescription="carousel" aria-label="Latest highlights">
+  {%- assign max_per_type = 3 -%}
+  {%- for i in (0..max_per_type) -%}
+    {%- comment -%} Render news if present {%- endcomment -%}
+    {% assign ni = news_items[i] %}
+    {% if ni %}
+      {% assign news_id = "news-" | append: (ni.slug | default: ni.id | slugify) %}
+      {% assign news_image = ni.featured_image | default: config.images.default_img %}
+      {% assign news_excerpt = ni.excerpt | strip_html | truncatewords: config.limits.excerpt_words %}
+      <div id="{{ news_id }}" class="slide" data-type="news" data-source-id="{{ ni.slug | default: ni.id }}">
+        <div class="slide-media" aria-hidden="true">
+          <img src="{{ news_image }}" alt="{{ ni.title }}" loading="lazy" style="width:100%; height:auto; aspect-ratio:16/9;">
         </div>
-    </div>
-    {% endfor %}
+        <div class="slide-text">
+          <div class="content-type-badge news-badge">News</div>
+          <h1><a href="{{ ni.url | default: '/' }}">{{ ni.title }}</a></h1>
+          <p>{{ news_excerpt }}</p>
+          <div class="read-more"><a href="{{ ni.url | default: '/' }}">Read more →</a></div>
+        </div>
+      </div>
+    {% endif %}
+
+    {%- comment -%} Render publication if present {%- endcomment -%}
+    {% assign pi = pub_items[i] %}
+    {% if pi %}
+      {% assign pub_id = "pub-" | append: (pi.pub_id | default: forloop.index0) %}
+      {% assign pub_image = pi.image | default: config.images.default_img %}
+      {% assign pub_url = config.urls.publication_base | append: pi.pub_id | append: "/" %}
+      <div id="{{ pub_id }}" class="slide" data-type="publication" data-source-id="{{ pi.pub_id }}">
+        <div class="slide-media" aria-hidden="true">
+          <img src="{{ pub_image }}" alt="{{ pi.title }}" loading="lazy" style="width:100%; height:auto; aspect-ratio:16/9;">
+        </div>
+        <div class="slide-text">
+          <div class="content-type-badge publication-badge">Publication</div>
+          <h1><a href="{{ pub_url }}">{{ pi.title }}</a></h1>
+          <p>{{ pi.abstract }}</p>
+          <div class="read-more"><a href="{{ pub_url }}">Read more →</a></div>
+        </div>
+      </div>
+    {% endif %}
+
+    {%- comment -%} Render project if present {%- endcomment -%}
+    {% assign ji = proj_items[i] %}
+    {% if ji %}
+      {% assign proj_id = "proj-" | append: (ji.proj_id | default: forloop.index0) %}
+      {% assign proj_image = ji.image | default: config.images.fallback_image %}
+      {% assign proj_url = config.urls.project_base | append: ji.proj_id | append: "/" %}
+      <div id="{{ proj_id }}" class="slide" data-type="project" data-source-id="{{ ji.proj_id }}">
+        <div class="slide-media" aria-hidden="true">
+          <img src="{{ proj_image }}" alt="{{ ji.title }}" loading="lazy" style="width:100%; height:auto; aspect-ratio:16/9;">
+        </div>
+        <div class="slide-text">
+          <div class="content-type-badge project-badge">Project</div>
+          <h1><a href="{{ proj_url }}">{{ ji.title }}</a></h1>
+          <p>{{ ji.overview }}</p>
+          <div class="read-more"><a href="{{ proj_url }}">Read more →</a></div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>
 
-<div>
-     <button class="arrow left-arrow">&#10094;</button>
-     <button class="arrow right-arrow">&#10095;</button>
+<div class="slider-controls" aria-hidden="false">
+  <button class="arrow left-arrow" aria-label="Previous slide" type="button">&#10094;</button>
+  <button class="arrow right-arrow" aria-label="Next slide" type="button">&#10095;</button>
 </div>
 
 <script>
-  // Dynamic slider configuration
-  const slider = document.querySelector('.slider');
-  const slides = document.querySelectorAll('.slide');
-  const leftArrow = document.querySelector('.left-arrow');
-  const rightArrow = document.querySelector('.right-arrow');
-  
-  // Get dynamic interval from data attribute (no hardcoded fallback)
-  const sliderInterval = parseInt(slider.dataset.interval);
-  let index = 0;
-  let interval;
+  (function () {
+    const slider = document.querySelector('.slider');
+    if (!slider) return;
 
-  function goToSlide(i) {
-    index = (i + slides.length) % slides.length;
-    slider.scrollTo({
-      left: slides[index].offsetLeft,
-      behavior: 'smooth'
+    const slides = Array.from(slider.querySelectorAll('.slide'));
+    if (!slides.length) return;
+
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    const rawInterval = Number.parseInt(slider.dataset.interval, 10);
+    const sliderInterval = Number.isFinite(rawInterval) && rawInterval > 0 ? rawInterval : 5000;
+
+    let index = 0;
+    let intervalId = null;
+    let isPaused = false;
+
+    function updateSlide(i) {
+      index = (i + slides.length) % slides.length;
+      const target = slides[index];
+      if (!target) return;
+      slider.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
+      // optional: manage focus for assistive tech without moving viewport unexpectedly
+      target.setAttribute('tabindex', '-1');
+    }
+
+    function nextSlide() { updateSlide(index + 1); }
+    function prevSlide() { updateSlide(index - 1); }
+
+    function startAutoAdvance() {
+      clearInterval(intervalId);
+      intervalId = setInterval(() => {
+        if (!isPaused) nextSlide();
+      }, sliderInterval);
+    }
+
+    slider.addEventListener('mouseenter', () => { isPaused = true; });
+    slider.addEventListener('mouseleave', () => { isPaused = false; });
+    slider.addEventListener('focusin', () => { isPaused = true; });
+    slider.addEventListener('focusout', () => { isPaused = false; });
+
+    leftArrow?.addEventListener('click', () => { prevSlide(); startAutoAdvance(); });
+    rightArrow?.addEventListener('click', () => { nextSlide(); startAutoAdvance(); });
+
+    slider.setAttribute('tabindex', '0');
+    slider.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); startAutoAdvance(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); nextSlide(); startAutoAdvance(); }
     });
-    resetInterval();
-  }
 
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(() => {
-      index = (index + 1) % slides.length;
-      slider.scrollTo({
-        left: slides[index].offsetLeft,
-        behavior: 'smooth'
+    slides.forEach(s => {
+      s.style.cursor = 'pointer';
+      s.addEventListener('click', () => {
+        const anchor = s.querySelector('a[href]');
+        if (anchor) window.location = anchor.getAttribute('href');
       });
-    }, sliderInterval);
-  }
+    });
 
-  // Initialize slider if elements exist
-  if (slider && slides.length > 0) {
-    leftArrow?.addEventListener('click', () => goToSlide(index - 1));
-    rightArrow?.addEventListener('click', () => goToSlide(index + 1));
-    resetInterval();
-  }
+    // initial layout and auto-start
+    updateSlide(0);
+    startAutoAdvance();
+
+    // handle resize (debounced)
+    let rTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(rTimer);
+      rTimer = setTimeout(() => { updateSlide(index); }, 150);
+    });
+  })();
 </script>
