@@ -2802,3 +2802,48 @@ html.nav-open .toggled-nav-wrapper {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+/* ===== Responsive post/news layout: fluid, justified, readable ===== */
+:root {
+  --content-max: 980px;
+  --content-padding: 1.25rem;
+  --content-line-height: 1.65;
+  --base-font: 16px;
+}
+
+/* Fluid base font that scales slightly on larger screens */
+html { font-size: var(--base-font); }
+@media (min-width: 900px) { html { font-size: 17px; } }
+@media (min-width: 1400px) { html { font-size: 18px; } }
+
+
+/* Constrain readable measure and center the article body */
+article.post > .post-wrapper, .news-wrapper .post-wrapper, .entry-content, .post-content, #content {
+  max-width: var(--content-max);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraphs: justified, hyphenation, comfortable spacing */
+article.post p, .post p, .news-wrapper p, .entry-content p, .post-content p, article.post li, .post li, .entry-content li {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  line-height: var(--content-line-height);
+  margin-top: 0.9rem;
+  margin-bottom: 1.1rem;
+  widows: 2;
+  orphans: 2;
+}
+
+/* Override narrow-width rules from earlier definitions */
+.publication-page p, .project-page p, .team-page p, .container-news-original .news-content-wrapper .post-wrapper .text-wrapper .information p {
+  width: auto !important;
+  max-width: var(--content-max) !important;
+}
+
+
+/* Accessibility focus and contrast helpers */
+a:focus, button:focus { outline: 3px solid Highlight; outline-offset: 2px; }

@@ -87,6 +87,6 @@ Published in Physics of Life Reviews, a prestigious journal known for:
 - High-impact research in life sciences
 - Authoritative perspectives on emerging fields
 
-![Motor Neuroscience](/assets/img/news/motor-neuroscience.jpeg)
+![Motor Neuroscience](/assets/img/news/2019-07-15/motor-neuroscience.jpeg)
 
 *Bridging neuroscience and robotics through understanding of motor control principles*

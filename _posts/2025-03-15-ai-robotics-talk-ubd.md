@@ -33,6 +33,6 @@ The presentation explored the **evolution of robotics**, from simple programmabl
 
 The talk was well-received by faculty, students, and researchers, providing **valuable insights** into the current state and future potential of AI-driven robotics systems.  
 
-![Robotics Talk](/assets/img/news/2025-03-15/iet-talk.jpeg)  
+![Robotics Talk](/assets/img/news/2025-03-15/iet-talk.jpg)  
 
 *Dr. Bhat presenting at the School of Digital Science, UBD*  
