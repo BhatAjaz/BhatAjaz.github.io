@@ -8,7 +8,11 @@ principal_investigator:
     member_id: "Ajaz-Ahmad-Bhat"
     image: "assets/img/team/ajaz-bhat.jpg"
     email: "ajaz.bhat@ubd.edu.bn"
-    bio: "Dr. Ajaz Ahmad Bhat leads research in cognitive robotics, AI, and brain-inspired computing systems. His work focuses on developing intelligent robots that can learn, reason, and adapt like biological systems."
+    bio: "Dr. Ajaz leads research in cognitive robotics, AI, and brain-inspired computing systems. His work focuses on developing intelligent robots that can learn, reason, and adapt like biological systems.
+    He is currently an Assistant Professor of Intelligent Robotics at the Faculty of Digital Science, Universiti Brunei Darussalam, Brunei, and a visiting researcher at the Okinawa Institute of Science and Technology, Japan.
+    Prior to this posting, he worked as a Senior Research Associate at the University of East Anglia, UK, and then as an Assistant Professor at the University of Twente, Netherlands.
+    He has been involved in multiple international research projects such as EU’s FP7 DARWIN and NIH’s WOLVES.
+    Ajaz retains memberships of both IEEE and APS societies in addition to holding a Ph.D. in Cognitive Robotics from the Istituto Italiano di Tecnologia (IIT), Italy."
     interests: ["Cognitive Robotics", "Artificial Intelligence", "Machine Learning", "Neural Networks"]
 
 #research_scientists_postdocs:
@@ -34,7 +38,7 @@ postgraduate_students:
     member_id: "Udaya-Wijesena"
     image: "assets/img/team/default-person.jpg"
     email: "Udaya-Wijesena@ubd.edu.bn"
-    bio: "Amirah is pursuing research in machine learning applciations to finance and stock price prediction."
+    bio: "Udaya's research focuses on machine learning applications to finance and stock price prediction."
     interests: ["Finance", "Time-Series", "Multi-agent Systems"]
 
   
@@ -43,7 +47,7 @@ postgraduate_students:
     member_id: "Amirah-Hamid"
     image: "assets/img/team/default-person.jpg"
     email: "Amirah-Hamid@ubd.edu.bn"
-    bio: "Amirah is pursuing research in machine learning applciations to Alzheimers disease and brain MRIs."
+    bio: "Amirah is pursuing research in machine learning applications to Alzheimer's disease and brain MRIs."
     interests: ["Alzheimers", "MRIs", "Machine Learning"]
   
   - name: "Taha Bhatti"
@@ -81,10 +85,18 @@ postgraduate_students:
 #    interests: ["Neural-Symbolic Learning", "Cognitive Science", "AI Safety"]
 
 other_collaborators:
-  - name: "Dr Larissa Samuelson"
+  - name: "Prof Larissa Samuelson"
     role: "Collaborating Professor"
     member_id: "Dr-Larissa-Samuelson"
     image: "assets/img/team/default-person.jpg"
-    email: "Larissa-Samuelson@stanford.edu"
-    bio: "Prof. Martinez collaborates on projects related to developmental psychology and word learning."
+    email: "L.Samuelson@uea.ac.uk"
+    bio: "Prof. Larissa collaborates on projects related to developmental psychology and word learning."
     interests: ["Developmental Psychology", "Language", "Cognitive Development"]
+
+  - name: "Dr Bandan Chakrabortty"
+    role: "Collaborating Professor"
+    member_id: "Dr-Bandan-Chakrabortty"
+    image: "assets/img/team/default-person.jpg"
+    email: "bandan@iisertvm.ac.in"
+    bio: "Dr. Bandan collaborates on projects related to AI applications for plant and animal development modelling."
+    interests: ["Computational Biology", "Segmentation", "Plant Development"]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Applied AI and AI-Enabled Robotics — Creative Problem Solving as the Panacea for Intelligent Manufacturing"
+title: "Applied AI and AI-Enabled Robotics for Intelligent Manufacturing"
 date: 2025-09-15
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "2025 CHINA (GUANGXI) – ASEAN Vocational Education and Development Conference"

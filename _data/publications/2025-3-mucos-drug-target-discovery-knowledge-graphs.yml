@@ -1,11 +1,72 @@
 title: "MuCoS: Efficient Drug Target Discovery via Multi Context Aware Sampling in Knowledge Graphs"
 pub_id: "2025-3-mucos-drug-target-discovery-knowledge-graphs"
-image: "https://images.pexels.com/photos/3825577/pexels-photo-3825577.jpeg"
+image: "https://moonlight-paper-snapshot.s3.ap-northeast-2.amazonaws.com/arxiv/mucos-efficient-drug-target-discovery-via-multi-context-aware-sampling-in-knowledge-graphs-3.png"
 authors: "Gul H., Naim A. G., & Bhat A. A."
 journal: "BioNLP Workshop at ACL"
 year: 2025
 link: "https://aclanthology.org/2025.bionlp-1.27/"
 video: ""
-tags: ["biomedical","KGC","graph","sampling","bert"]
-abstract: "Knowledge graphs (KGs) have emerged as powerful tools for drug discovery, but existing methods often fail to capture the multi-contextual nature of biomedical relationships. We introduce MuCoS (Multi Context Aware Sampling), a novel approach that efficiently discovers drug targets by sampling diverse contextual neighborhoods in biomedical KGs. Our method significantly improves target identification accuracy while reducing computational overhead."
+tags:
+  - "biomedical"
+  - "KGC"
+  - "graph"
+  - "sampling"
+  - "bert"
+abstract: "Knowledge Graphs (KGs) have emerged as powerful tools for drug discovery, but existing methods often fail to capture the multi-contextual nature of biomedical relationships. We introduce MuCoS (Multi Context Aware Sampling), a novel approach that efficiently discovers drug targets by sampling diverse contextual neighborhoods in biomedical KGs. Our method significantly improves target identification accuracy while reducing computational overhead."
 methodology: "MuCoS employs a multi-context aware sampling strategy that explores different relationship types and entity neighborhoods simultaneously. We evaluate on standard drug discovery benchmarks and compare against state-of-the-art KG completion methods. Performance is measured by target prediction accuracy, computational efficiency, and biological relevance of discovered relationships."
+details:
+  problem_framing: |
+    Drug-target prediction is cast as a link prediction task on heterogeneous biomedical knowledge graphs where nodes are drugs, proteins, diseases, and pathways, and edges denote relationships. The aim is to predict missing drug–target links without relying explicitly on negative sampling, avoiding associated bias and computational cost.
+  proposed_framework: |
+    Multi-Context-Aware Sampling (MuCoS) merges structural and contextual embedding approaches and integrates BERT to enrich contextual information for drug-target prediction.
+  context_extraction:
+    head_context:
+      description: "For a given head entity (drug), identify associated relations R(h) and tail entities E(h); build head context (Hc) by selecting top-n neighboring entities using density-based (frequency) sampling."
+      steps:
+        - "Identify relations R(h) for head h."
+        - "Collect tail entities E(h) connected to h."
+        - "Select high-density neighbors from E(h) (top-n frequency-based)."
+    tail_context:
+      description: "Apply the same density-based neighbor selection procedure to extract tail context (Tc) for candidate target entities (genes)."
+    relation_context:
+      description: "For each relation, gather involved entities and select high-density entity pairs to form relation context (Rc)."
+  modeling_with_bert: |
+    Concatenate contexts (Hc, Tc, Rc) with the head, tail, or relation as appropriate and pass resulting sequences through BERT to capture rich contextual dependencies beyond traditional KG methods.
+  prediction_tasks:
+    link_prediction: "Infer existence of relationships from triples (head, relation, tail)."
+    tail_prediction: "Identify missing tail entities for a known head and relation."
+  training_and_loss: "Use cross-entropy loss for both link and tail prediction tasks, optimizing predictions against true labels."
+  computational_efficiency: |
+    MuCoS reduces computational overhead by sampling only the most informative neighbors during context extraction. Complexity analysis shows a substantial reduction relative to baseline methods (e.g., MuCo-KGC), with reported speed-ups on the order of ~175x.
+  experimental_setup:
+    dataset: "KEGG50k (63,080 triples covering drugs, genes, and relations)"
+    splits: "Training / validation / testing splits used for robust evaluation"
+    metrics:
+      - "Mean Reciprocal Rank (MRR)"
+      - "Hits@k"
+  results_and_discussion: |
+    MuCoS outperforms several state-of-the-art models on link and drug-target prediction. Reported performance includes MRR=0.65 for general link prediction and MRR=0.84 for drug-target link prediction, surpassing models like ComplEx-SE by ~13% and ~6% respectively. The framework also demonstrates marked computational efficiency gains enabling faster prediction with minimal loss in accuracy.
+  conclusion: |
+    MuCoS integrates contextual and structural embeddings with transformer-based modeling to provide an efficient, effective tool for drug-target interaction prediction. The approach offers a promising direction for accelerating discovery in biomedical informatics by combining knowledge graphs with deep contextual encoders.
+metrics:
+  general_link_prediction:
+    MRR: 0.65
+  drug_target_link_prediction:
+    MRR: 0.84
+  comparative_gains:
+    vs_ComplEx-SE:
+      general_MRR_gain: "≈13%"
+      drug_target_MRR_gain: "≈6%"
+computational:
+  reported_speedup: "≈175x (complexity reduction via density-based sampling)"
+dataset:
+  name: "KEGG50k"
+  triples: 63080
+  entity_types:
+    - "drug"
+    - "gene"
+    - "relation"
+limitations_and_future_work: |
+  - The paper focuses on KEGG50k; evaluation on additional, larger, and more diverse biomedical KGs would strengthen generalizability claims.
+  - Exploration of alternate transformer encoders or lightweight contextual models could trade-off accuracy and inference cost.
+  - Further analysis of biological plausibility and experimental validation of predicted drug-target pairs is recommended.

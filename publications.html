@@ -8,24 +8,20 @@ layout: default
   <div class="tag-header">
     {% include header-with-search.html title="Publications"
     search_wrapper_class="search-wrapper" %}
+    <br>
+    <hr>
   </div>
   {% assign all_tags = "" | split: "" %} {% for publication_file in
   site.data.publications %} {% assign all_tags = all_tags | concat:
   publication_file[1].tags %} {% endfor %} {% assign unique_tags = all_tags |
   uniq | sort %}
+  
+  <!-- "Show All tags in the unique-tags with background color formats"  -->
+ 
+ 
 
-  <!-- Hide "All tags" section for now -->
-  <!--
-  <p>All tags:</p>
-  <div class="tag-holder">
-    {% for tag in unique_tags %}
-    <div class="tag" data-tag="{{ tag | downcase }}"><p>{{ tag }}</p></div>
-    {% endfor %}
-  </div>
-  -->
-
-  <hr />
   <div class="publications-content-wrapper">
+    <br>
     {% assign all_publications = "" | split: "" %} {% for publication_file in
     site.data.publications %} {% assign all_publications = all_publications |
     push: publication_file[1] %} {% endfor %} {% assign sorted_publications =

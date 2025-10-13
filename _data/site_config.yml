@@ -13,7 +13,7 @@ limits:
 
 # Timing and Intervals (in milliseconds)
 timing:
-  slider_interval: 5000             # Auto-slide interval for project slider
+  slider_interval: 4000             # Auto-slide interval for project slider
   scroll_duration: 800              # Smooth scroll animation duration
   fade_duration: 300                # Fade transition duration
   loading_delay: 100                # Loading animation delay
