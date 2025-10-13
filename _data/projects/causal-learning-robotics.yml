@@ -3,7 +3,7 @@ title: "Causal Learning & Body Schema in Robotics"
 status: "active"
 start_date: "2021-09-01"
 tags: ["causal-learning", "body-schema", "motor-intelligence"]
-image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+image: "https://royalsocietypublishing.org/cms/asset/bb091d88-632f-4a33-8859-1fd488a3538a/rsif20160310f08.jpg"
 link: "some-page-3"
 
 # Content sections
@@ -31,19 +31,19 @@ funding:
     duration: "2022-2025"
 
 collaborators:
-  - name: "Prof. Giorgio Metta"
+  - name: "Prof. Gulio Sandini"
     institution: "Italian Institute of Technology"
-  - name: "Dr. Tamim Asfour"
-    institution: "Karlsruhe Institute of Technology"
+  - name: "Dr. Vishuu Mohan"
+    institution: "University of Essex"
 
 publications:
-  - title: "Causal Learning for Robotic Manipulation"
-    authors: "A.A. Bhat, G. Metta, T. Asfour"
-    year: "2023"
-    journal: "Philosophical Transactions of the Royal Society B"
-    link: "https://example.com/paper5"
-  - title: "Body Schema Learning Through Causal Inference"
-    authors: "A.A. Bhat, T. Asfour"
-    year: "2022"
-    journal: "IEEE Transactions on Robotics"
-    link: "https://example.com/paper6"
+  - title: "Humanoid Infers Archimedes Principle"
+    authors: "A.A. Bhat, V. Mohan, G. Sandini"
+    year: "2016"
+    journal: "Philosophical Transactions of the Royal Society"
+    link: "https://royalsocietypublishing.org/cms/asset/bb091d88-632f-4a33-8859-1fd488a3538a/rsif20160310f08.jpg"
+  - title: "Causal Learning by a Robot with Semantic-Episodic Memory"
+    authors: "A.A. Bhat, V Mohan"
+    year: "2020"
+    journal: "ICLR Conference"
+    link: "https://baicsworkshop.github.io/program/baics_32.html"
