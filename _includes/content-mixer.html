@@ -10,8 +10,7 @@
 
 <!-- Latest Publications (dynamic limit) -->
 {% assign all_publications = '' | split: '' %}
-{% for pub_pair in site.data.publications %}
-  {% assign publication = pub_pair[1] %}
+{% for publication in site.publications %}
   {% assign all_publications = all_publications | push: publication %}
 {% endfor %}
 {% assign publications_by_year = all_publications | sort: 'year' | reverse %}

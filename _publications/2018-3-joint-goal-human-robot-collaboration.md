@@ -1,0 +1,23 @@
+---
+title: Joint Goal Human-Robot Collaboration—From Remembering to Inferring
+pub_id: 2018-3-joint-goal-human-robot-collaboration
+image: "https://images.pexels.com/photos/17808485/pexels-photo-17808485.jpeg"
+authors: Mohan V. & Bhat A. A.
+journal: Procedia Computer Science
+year: 2018
+link: "https://doi.org/10.1016/j.procs.2018.01.089"
+video: 
+tags: ["collaboration","memory","robotics","cognitive","inference"]
+date: 2018-01-01
+permalink: /publication/2018-3-joint-goal-human-robot-collaboration.html
+layout: publication
+abstract: "We present a bio-inspired neural architecture where two robots learn internal models of their bodies and peripersonal space. Coupled simulations allow anticipation of partner actions and dynamic task allocation, enabling cooperative assembly of fuse-boxes in unstructured environments."
+---
+
+## Abstract
+
+We present a bio-inspired neural architecture where two robots learn internal models of their bodies and peripersonal space. Coupled simulations allow anticipation of partner actions and dynamic task allocation, enabling cooperative assembly of fuse-boxes in unstructured environments.
+## Methodology
+
+Robots learn forward models via sensorimotor exploration. A reward-driven planner uses internal simulation to evaluate feasibility and sequence complementary actions. Real-world trials with two UR5 arms demonstrate joint key insertions and collision avoidance.
+We present a bio-inspired neural architecture where two robots learn internal models of their bodies and peripersonal space. Coupled simulations allow anticipation of partner actions and dynamic task allocation, enabling cooperative assembly of fuse-boxes in unstructured environments.

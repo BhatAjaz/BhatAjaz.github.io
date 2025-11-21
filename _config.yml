@@ -42,6 +42,26 @@ exclude:
   
 #defaults:
 
+collections:
+  publications:
+    output: true
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: publication
+      permalink: /publication/:name.html
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+      permalink: /project/:name.html
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

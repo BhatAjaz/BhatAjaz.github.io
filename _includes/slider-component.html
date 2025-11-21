@@ -9,10 +9,7 @@
 {% assign news_items = site.posts | slice: 0, 3 %}
 
 {% assign all_publications = '' | split: '' %}
-{% for pub_pair in site.data.publications %}
-  {% assign pub_key = pub_pair[0] %}
-  {% assign publication = pub_pair[1] %}
-  {% assign publication = publication | merge: { 'data_key': pub_key } %}
+{% for publication in site.publications %}
   {% assign all_publications = all_publications | push: publication %}
 {% endfor %}
 

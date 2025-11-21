@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+<div class="team-page">
+  <h1 class="header">{{ page.title }}</h1>
+  <hr>
+
+  <div class="post-meta">
+    {% if page.year %}
+    <p><strong>Year:</strong> {{ page.year }}</p>
+    {% endif %}
+    {% if page.authors %}
+    <p><strong>Authors:</strong> {{ page.authors }}</p>
+    {% endif %}
+    {% if page.journal %}
+    <p><strong>Journal / Venue:</strong> {{ page.journal }}</p>
+    {% endif %}
+    {% if page.link %}
+    <p><strong>External Link:</strong> <a href="{{ page.link }}" target="_blank">{{ page.link }}</a></p>
+    {% endif %}
+  </div>
+  <!-- DEBUG: image={{ page.image }} featured={{ page.featured_image }} -->
+  {% assign pub_image = page.image | default: page.featured_image | default: site.data.site_config.images.fallback_image %}
+  {% if pub_image %}
+    <img src="{{ pub_image }}" alt="{{ page.title }}" style="width: 50%; margin: 2vh 0;">
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <hr>
+  <div class="post-navigation">
+    <a href="/publications/">← Back to Publications</a>
+  </div>
+</div>
+
+{% include footer.html %}

@@ -11,10 +11,13 @@ layout: default
     <br>
     <hr>
   </div>
-  {% assign all_tags = "" | split: "" %} {% for publication_file in
-  site.data.publications %} {% assign all_tags = all_tags | concat:
-  publication_file[1].tags %} {% endfor %} {% assign unique_tags = all_tags |
-  uniq | sort %}
+  {% assign all_tags = "" | split: "" %}
+  {% for publication in site.publications %}
+    {% if publication.tags %}
+      {% assign all_tags = all_tags | concat: publication.tags %}
+    {% endif %}
+  {% endfor %}
+  {% assign unique_tags = all_tags | uniq | sort %}
   
   <!-- "Show All tags in the unique-tags with background color formats"  -->
  
@@ -22,11 +25,12 @@ layout: default
 
   <div class="publications-content-wrapper">
     <br>
-    {% assign all_publications = "" | split: "" %} {% for publication_file in
-    site.data.publications %} {% assign all_publications = all_publications |
-    push: publication_file[1] %} {% endfor %} {% assign sorted_publications =
-    all_publications | sort: "year" | reverse %} {% for publication in
-    sorted_publications %}
+    {% assign all_publications = "" | split: "" %}
+    {% for publication in site.publications %}
+      {% assign all_publications = all_publications | push: publication %}
+    {% endfor %}
+    {% assign sorted_publications = all_publications | sort: "year" | reverse %}
+    {% for publication in sorted_publications %}
     <div class="publication" data-tags="{{ publication.tags | join: ',' }}">
       <div
         class="publication-wrapper"

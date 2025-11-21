@@ -11,9 +11,8 @@ layout: default
   <div class="projects-overview"><p>{{site.data.projects_overview.overview}}</p></div>
   <hr>
   <div class="projects-wrapper">
-    {% for project_data in site.data.projects %}
-    {% assign project = project_data[1] %}
-    <div class="project-card" id="{{project.link}}" data-href="../project/{{project.proj_id}}" data-tags="{{ project.tags | join: ',' }}">
+    {% for project in site.projects %}
+    <div class="project-card" id="{{project.proj_id}}" data-href="../project/{{project.proj_id}}" data-tags="{{ project.tags | join: ',' }}">
       <div class="project-card-text">
         <h1>{{project.title}}</h1>
         <div class="image-box">

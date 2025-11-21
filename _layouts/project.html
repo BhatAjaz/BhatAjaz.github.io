@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+<div class="team-page">
+  <h1 class="header">{{ page.title }}</h1>
+  <hr>
+
+  <div class="post-meta">
+    {% if page.status %}
+    <p><strong>Status:</strong> {{ page.status }}</p>
+    {% endif %}
+    {% if page.start_date %}
+    <p><strong>Start:</strong> {{ page.start_date }}</p>
+    {% endif %}
+    {% if page.collaborators %}
+    <p><strong>Collaborators:</strong>
+      {% for c in page.collaborators %}
+        {{ c.name }} ({{ c.institution }}){% if forloop.last == false %}, {% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
+  </div>
+
+  {% assign proj_image = page.image | default: page.featured_image | default: site.data.site_config.images.fallback_image %}
+  {% if proj_image %}
+    <img src="{{ proj_image }}" alt="{{ page.title }}" style="width:50%; margin:2vh 0;">
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <hr>
+  <div class="post-navigation">
+    <a href="/projects/">← Back to Projects</a>
+  </div>
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,23 @@
+---
+title: "Word-Object Learning via Visual Exploration in Space (WOLVES): A Neural Process Account of Cross-Situational Word Learning"
+pub_id: 2022-1-wolves-word-object-learning-visual-exploration-space
+image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
+authors: Bhat A. A., Spencer J. P., & Samuelson L. K.
+journal: Psychological Review
+year: 2022
+link: "https://psycnet.apa.org/record/2022-72074-001"
+video: 
+tags: ["word-learning","language","learning","visual","exploration","attention","memory","cognitive"]
+date: 2022-01-01
+permalink: /publication/2022-1-wolves-word-object-learning-visual-exploration-space.html
+layout: publication
+abstract: "How do children learn word meanings from ambiguous contexts? We present WOLVES, a neural process model that captures the interaction between visual exploration and word learning"
+---
+
+## Abstract
+
+How do children learn word meanings from ambiguous contexts? We present WOLVES, a neural process model that captures the interaction between visual exploration and word learning. The model demonstrates how spatial attention and memory processes enable children to learn word-object mappings across multiple ambiguous naming events, providing quantitative predictions that match developmental data.
+## Methodology
+
+WOLVES integrates Dynamic Neural Field theory with principles from cross-situational word learning. The model simulates attention allocation during visual exploration and tracks activation patterns across learning trials. We compare model predictions against empirical data from infant word learning experiments and test generalization to novel word-learning scenarios.
+How do children learn word meanings from ambiguous contexts? We present WOLVES, a neural process model that captures the interaction between visual exploration and word learning. The model demonstrates how spatial attention and memory processes enable children to learn word-object mappings across multiple ambiguous naming events, providing quantitative predictions that match developmental data.
