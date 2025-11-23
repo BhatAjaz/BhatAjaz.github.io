@@ -2673,6 +2673,14 @@ html.nav-open .toggled-nav-wrapper {
   filter: grayscale(40%);
 }
 
+/* Ensure publication images are centered inside the content column */
+.publication-page img {
+  display: block;
+  margin: 1rem auto;
+  max-width: var(--content-max);
+  width: 60%;
+}
+
 .project-page {
   position: relative;
   padding: 5vh;
@@ -2732,6 +2740,14 @@ html.nav-open .toggled-nav-wrapper {
   filter: grayscale(40%);
 }
 
+/* Center project images like publications */
+.project-page img {
+  display: block;
+  margin: 1rem auto;
+  max-width: var(--content-max);
+  width: 60%;
+}
+
 .team-page {
   position: relative;
   padding: 5vh;
@@ -2789,6 +2805,14 @@ html.nav-open .toggled-nav-wrapper {
   width: 60%;
   height: auto;
   filter: grayscale(40%);
+}
+
+/* Center team images too */
+.team-page img {
+  display: block;
+  margin: 1rem auto;
+  max-width: var(--content-max);
+  width: 60%;
 }
 .team-page h2 {
   margin-top: 2vh;
