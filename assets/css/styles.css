@@ -2797,13 +2797,94 @@ html.nav-open .toggled-nav-wrapper {
   text-align: center;
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
 }
+
+.team-page h3 {
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
 .team-page ul {
   color: rgb(255, 255, 255);
-  width: 60%;
+  width: auto;
+  max-width: var(--content-max);
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  margin: 0 auto; /* center the list within the content column */
+  padding-left: 1.5rem;
 }
+
+.team-page ul li,
+.team-page ol li {
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.5rem;
+}
+
+.team-page ol {
+  color: rgb(255, 255, 255);
+  width: auto;
+  max-width: var(--content-max);
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0 auto; /* center the list within the content column */
+  padding-left: 1.5rem;
+}
+
+.team-page code,
+.team-page pre {
+  color: rgb(200, 200, 200);
+  background-color: rgba(50, 50, 50, 0.8);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+}
+
+.team-page pre {
+  width: auto;
+  max-width: var(--content-max);
+  padding: 1rem;
+  margin: 1rem auto;
+  overflow-x: auto;
+}
+
+.team-page table {
+  color: rgb(255, 255, 255);
+  width: auto;
+  max-width: var(--content-max);
+  border-collapse: collapse;
+  margin: 1rem auto;
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.team-page table th {
+  background-color: rgba(80, 80, 80, 0.8);
+  color: rgb(255, 255, 255);
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.team-page table td {
+  padding: 0.75rem;
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.team-page table tr:nth-child(even) {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+
+.team-page blockquote {
+  color: rgb(200, 200, 200);
+  border-left: 4px solid rgb(81, 122, 244);
+  padding-left: 1rem;
+  margin-left: 1rem;
+  font-style: italic;
+}
+
 /* ===== Responsive post/news layout: fluid, justified, readable ===== */
 :root {
   --content-max: 980px;
