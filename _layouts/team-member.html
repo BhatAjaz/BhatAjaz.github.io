@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+<div class="team-page">
+  <h1 class="header">{{ page.title }}</h1>
+  <hr>
+
+  {% if page.image %}
+    <img src="/{{ page.image | remove: '../' | remove: './' }}" alt="{{ page.title }}" style="width:40%; margin:2vh 0;">
+  {% endif %}
+
+  <div class="post-meta">
+    {% if page.role %}
+      <p><strong>Role:</strong> {{ page.role }}</p>
+    {% endif %}
+    {% if page.email %}
+      <p><strong>Email:</strong> <a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
+    {% endif %}
+  </div>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <hr>
+  <div class="post-navigation">
+    <a href="/team/">← Back to Team</a>
+  </div>
+</div>
+
+{% include footer.html %}

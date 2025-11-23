@@ -8,149 +8,201 @@ layout: default
   {% include page-header.html title="Meet the group" %}
   
   <!-- Principal Investigator Section -->
+  {% assign has_principals = false %}
+  {% for member in site.team %}
+    {% if member.role contains 'Principal' %}
+      {% assign has_principals = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_principals %}
   <div class="title">
       <h1>Principal Investigator</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    {% for member in site.data.team.principal_investigator %}
+    {% for member in site.team %}
+      {% if member.role contains 'Principal' %}
     <div class="first-content-box" data-href="../team/{{ member.member_id }}">
       <div class="image-box">
-          <img src="../{{ member.image }}" alt="{{ member.name }}">
+          <img src="../{{ member.image }}" alt="{{ member.title }}">
       </div>
       <div class="content-box-text">
-        <h1>{{ member.name }}</h1>
-        <p>{{ member.bio }}</p>     
+        <h1>{{ member.title }}</h1>
+        <p>{{ member.excerpt | default: member.content | strip_html | truncate: 220 }}</p>
         <div class="email">
           <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
-      </div> 
+      </div>
     </div>
+      {% endif %}
     {% endfor %}
   </div>
+  {% endif %}
   
-  <!-- Research Scientists & PostDocs Section -->
-  {% if site.data.team.research_scientists_postdocs.size > 0 %}
+  {% assign has_postdocs = false %}
+  {% for member in site.team %}
+    {% if member.role contains 'Postdoc' or member.role contains 'Post' or member.role contains 'Research' %}
+      {% assign has_postdocs = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if has_postdocs %}
   <div class="title">
       <h1>Research Scientists & PostDocs</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    {% for member in site.data.team.research_scientists_postdocs %}
+    {% for member in site.team %}
+      {% if member.role contains 'Postdoc' or member.role contains 'Post' or member.role contains 'Research' %}
       <div class="content-box" data-href="../team/{{ member.member_id }}">
           <div class="content-box-text">
-          <h1>{{ member.name }}</h1>
+          <h1>{{ member.title }}</h1>
           <div class="image-box">
-            <img src="../{{ member.image }}" alt="{{ member.name }}">
+            <img src="../{{ member.image }}" alt="{{ member.title }}">
           </div>
-          <p>{{ member.bio }}</p>
+          <p>{{ member.excerpt | default: member.content | strip_html | truncate: 200 }}</p>
           </div>
         <div class="email">
           <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
   
-  <!-- PostGraduate Students Section -->
-  {% if site.data.team.postgraduate_students.size > 0 %}
+  {% assign has_postgrads = false %}
+  {% for member in site.team %}
+    {% if member.role contains 'PhD' or member.role contains 'PostGraduate' or member.role contains 'Masters' %}
+      {% assign has_postgrads = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if has_postgrads %}
   <div class="title">
       <h1>PostGraduate Students</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    {% for member in site.data.team.postgraduate_students %}
+    {% for member in site.team %}
+      {% if member.role contains 'PhD' or member.role contains 'PostGraduate' or member.role contains 'Masters' %}
       <div class="content-box" data-href="../team/{{ member.member_id }}">
           <div class="content-box-text">
-          <h1>{{ member.name }}</h1>
+          <h1>{{ member.title }}</h1>
           <div class="image-box">
-            <img src="../{{ member.image }}" alt="{{ member.name }}">
+            <img src="../{{ member.image }}" alt="{{ member.title }}">
           </div>
-          <p>{{ member.bio }}</p>
+          <p>{{ member.excerpt | default: member.content | strip_html | truncate: 200 }}</p>
           </div>
         <div class="email">
           <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
   
-  <!-- Bachelors Students Section -->
-  {% if site.data.team.bachelor_students.size > 0 %}
+  {% assign has_bachelors = false %}
+  {% for member in site.team %}
+    {% if member.role contains 'Bachelor' or member.role contains 'Undergrad' %}
+      {% assign has_bachelors = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if has_bachelors %}
   <div class="title">
       <h1>Bachelors Students</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    {% for member in site.data.team.bachelor_students %}
+    {% for member in site.team %}
+      {% if member.role contains 'Bachelor' or member.role contains 'Undergrad' %}
       <div class="content-box" data-href="../team/{{ member.member_id }}">
           <div class="content-box-text">
-          <h1>{{ member.name }}</h1>
+          <h1>{{ member.title }}</h1>
           <div class="image-box">
-            <img src="../{{ member.image }}" alt="{{ member.name }}">
+            <img src="../{{ member.image }}" alt="{{ member.title }}">
           </div>
-          <p>{{ member.bio }}</p>
+          <p>{{ member.excerpt | default: member.content | strip_html | truncate: 200 }}</p>
           </div>
         <div class="email">
           <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
   
-  <!-- Alumni (Collaborators) Section -->
-  {% if site.data.team.alumni.size > 0 %}
+  {% assign has_alumni = false %}
+  {% for member in site.team %}
+    {% if member.role contains 'Former' or member.role contains 'Alumni' %}
+      {% assign has_alumni = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if has_alumni %}
   <div class="title">
       <h1>Alumni (Collaborators)</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    {% for member in site.data.team.alumni %}
+    {% for member in site.team %}
+      {% if member.role contains 'Former' or member.role contains 'Alumni' %}
       <div class="content-box" data-href="../team/{{ member.member_id }}">
           <div class="content-box-text">
-          <h1>{{ member.name }}</h1>
+          <h1>{{ member.title }}</h1>
           <div class="image-box">
-            <img src="../{{ member.image }}" alt="{{ member.name }}">
+            <img src="../{{ member.image }}" alt="{{ member.title }}">
           </div>
-          <p>{{ member.bio }}</p>
+          <p>{{ member.excerpt | default: member.content | strip_html | truncate: 200 }}</p>
           </div>
         <div class="email">
           <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
   
-  <!-- Other Collaborators Section -->
-  {% if site.data.team.other_collaborators.size > 0 %}
+  {% assign has_others = false %}
+  {% for member in site.team %}
+    {% if member.role contains 'Collaborator' or member.role contains 'Collaborating' %}
+      {% assign has_others = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if has_others %}
   <div class="title">
       <h1>Other Collaborators</h1>
       <hr>
   </div>
   <div class="member-content-wrapper">
-    {% for member in site.data.team.other_collaborators %}
+    {% for member in site.team %}
+      {% if member.role contains 'Collaborator' %}
       <div class="content-box" data-href="../team/{{ member.member_id }}">
           <div class="content-box-text">
-          <h1>{{ member.name }}</h1>
+          <h1>{{ member.title }}</h1>
           <div class="image-box">
-            <img src="../{{ member.image }}" alt="{{ member.name }}">
+            <img src="../{{ member.image }}" alt="{{ member.title }}">
           </div>
-          <p>{{ member.bio }}</p>
+          <p>{{ member.excerpt | default: member.content | strip_html | truncate: 200 }}</p>
           </div>
         <div class="email">
           <a href="../team/{{ member.member_id }}">More details</a>
         </div>
         <div class="overlay"></div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
