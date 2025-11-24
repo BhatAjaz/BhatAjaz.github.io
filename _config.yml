@@ -55,14 +55,20 @@ defaults:
       path: ""
       type: "publications"
     values:
-      layout: publication
+      layout: post
       permalink: /publication/:name.html
   - scope:
       path: ""
       type: "projects"
     values:
-      layout: project
+      layout: post
       permalink: /project/:name.html
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: post
+      permalink: /team/:name.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.
