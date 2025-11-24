@@ -11,6 +11,10 @@ source "https://rubygems.org"
 ## This will pin Jekyll and all supported plugins to the versions GitHub Pages uses.
 ## To update, run: bundle update github-pages
 gem "github-pages", group: :jekyll_plugins
+
+# Pin Activesupport to remain compatible with Ruby 3.1.x used on GitHub Actions
+# Activesupport 8.x requires Ruby >= 3.2; constrain to < 8 to avoid bundler picking 8.x
+gem "activesupport", "< 8.0"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 ######gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
