@@ -1,6 +1,6 @@
 ---
 title: "Amirah Hamid"
-member_id: "Amirah-Hamid"
+member_id: "amirah-hamid"
 role: "PhD Student"
 image: "assets/img/team/default-person.jpg"
 email: "Amirah-Hamid@ubd.edu.bn"

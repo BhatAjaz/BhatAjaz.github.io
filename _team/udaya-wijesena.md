@@ -1,6 +1,6 @@
 ---
 title: "Udaya Wijesena"
-member_id: "Udaya-Wijesena"
+member_id: "udaya-wijesena"
 role: "PhD Student"
 image: "assets/img/team/default-person.jpg"
 email: "Udaya-Wijesena@ubd.edu.bn"

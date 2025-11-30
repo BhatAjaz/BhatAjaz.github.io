@@ -1,6 +1,6 @@
 ---
 title: "Azryl Sarih"
-member_id: "Azryl-Sarih"
+member_id: "azryl-sarih"
 role: "Masters Student"
 image: "assets/img/team/default-person.jpg"
 email: "Azryl-Sarih@ubd.edu.bn"

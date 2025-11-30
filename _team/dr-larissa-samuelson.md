@@ -1,6 +1,6 @@
 ---
 title: "Prof Larissa Samuelson"
-member_id: "Dr-Larissa-Samuelson"
+member_id: "dr-larissa-samuelson"
 role: "Collaborator"
 image: "assets/img/team/default-person.jpg"
 email: "L.Samuelson@uea.ac.uk"

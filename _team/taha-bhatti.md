@@ -1,6 +1,6 @@
 ---
 title: "Taha Bhatti"
-member_id: "Taha-Bhatti"
+member_id: "taha-bhatti"
 role: "Masters Student"
 image: "assets/img/team/default-person.jpg"
 email: "Taha-Bhatti@ubd.edu.bn"

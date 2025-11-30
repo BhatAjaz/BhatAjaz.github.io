@@ -1,6 +1,6 @@
 ---
 title: "Dr. Ajaz Ahmad Bhat"
-member_id: "Ajaz-Ahmad-Bhat"
+member_id: "ajaz-ahmad-bhat"
 role: "Principal Investigator & Assistant Professor"
 image: "assets/img/team/ajaz-bhat.jpg"
 email: "ajaz.bhat@ubd.edu.bn"
@@ -99,7 +99,7 @@ Ajaz’s research interests lie at the intersection of intelligent robotics, cog
 - **2016**: Article on Aesop’s Fable featured as cover of *Journal of the Royal Society Interface*
 - **2012**: Article highlighted in *Kaleidoscope* section of *Physical Review E*
 
-#### Fellowships & Awards
+### Fellowships & Awards
 - Thesis Completion Fellowship, IIT Genova (2016)
 - Doctoral Fellowship, University of Genova (2013–2015)
 - EU FP7 DARWIN Project Member (£300k funding)
@@ -118,25 +118,3 @@ Ajaz’s research interests lie at the intersection of intelligent robotics, cog
 - **Memberships**:  
   - Cognitive Science Society (2018–Present)  
   - IEEE RAS Technical Committee on Cognitive Robotics (2018–Present)
-- **Organizing Roles**:  
-  - Pint of Science Festival, Norwich (2018)  
-  - Workshop on Dynamical Field Theory, CogSci 2018
-- **Reviewer** for: *Neural Networks*, *ICRA*, *ICLR*, *IEEE TCDS*, *PLOS Comp Bio*, *Cognitive Science*, *CogSci*, *ICDL-EPIROB*, *Living Machines*, and more
-
-### Selected Publications (2011–2025)
-
-- **2025**: *MuCoS: Efficient Drug–Target Discovery via Multi-Context-Aware Sampling in Knowledge Graphs*. BioNLP@ACL  
-- **2024**: * Muko_KGC Model for Knowledge Graph Completion*. PAKDD 2025  
-- **2023**: *Formal Theories Clarify the Complex*. *Child Development*  
-- **2022**: *WOLVES: A Neural Process Account of Cross-Situational Word Learning*. *Psychological Review*  
-- **2020**: *Causal Learning by a Robot with Semantic-Episodic Memory*. ICLR  
-- **2019**: *Muscle-less Motor Synergies*. *Physics of Life Reviews*  
-- **2018**: *Goal Directed Reasoning in Robots*. *Cognitive Computation*  
-- **2016**: *Humanoid Robot Infers Archimedes’ Principle*. *Journal of the Royal Society Interface*  
-- **2012**: *Dynamics of Competitive Learning*. *Physical Review E*  
-
-
-
-### Conference Talks & Workshops
-
-Invited/keynote talks at CogSci, ICDL-EPIROB, ICRIET, and more. Frequent presenter at ICIS, SRCD, and IEEE robotics conferences on topics spanning word learning, causal reasoning, motor synergies, and developmental robotics. Notable invited talks include *“Thirsty Crows, Cognitive Robots and Attentive Babies”* (ICDL-EpiRob 2018) and *“Dynamic Field Theory for Higher Cognition”* (CogSci 2018).
