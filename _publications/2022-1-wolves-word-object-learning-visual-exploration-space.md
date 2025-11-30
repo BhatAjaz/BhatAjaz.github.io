@@ -9,7 +9,6 @@ link: "https://psycnet.apa.org/record/2022-72074-001"
 video: 
 tags: ["word-learning","language","learning","visual","exploration","attention","memory","cognitive"]
 date: 2022-01-01
-permalink: /publication/2022-1-wolves-word-object-learning-visual-exploration-space.html
 layout: publication
 abstract: "How do children learn word meanings from ambiguous contexts? We present WOLVES, a neural process model that captures the interaction between visual exploration and word learning"
 ---

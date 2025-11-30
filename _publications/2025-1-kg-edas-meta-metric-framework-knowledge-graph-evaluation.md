@@ -9,7 +9,6 @@ link: "https://arxiv.org/abs/2508.15357"
 video: 
 tags: ["evaluation","metric","KGC","graph",]
 date: 2025-01-01
-permalink: /publication/2025-1-kg-edas-meta-metric-framework-knowledge-graph-evaluation.html
 layout: publication
 abstract: "Current evaluation practices for knowledge graph completion models lack standardization and often fail to capture model capabilities comprehensively. We introduce KG-EDAS (Knowledge Graph Evaluation through Data-Aware Scoring), a meta-metric framework that provides more robust and interpretable evaluation of KGC models. "
 ---

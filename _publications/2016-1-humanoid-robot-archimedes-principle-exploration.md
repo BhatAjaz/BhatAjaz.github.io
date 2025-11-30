@@ -9,7 +9,6 @@ link: "https://doi.org/10.1098/rsif.2016.0310"
 tags: ["cognitive","robotics","causal","exploration","episodic-memory","tool-use","learning"]
 layout: publication
 date: 2016-01-01
-permalink: /publication/2016-1-humanoid-robot-archimedes-principle-exploration/
 abstract: "eenacting Aesop's Crow and Pitcher on a humanoid, we propose a neural architecture that encodes sensorimotor interactions into episodic traces and applies four learning rules (elimination, growth, uncertainty, status quo) to extract causal relations. The robot's predictions for novel objects converge to Archimedes' law."
 ---
 

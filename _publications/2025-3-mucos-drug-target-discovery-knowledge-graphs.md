@@ -9,7 +9,6 @@ link: "https://aclanthology.org/2025.bionlp-1.27/"
 video: 
 tags: ["graph","bert","drug-discovery","link-prediction"]
 date: 2025-01-01
-permalink: /publication/2025-3-mucos-drug-target-discovery-knowledge-graphs.html
 layout: publication
 abstract: "We introduce MuCoS (*Multi-Context-Aware Sampling*), a novel approach that efficiently discovers drug targets by sampling diverse contextual neighborhoods in biomedical KGs. Our method significantly improves target identification accuracy while reducing computational overhead."
 ---

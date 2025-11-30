@@ -9,7 +9,6 @@ link: "https://link.springer.com/chapter/10.1007/978-981-97-2253-2_1"
 video: 
 tags: ["graph","bert","neural-model","link-prediction"]
 date: 2025-01-01
-permalink: /publication/2025-2-muco-kgc-multi-context-knowledge-graph-completion.html
 layout: publication
 abstract: "We propose MuCo-KGC, a multi-context-aware approach that leverages diverse contextual signals to improve link prediction performance. Our method achieves state-of-the-art results on several benchmarks while maintaining computational efficiency."
 ---

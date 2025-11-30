@@ -9,7 +9,6 @@ link: "https://doi.org/10.1016/j.plrev.2018.04.005"
 video: 
 tags: ["motor-control","cognitive","robotics","body-schema","action","simulation","PMP"]
 date: 2018-01-01
-permalink: /publication/2018-4-muscle-less-motor-synergies-cognitive-robotics.html
 layout: publication
 abstract: "We propose a plastic and configurable internal body‐schema as a unifying principle enabling both real and imagined actions through internal simulation. The theoretical rationale is grounded in intracranial recordings, fMRI studies of action execution/imagination, tool‐use experiments, and computational robot models to show how muscleless motor synergies arise from goal‐directed body‐schema animation."
 ---

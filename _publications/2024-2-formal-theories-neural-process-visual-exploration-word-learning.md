@@ -9,7 +9,6 @@ link: "https://doi.org/10.1111/cdev.14023"
 video: 
 tags: ["novelty","word-learning","neural-model","attention","memory","visual",]
 date: 2024-01-01
-permalink: /publication/2024-2-formal-theories-neural-process-visual-exploration-word-learning.html
 layout: publication
 abstract: "Visual exploration and auditory processing interact to support object discrimination, categorization, and early word learning. To clarify their complex, multi‐timescale interactions, we generalize a formal neural process model of word learning to simulate two infant studies of label‐driven novelty preference (9–22 months). "
 ---

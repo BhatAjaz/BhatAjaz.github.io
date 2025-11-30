@@ -9,7 +9,6 @@ link: "https://doi.org/10.1007/s12559-018-9553-1"
 video: 
 tags: ["planning","simulation","cooperation","robotics","cognitive"]
 date: 2018-01-01
-permalink: /publication/2018-2-goal-directed-reasoning-cooperation-robots-shared-workspaces.html
 layout: publication
 abstract: "In an industrial assembly task, two robots share workspace to assemble fuse-boxes. We describe coupled forward models of body and peripersonal space learned via exploration. Internal simulation evaluates action-consequence pairs, driving cooperative sequences even when solo goals are unachievable."
 ---

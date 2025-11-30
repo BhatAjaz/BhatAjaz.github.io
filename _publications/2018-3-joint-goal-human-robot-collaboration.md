@@ -9,7 +9,6 @@ link: "https://doi.org/10.1016/j.procs.2018.01.089"
 video: 
 tags: ["collaboration","memory","robotics","cognitive","inference"]
 date: 2018-01-01
-permalink: /publication/2018-3-joint-goal-human-robot-collaboration.html
 layout: publication
 abstract: "We present a bio-inspired neural architecture where two robots learn internal models of their bodies and peripersonal space. Coupled simulations allow anticipation of partner actions and dynamic task allocation, enabling cooperative assembly of fuse-boxes in unstructured environments."
 ---

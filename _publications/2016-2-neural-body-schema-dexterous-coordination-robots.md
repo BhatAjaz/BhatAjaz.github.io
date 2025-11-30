@@ -9,7 +9,6 @@ link: "https://doi.org/10.1007/s10514-016-9563-3"
 tags: ["body-schema","motor-control","PMP","cognitive","robotics"]
 layout: publication
 date: 2016-01-01
-permalink: /publication/2016-2-neural-body-schema-dexterous-coordination-robots/
 abstract: "We describe a neural framework that learns a distributed body schema enabling simultaneous control of multiple limbs or tools. Forward simulations inform real-time motor plans, resolving redundancy by well-posed field computations rather than inverse kinematics."
 ---
 

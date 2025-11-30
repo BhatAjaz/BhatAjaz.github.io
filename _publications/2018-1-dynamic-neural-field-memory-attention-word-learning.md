@@ -9,7 +9,6 @@ link: "https://mindmodeling.org/cogsci2018/papers/0048/index.html"
 tags: ["word-learning","attention","memory","neural","DFT"]
 layout: publication
 date: 2018-01-01
-permalink: /publication/2018-1-dynamic-neural-field-memory-attention-word-learning/
 abstract: "WOLVES integrates dynamic neural fields for vision and language to model cross-situational word learning. Peaks represent sustained attention to objects and words; memory fields accumulate co-occurrence statistics. The model reproduces human looking and learning curves across 12 experiments."
 ---
 

@@ -9,7 +9,6 @@ link: "https://doi.org/10.1007/978-3-319-22979-9_33"
 tags: ["imitation","tool-use","cognitive","robotics","affordance","skills"]
 layout: publication
 date: 2015-01-01
-permalink: /publication/2015-1-icub-learns-imitate-tool-recycling-knowledge/
 abstract: "We show that the iCub humanoid can generalize motor skills by representing movements as shape primitives. After learning to draw shapes, the robot rapidly adapts to tool use tasks by recombining existing shape modules rather than learning from scratch."
 ---
 

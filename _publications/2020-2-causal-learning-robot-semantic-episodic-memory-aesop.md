@@ -10,7 +10,6 @@ link: "https://arxiv.org/abs/2003.00274"
 video: 
 tags: ["causal-learning","episodic-memory","semantic-memory","robotics",]
 date: 2020-01-01
-permalink: /publication/2020-2-causal-learning-robot-semantic-episodic-memory-aesop.html
 layout: publication
 abstract: "To explore how agents abstract cause–effect relations from cumulative interactions, we re-enact the Aesop's fable task on a robot equipped with a brain-guided neural model of semantic-episodic memory. Four task-agnostic learning rules compare expectations recalled from past episodes with current scenarios to extract hidden causal relations."
 ---

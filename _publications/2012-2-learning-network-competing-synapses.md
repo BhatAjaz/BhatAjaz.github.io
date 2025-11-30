@@ -9,7 +9,6 @@ link: "https://doi.org/10.1371/journal.pone.0025048"
 tags: ["plasticity","synapses","learning","neural","memory"]
 layout: publication
 date: 2012-01-01
-permalink: /publication/2012-2-learning-network-competing-synapses/
 abstract: "We propose a game-theory-inspired model in which synapses switch between weak and strong states, driven by local competition and memory of past outcomes. The framework reproduces power-law forgetting and captures motor adaptation phenomena like savings and rebound via distinct timescales."
 ---
 

@@ -9,7 +9,6 @@ link: "https://escholarship.org/uc/item/893685t3"
 video: 
 tags: ["word-learning","similarity","attention","memory",]
 date: 2024-01-01
-permalink: /publication/2024-3-similarity-object-properties-cross-situational-word-learning.html
 layout: publication
 abstract: "Context manipulations reveal that similarity in object properties can counterintuitively facilitate word learning. Using the WOLVES dynamic field model, we simulated CSWL under two conditions: 'NEAR' (objects metrically similar) and 'FAR' (objects distinct). WOLVES predicted superior learning in NEAR trials. An adult behavioral experiment confirmed this novel prediction, demonstrating that contextual similarity enhances cross‐situational word mapping."
 ---

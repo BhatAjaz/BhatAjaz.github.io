@@ -9,7 +9,6 @@ link: "https://osf.io/htd7p"
 video: 
 tags: ["word-learning","attention","working-memory","associative"]
 date: 2020-01-01
-permalink: /publication/2020-1-beyond-associative-learning-stimulus-exposure-word-learning.html
 layout: publication
 abstract: "This pre‐registered study investigates how the duration of stimulus exposure and participants' looking behaviours jointly influence cross‐situational word learning. By manipulating exposure times and recording eye movements, we will examine contributions of associative learning versus hypothesis‐testing mechanisms across multiple ambiguous naming trials."
 ---

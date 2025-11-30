@@ -9,7 +9,6 @@ link: "https://doi.org/10.1109/DEVLRN.2014.6983007"
 tags: ["episodic-memory","robotics","cognitive","developmental"]
 layout: publication
 date: 2014-01-01
-permalink: /publication/2014-1-connecting-experiences-episodic-memory-robots/
 abstract: "Robots must flexibly connect context-relevant chunks of past experience to meet novel goals. We introduce a neural framework that encodes high-dimensional sensorimotor episodes into structured episodic memory and retrieves relevant sequences to simulate unexperienced actions."
 ---
 

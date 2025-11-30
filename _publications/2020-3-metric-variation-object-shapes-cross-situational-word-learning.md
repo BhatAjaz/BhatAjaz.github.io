@@ -9,7 +9,6 @@ link: "https://osf.io/rbg7m"
 video: 
 tags: ["word-learning","variability","attention","memory","similarity","language","development"]
 date: 2020-01-01
-permalink: /publication/2020-3-metric-variation-object-shapes-cross-situational-word-learning.html
 layout: publication
 abstract: "This experiment systematically varies object shape and colour distances on each trial—'Near' (similar) versus 'Far' (distinct)—while controlling stimulus pairs. Eye-tracking and forced-choice naming test assess how metric variation affects real-time attention and word‐learning accuracy."
 ---

@@ -9,7 +9,6 @@ link: "https://arxiv.org/abs/2412.11016"
 video: 
 tags: ["KGC","graph","bert","transformer","context","embedding","link-prediction"]
 date: 2024-01-01
-permalink: /publication/2024-1-contextualized-bert-knowledge-graph-completion.html
 layout: publication
 abstract: "We introduce CAB‐KGC, a Context‐Aware BERT for KGC that leverages contextual information from neighboring entities and relations to predict missing tail entities. CAB‐KGC eliminates the need for entity descriptions and negative sampling, reducing compute while improving Hit@1 by 5.3% on FB15k-237 and 4.88% on WN18RR." 
 ---

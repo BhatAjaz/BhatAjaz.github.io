@@ -9,7 +9,6 @@ link: "https://doi.org/10.1016/j.bica.2014.11.006"
 tags: ["causal","robotics","cognitive","affordance"]
 layout: publication
 date: 2014-01-01
-permalink: /publication/2014-2-object-action-property-learning-causal-properties/
 abstract: "We explore how robots can discover which object properties drive task outcomes by cumulatively interacting with objects varying along multiple dimensions. Through a dynamic neural field model, robots infer causally dominant properties from exploration data without supervision."
 ---
 
