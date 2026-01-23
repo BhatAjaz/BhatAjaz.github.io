@@ -42,41 +42,42 @@ A modern, responsive Jekyll website showcasing research activities, publications
 ## Project Structure
 
 ```
-├── _data/              # Content data files (YAML)
+├── _data/              # Content site config files (YAML)
 ├── _includes/          # Reusable components
 ├── _layouts/           # Page templates
 ├── _posts/             # Blog posts/news
-├── assets/             # Images, CSS, JavaScript
-├── publication/        # Individual publication pages
-├── project/            # Individual project pages
-├── team/               # Team member pages
+├── _projects/            # Individual project markdown pages
+├── _publications/        # Individual publication markdown pages
+├── team/               # Team member markdown pages
 └── *.html              # Main site pages
 ```
 
 ## Content Management
 
-All content is managed through YAML files in the `_data/` directory:
+All content is managed through md post files in the `_*/` directories:
 
-- **Team**: `_data/team.yml`
-- **Publications**: `_data/publications/[publication-name].yml`
-- **Projects**: Individual files in `_data/projects/` and `_data/projects_overview.yml`
+- **Team**: `_team/team-member.md`
+- **Publications**: `_publications/[publication-name].md`
+- **Projects**: Individual md files in `_projects/`
 - **News**: Individual files in `_posts/`
 
 ## Adding New Content
 
 ### New Team Member
-1. Add entry to `_data/team.yml`
-2. Create page: `team/Member-Name.html`
-3. Add photo: `assets/img/team/fname-lname`
+1. Add a new md file to `_team/`
+2. Add photo: `assets/img/team/fname-lname`
 
 ### New Publication
-1. Create: `_data/publications/year-number-publication-short-title.yml`
-2. Create page: `publication/year-number-publication-short-title.html`
-3. Add images: `assets/img/publications/year-number/`
+1. Create: `_publications/year-number-publication-short-title.md`
+2. Add images: `assets/img/publications/year-number/`or via a weblink
+
+### New Publication
+1. Create: `_projects/short-title.md`
+2. Add images: `assets/img/projects`or via a weblink
 
 ### New Blog Post
-Create: `_posts/YYYY-MM-DD-title.md`
-
+1. Create: `_posts/YYYY-MM-DD-title.md`
+3. Add images: `assets/img/news/YYYY-MM-DD/`or via a weblink 
 ## Customization
 
 ### Styling
@@ -84,7 +85,7 @@ Create: `_posts/YYYY-MM-DD-title.md`
 
 ### Components
 - Modify includes in `_includes/`
-- Update layouts in `_layouts/`
+- Update layouts in `_layouts/`(not sure if this is being used)
 
 ## Deployment
 
