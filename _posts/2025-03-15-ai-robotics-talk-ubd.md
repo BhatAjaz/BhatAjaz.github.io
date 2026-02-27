@@ -6,10 +6,10 @@ authors: "Dr. Ajaz Ahmad Bhat"
 source: "School of Digital Science, UBD"
 categories: [talks, research]
 featured_image: "/assets/img/news/2025-03-15/iet-talk.jpg"
-external_link: "https://ajazbhat.com"
+external_link: "https://borneobulletin.com.bn/talks-discuss-future-of-robotics-ict-advancements/"
 ---
 
-Assistant Professor **Dr. Ajaz Ahmad Bhat** delivered an insightful talk titled *"From Code to Creation"* at Universiti Brunei Darussalam.  
+Assistant Professor **Dr. Ajaz Ahmad Bhat** delivered a talk titled *"From Code to Creation"* at Universiti Brunei Darussalam.  
 
 ---
 
