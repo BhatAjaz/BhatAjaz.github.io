@@ -2,7 +2,7 @@
 
 title: " Does Cumulative Spectral Gradient work for KGs?"
 pub_id: 2025-04-evaluating-cumulative-spectral-gradient-knowledge-graphs
-image: "/assets/img/publications/pub-2025-04-csg-1.png"
+image: "/assets/img/publications/pub-2026-01-kg-complexity-2.png"
 authors: "Haji Gul, Abdul Ghani Naim, & Ajaz Ahmad Bhat"
 journal: "Affinity Event — 4th MusIML workshop (ICML’25) — Poster"
 year: 2025
