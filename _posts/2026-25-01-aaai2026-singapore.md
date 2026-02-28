@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Presnted at AAAI 2026 in Singapore"
+title: "Presented at AAAI 2026 in Singapore"
 date: 2026-01-25
 authors: "Ajaz"
 source: "LinkedIn — Ajaz Bhat"
