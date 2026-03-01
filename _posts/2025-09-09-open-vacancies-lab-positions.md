@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open Vacancies - Master's and PhD Positions Available"
-date: 2025-09-09
+date: 2026-01-01
 pinned: true
 authors: "Dr. Ajaz Ahmad Bhat"
 source: "School of Digital Science UBD "
@@ -31,7 +31,10 @@ The following links will guide you to the admission/application process:
 ### Scholarship Opportunities
 **Scholarships available for eligible applicants**: [https://ubd.edu.bn/admission/scholarship/](https://ubd.edu.bn/admission/scholarship/)
 
-**Other Scholarships**: [https://www.mfa.gov.bn/Pages/bdgs/bdgs2022.aspx](https://www.mfa.gov.bn/Pages/bdgs/bdgs2022.aspx)
+**Other Scholarships**: 
+- BDGS [https://www.mfa.gov.bn/Pages/bdgs/bdgs2022.aspx](https://www.mfa.gov.bn/Pages/bdgs/bdgs2022.aspx)
+- IDB [https://www.isdb.org/scholarships](https://www.isdb.org/scholarships)
+
 
 ## Admission Timeline
 

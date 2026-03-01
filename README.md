@@ -1,4 +1,4 @@
-# Dr. Ajaz Ahmad Bhat's Research Lab Website
+# Adaptive Bots Research Lab Website
 
 A modern, responsive Jekyll website showcasing research activities, publications, team members, and projects in artificial intelligence, cognitive robotics, and related fields at Universiti Brunei Darussalam.
 
