@@ -3,7 +3,7 @@ title: "Haji Gul"
 member_id: "haji-gul"
 role: "PhD Student"
 image: "assets/img/team/default-person.jpg"
-email: "haji.gul@ubd.edu.bn"
+email: "23h1710@ubd.edu.bn"
 interests:
   - "Knowledge Graphs"
   - "NLP"
