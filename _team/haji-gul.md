@@ -13,7 +13,7 @@ layout: team-member
 
 ## Overview
 
-Haji is pursuing research in knowledge graph completion and natural language processing.
+Haji is pursuing research in knowledge graph completion and natural language processing. My interest is KGC
 
 ## Research Interests
 
