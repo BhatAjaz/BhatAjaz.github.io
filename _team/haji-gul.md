@@ -36,7 +36,7 @@ Haji Gul is a PhD researcher in Artificial Intelligence at Universiti Brunei Dar
 
 Reviewer / Program Committee Member for:
 
-- **Conferences:** ICML 2026, NeurIPS 2026, AAAI, ICDM, MusIML @ ICML, World CIST (World Conference on Information Systems and Technologies), ECIC (EasyChair International Conference)
+- **Conferences:** ICML, NeurIPS, AAAI, ICDM, MusIML @ ICML, World CIST (World Conference on Information Systems and Technologies)
 - **Journals:** Scientific Reports, npj Complexity, Applied Network Science, Cluster Computing, Social Network Analysis and Mining, Transactions on Consumer Electronics
 
 
