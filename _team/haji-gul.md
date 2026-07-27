@@ -27,6 +27,19 @@ Haji Gul is a PhD researcher in Artificial Intelligence at Universiti Brunei Dar
 - Transformers, Pre-trained Language Models, and LLMs
 - Machine Learning & Deep Learning
 
+
+## Awards & Fellowships
+
+- **DAAD AInet Fellowship — Natural Language Processing (May 2025).** Currently collaborating with Leuphana University, Germany. [[DAAD Profile]](https://www.daad.de/en/the-daad/postdocnet/fellows/fellows/#Gul_Haji)
+
+## Academic Service
+
+Reviewer / Program Committee Member for:
+
+- **Conferences:** ICML 2026, NeurIPS 2026, AAAI, ICDM, MusIML @ ICML, World CIST (World Conference on Information Systems and Technologies), ECIC (EasyChair International Conference)
+- **Journals:** Scientific Reports, npj Complexity, Applied Network Science, Cluster Computing, Social Network Analysis and Mining, Transactions on Consumer Electronics
+
+
 ## Publications
 
 1. Gul, H., Naim, A.G., and Bhat, A.A. **MuCo-KGC: Multi-context-Aware Knowledge Graph Completion.** *Data Science: Foundations and Applications — PAKDD 2025*, Proceedings Part VII, Springer, Berlin, Heidelberg, 2025, pp. 3–15. [[Paper]](https://link.springer.com/chapter/10.1007/978-981-96-8298-0_1)
@@ -48,4 +61,4 @@ Haji Gul is a PhD researcher in Artificial Intelligence at Universiti Brunei Dar
 ## Contact
 
 - Email: [23h1710@ubd.edu.bn](mailto:23h1710@ubd.edu.bn)
-- Google Scholar: [Profile](https://scholar.google.com/citations?user=WqmzWogAAAAJ&hl=en)
+
