@@ -2,7 +2,7 @@
 title: "Haji Gul"
 member_id: "haji-gul"
 role: "PhD Student"
-image: "assets/img/team/Haji.png"
+image: "assets/img/publications/Dr_Ajaz_and_Haji_work/Haji.jpeg"
 email: "23h1710@ubd.edu.bn"
 interests:
   - "Knowledge Graphs"
