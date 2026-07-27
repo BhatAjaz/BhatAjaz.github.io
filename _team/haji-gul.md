@@ -1,5 +1,5 @@
 ---
-title: "Haji Gul bin"
+title: "Haji Gul"
 member_id: "haji-gul"
 role: "PhD Student"
 image: "assets/img/team/Haji.png"
@@ -16,7 +16,7 @@ layout: team-member
 
 ## Overview
 
-Haji Gul is a PhD researcher in Artificial Intelligence at Universiti Brunei Darussalam. His research focuses on knowledge graphs — including knowledge graph completion (KGC), link prediction, evaluation, and complexity — alongside natural language processing, Transformers, and large language models. He also works on complex network analysis and graph clustering, with applications in pattern recognition. In 2025 he was awarded the DAAD AInet Fellowship in Natural Language Processing.
+Haji Gul test is a PhD researcher in Artificial Intelligence at Universiti Brunei Darussalam. His research focuses on knowledge graphs — including knowledge graph completion (KGC), link prediction, evaluation, and complexity — alongside natural language processing, Transformers, and large language models. He also works on complex network analysis and graph clustering, with applications in pattern recognition. In 2025 he was awarded the DAAD AInet Fellowship in Natural Language Processing.
 
 ## Research Interests
 
