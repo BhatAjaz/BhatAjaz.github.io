@@ -1,5 +1,5 @@
 ---
-title: "Haji Gul bin"
+title: "Haji Gul"
 member_id: "haji-gul"
 role: "PhD Student"
 image: "assets/img/team/Haji.png"
